@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_v_i_c_e" xml:lang="ru">
+<title>USBD_DEVICE</title>
+<indexterm><primary>USBD_DEVICE</primary></indexterm>
+<para>
+
+<para>Device file for Usb otg low level driver. </para>
+ 
+</para>
+Граф связей класса USBD_DEVICE:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_v_i_c_e.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___variables">USBD_DEVICE_Exported_Variables</link></para>
+
+<para>Public variables. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype">USBD_DEVICE_Exported_FunctionsPrototype</link></para>
+
+<para>Declaration of public functions for Usb device. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Device file for Usb otg low level driver. </para>
+</section>
+    <xi:include href="group___u_s_b_d___d_e_v_i_c_e___exported___variables.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>

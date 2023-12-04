@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___exported___variables" xml:lang="ru">
+<title>USBD_DESC_Exported_Variables</title>
+<indexterm><primary>USBD_DESC_Exported_Variables</primary></indexterm>
+<para>
+
+<para>Public variables. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Exported_Variables:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___exported___variables.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>USBD_DescriptorsTypeDef <link linkend="_group___u_s_b_d___d_e_s_c___exported___variables_1ga89f0dd7f68532841d99af34b1be3cd0c">HS_Desc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Public variables. </para>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___exported___variables_1ga89f0dd7f68532841d99af34b1be3cd0c"/><section>
+    <title>HS_Desc</title>
+<indexterm><primary>HS_Desc</primary><secondary>USBD_DESC_Exported_Variables</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Exported_Variables</primary><secondary>HS_Desc</secondary></indexterm>
+<para><computeroutput>USBD_DescriptorsTypeDef HS_Desc<computeroutput>[extern]</computeroutput></computeroutput></para>
+<para>Descriptor for the Usb device. </para>
+</section>
+</section>
+</section>

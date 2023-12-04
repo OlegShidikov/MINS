@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_0e624b6d60b80e1192210a4d0311b9b9" xml:lang="ru">
+<title>Содержание директории Debug/FATFS/Target</title>
+<indexterm><primary>Содержание директории Debug/FATFS/Target</primary></indexterm>
+Директория графа зависимостей Target:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_0e624b6d60b80e1192210a4d0311b9b9_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_bsp__driver__sd_8d">bsp_driver_sd.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_sd__diskio_8d">sd_diskio.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fatfs_8h_source" xml:lang="ru">
+<title>fatfs.h</title>
+<indexterm><primary>FATFS/App/fatfs.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+18 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+20 <emphasis role="preprocessor">#ifndef&#32;__fatfs_H</emphasis>
+21 <emphasis role="preprocessor">#define&#32;__fatfs_H</emphasis>
+22 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+23 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+24 <emphasis role="preprocessor">#endif</emphasis>
+25 
+26 <emphasis role="preprocessor">#include&#32;&quot;ff.h&quot;</emphasis>
+27 <emphasis role="preprocessor">#include&#32;&quot;ff_gen_drv.h&quot;</emphasis>
+28 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_sd__diskio_8h">sd_diskio.h</link>&quot;</emphasis>&#32;<emphasis role="comment">/*&#32;defines&#32;SD_Driver&#32;as&#32;external&#32;*/</emphasis>
+29 
+30 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Includes&#32;*/</emphasis>
+31 
+32 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Includes&#32;*/</emphasis>
+33 
+34 <emphasis role="keyword">extern</emphasis>&#32;uint8_t&#32;<link linkend="_fatfs_8h_1ab5eb61c3cf0ce65bdb6f8973d2ddaca5">retSD</link>;&#32;<emphasis role="comment">/*&#32;Return&#32;value&#32;for&#32;SD&#32;*/</emphasis>
+35 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_fatfs_8h_1afe5c7eca20c5b43d6d1a3bda215941bb">SDPath</link>[4];&#32;<emphasis role="comment">/*&#32;SD&#32;logical&#32;drive&#32;path&#32;*/</emphasis>
+36 <emphasis role="keyword">extern</emphasis>&#32;FATFS&#32;<link linkend="_fatfs_8h_1a23b38dea75a427fda6997c2a56014e95">SDFatFS</link>;&#32;<emphasis role="comment">/*&#32;File&#32;system&#32;object&#32;for&#32;SD&#32;logical&#32;drive&#32;*/</emphasis>
+37 <emphasis role="keyword">extern</emphasis>&#32;FIL&#32;<link linkend="_fatfs_8h_1ac80bcdc112ce2f3eb3aea1e1e78f97d4">SDFile</link>;&#32;<emphasis role="comment">/*&#32;File&#32;object&#32;for&#32;SD&#32;*/</emphasis>
+38 
+39 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_fatfs_8h_1a3712bd1d3043334cf9343acc30bd2604">MX_FATFS_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+40 
+41 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Prototypes&#32;*/</emphasis>
+42 
+43 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Prototypes&#32;*/</emphasis>
+44 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+45 }
+46 <emphasis role="preprocessor">#endif</emphasis>
+47 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*__fatfs_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_3980504b3adf1042ed6243fb396e0cfb" xml:lang="ru">
+<title>Содержание директории FATFS/App</title>
+<indexterm><primary>Содержание директории FATFS/App</primary></indexterm>
+Директория графа зависимостей App:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_3980504b3adf1042ed6243fb396e0cfb_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_fatfs_8c">fatfs.c</link></para>
+
+<para>Code for fatfs applications. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_fatfs_8h">fatfs.h</link></para>
+
+<para>Header for fatfs applications. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

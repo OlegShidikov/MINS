@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usb__device_8h_source" xml:lang="ru">
+<title>usb_device.h</title>
+<indexterm><primary>USB_DEVICE/App/usb_device.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+20 
+21 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+22 <emphasis role="preprocessor">#ifndef&#32;__USB_DEVICE__H__</emphasis>
+23 <emphasis role="preprocessor">#define&#32;__USB_DEVICE__H__</emphasis>
+24 
+25 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+26 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+27 <emphasis role="preprocessor">#endif</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx.h&quot;</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx_hal.h&quot;</emphasis>
+32 <emphasis role="preprocessor">#include&#32;&quot;usbd_def.h&quot;</emphasis>
+33 
+34 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;INCLUDE&#32;*/</emphasis>
+35 
+36 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;INCLUDE&#32;*/</emphasis>
+37 
+52 <emphasis role="comment">/*&#32;Private&#32;variables&#32;---------------------------------------------------------*/</emphasis>
+53 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;PV&#32;*/</emphasis>
+54 
+55 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;PV&#32;*/</emphasis>
+56 
+57 <emphasis role="comment">/*&#32;Private&#32;function&#32;prototypes&#32;-----------------------------------------------*/</emphasis>
+58 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;PFP&#32;*/</emphasis>
+59 
+60 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;PFP&#32;*/</emphasis>
+61 
+62 <emphasis role="comment">/*</emphasis>
+63 <emphasis role="comment">&#32;*&#32;--&#32;Insert&#32;your&#32;variables&#32;declaration&#32;here&#32;--</emphasis>
+64 <emphasis role="comment">&#32;*/</emphasis>
+65 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;VARIABLES&#32;*/</emphasis>
+66 
+67 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;VARIABLES&#32;*/</emphasis>
+78 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af">MX_USB_DEVICE_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+79 
+80 <emphasis role="comment">/*</emphasis>
+81 <emphasis role="comment">&#32;*&#32;--&#32;Insert&#32;functions&#32;declaration&#32;here&#32;--</emphasis>
+82 <emphasis role="comment">&#32;*/</emphasis>
+83 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;FD&#32;*/</emphasis>
+84 
+85 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;FD&#32;*/</emphasis>
+98 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+99 }
+100 <emphasis role="preprocessor">#endif</emphasis>
+101 
+102 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__USB_DEVICE__H__&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

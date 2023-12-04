@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_faa8bedbcbaa373d57b77d9219afda20" xml:lang="ru">
+<title>Содержание директории Debug</title>
+<indexterm><primary>Содержание директории Debug</primary></indexterm>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_23c2652425d83ad6c27be201e5d4bc42">Core</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_825c031ab2a396f0caa2e2876b01ae22">Drivers</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_c9156d1d6819a576eb5448f33f6ff76b">FATFS</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_a052b1712bc4973eb6cf6db24fbe0122">Middlewares</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_3cb2572d615e3ed18962fdc1b36a6977">USB_DEVICE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

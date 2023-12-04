@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5883902db5c376282f63de5fbbf1fa4c" xml:lang="ru">
+<title>Содержание директории Debug/Middlewares/FatFs</title>
+<indexterm><primary>Содержание директории Debug/Middlewares/FatFs</primary></indexterm>
+Директория графа зависимостей FatFs:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_5883902db5c376282f63de5fbbf1fa4c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_diskio_8d">diskio.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_ff_8d">ff.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_ff__gen__drv_8d">ff_gen_drv.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_syscall_8d">syscall.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,10 @@
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:98:6:MSC_BOT_Init	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:125:6:MSC_BOT_Reset	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:146:6:MSC_BOT_DeInit	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:159:6:MSC_BOT_DataIn	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:190:6:MSC_BOT_DataOut	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:220:14:MSC_BOT_CBW_Decode	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:283:14:MSC_BOT_SendData	32	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:303:7:MSC_BOT_SendCSW	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:326:14:MSC_BOT_Abort	24	static
+C:/Users/olegs/STM32Cube/Repository/STM32Cube_FW_F7_V1.16.2/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/usbd_msc_bot.c:354:7:MSC_BOT_CplClrFeature	24	static

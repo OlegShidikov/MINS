@@ -1,0 +1,1953 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__conf_8c" xml:lang="ru">
+<title>Файл USB_DEVICE/Target/usbd_conf.c</title>
+<indexterm><primary>USB_DEVICE/Target/usbd_conf.c</primary></indexterm>
+<para>
+
+<para>: This file implements the board support package for the USB device library </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f7xx.h&quot;<?linebreak?>#include &quot;stm32f7xx_hal.h&quot;<?linebreak?>#include &quot;usbd_def.h&quot;<?linebreak?>#include &quot;usbd_core.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для usbd_conf.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a1730ffe1e560465665eb47d9264826f9">Error_Handler</link> (void)</para>
+
+<para>This function is executed in case of error occurrence. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</link> (void)</para>
+
+<para>System Clock Configuration. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a71e72e29fe464c7f3be4edf36806355e">USBD_Get_USB_Status</link> (HAL_StatusTypeDef hal_status)</para>
+
+<para>Returns the USB status depending on the HAL status: </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1ab88e6d72062dc5d478ab12b435695ccb">HAL_PCD_MspInit</link> (PCD_HandleTypeDef *pcdHandle)</para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a0a53f3c7c744fcfa7bdba6e9badc70d4">HAL_PCD_MspDeInit</link> (PCD_HandleTypeDef *pcdHandle)</para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a9d72aa4d3d984b164047b081d4566f6d">HAL_PCD_SetupStageCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Setup stage callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a2f1ac834d9677dcae7d8973828f81149">HAL_PCD_DataOutStageCallback</link> (PCD_HandleTypeDef *hpcd, uint8_t epnum)</para>
+
+<para>Data Out stage callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a1679f5c50539a3dfca1391557e7a757b">HAL_PCD_DataInStageCallback</link> (PCD_HandleTypeDef *hpcd, uint8_t epnum)</para>
+
+<para>Data In stage callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a85c99eeb4aa17d8ff5298efff92ac28e">HAL_PCD_SOFCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>SOF callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1af4fbef977092aa525c6b1668ffbec77b">HAL_PCD_ResetCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Reset callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a0e14acd4564979743bc0a89aa5f15428">HAL_PCD_SuspendCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Suspend callback. When Low power mode is enabled the debug cannot be used (IAR, Keil doesn&apos;t support it) </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a0386a36b921cd51dd6e50103c3cd33b1">HAL_PCD_ResumeCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Resume callback. When Low power mode is enabled the debug cannot be used (IAR, Keil doesn&apos;t support it) </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a4274f129d782f0a3c9a10b5bbe022cd4">HAL_PCD_ISOOUTIncompleteCallback</link> (PCD_HandleTypeDef *hpcd, uint8_t epnum)</para>
+
+<para>ISOOUTIncomplete callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a8f4041d553ef2fb326c6e483797f99a8">HAL_PCD_ISOINIncompleteCallback</link> (PCD_HandleTypeDef *hpcd, uint8_t epnum)</para>
+
+<para>ISOINIncomplete callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a0c449541523759cf62be9c9d47540c5d">HAL_PCD_ConnectCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Connect callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a25f930b5fe696224f8e71dacf5f324b4">HAL_PCD_DisconnectCallback</link> (PCD_HandleTypeDef *hpcd)</para>
+
+<para>Disconnect callback. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a24b61e95db7e4c7ad30a835e8d905943">USBD_LL_Init</link> (USBD_HandleTypeDef *pdev)</para>
+
+<para>Initializes the low level portion of the device driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1aae9bfb6a27b11f232fc55a1d1b28be24">USBD_LL_DeInit</link> (USBD_HandleTypeDef *pdev)</para>
+
+<para>De-Initializes the low level portion of the device driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a43e53e424e9850d8261e1f9a1be53348">USBD_LL_Start</link> (USBD_HandleTypeDef *pdev)</para>
+
+<para>Starts the low level portion of the device driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1ac522b28139c1868a2e24d044fc8288fd">USBD_LL_Stop</link> (USBD_HandleTypeDef *pdev)</para>
+
+<para>Stops the low level portion of the device driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1ad96254d74d95496ffb5f6f2248585cb0">USBD_LL_OpenEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t ep_type, uint16_t ep_mps)</para>
+
+<para>Opens an endpoint of the low level driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1ae12e7de3c398d5663976bf11faa63572">USBD_LL_CloseEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Closes an endpoint of the low level driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a10080ed9555110afba809de968314985">USBD_LL_FlushEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Flushes an endpoint of the Low Level Driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1abc2b4a7c8307e04955b015fd32057ec7">USBD_LL_StallEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Sets a Stall condition on an endpoint of the Low Level Driver. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1ad4fa6f2eeefe95d07148c6c53d111eae">USBD_LL_ClearStallEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Clears a Stall condition on an endpoint of the Low Level Driver. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_usbd__conf_8c_1a2a0f10f93cc4246272b63661051a64b7">USBD_LL_IsStallEP</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Returns Stall condition. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1ad3674ea3c4a9c4bbe7c73192727f922f">USBD_LL_SetUSBAddress</link> (USBD_HandleTypeDef *pdev, uint8_t dev_addr)</para>
+
+<para>Assigns a USB address to the device. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a0388dbff915f441dd990896e28509dd9">USBD_LL_Transmit</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)</para>
+
+<para>Transmits data over an endpoint. </para>
+</listitem>
+            <listitem><para>USBD_StatusTypeDef <link linkend="_usbd__conf_8c_1a7018483ecc085a931fd7bf5353030b99">USBD_LL_PrepareReceive</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr, uint8_t *pbuf, uint32_t size)</para>
+
+<para>Prepares an endpoint for reception. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_usbd__conf_8c_1aeb80f50482e04c046ba41f5ea58a1b2b">USBD_LL_GetRxDataSize</link> (USBD_HandleTypeDef *pdev, uint8_t ep_addr)</para>
+
+<para>Returns the last transferred packet size. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1aedfa3f41ed63ea8c934e211448c61443">HAL_PCDEx_LPM_Callback</link> (PCD_HandleTypeDef *hpcd, PCD_LPM_MsgTypeDef msg)</para>
+
+<para>Send LPM message to user layer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_usbd__conf_8c_1a383d9a41089cf426cdc61b5b24e2ca0a">USBD_LL_Delay</link> (uint32_t Delay)</para>
+
+<para>Delays routine for the USB device library. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>PCD_HandleTypeDef <link linkend="_usbd__conf_8c_1a0a95840304203648c1cce34ad1365090">hpcd_USB_OTG_HS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: This file implements the board support package for the USB device library </para>
+
+<para><formalpara><title>Версия</title>
+
+<para>: v1.0_Cube </para>
+</formalpara>
+<caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_usbd__conf_8c_1a1730ffe1e560465665eb47d9264826f9"/><section>
+    <title>Error_Handler()</title>
+<indexterm><primary>Error_Handler</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>Error_Handler</secondary></indexterm>
+<para><computeroutput>void Error_Handler (void )</computeroutput></para><para>
+
+<para>This function is executed in case of error occurrence. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a1730ffe1e560465665eb47d9264826f9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a0c449541523759cf62be9c9d47540c5d"/><section>
+    <title>HAL_PCD_ConnectCallback()</title>
+<indexterm><primary>HAL_PCD_ConnectCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_ConnectCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ConnectCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Connect callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a1679f5c50539a3dfca1391557e7a757b"/><section>
+    <title>HAL_PCD_DataInStageCallback()</title>
+<indexterm><primary>HAL_PCD_DataInStageCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_DataInStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DataInStageCallback (PCD_HandleTypeDef * hpcd, uint8_t epnum)</computeroutput></para><para>
+
+<para>Data In stage callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>epnum</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a2f1ac834d9677dcae7d8973828f81149"/><section>
+    <title>HAL_PCD_DataOutStageCallback()</title>
+<indexterm><primary>HAL_PCD_DataOutStageCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_DataOutStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DataOutStageCallback (PCD_HandleTypeDef * hpcd, uint8_t epnum)</computeroutput></para><para>
+
+<para>Data Out stage callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>epnum</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a25f930b5fe696224f8e71dacf5f324b4"/><section>
+    <title>HAL_PCD_DisconnectCallback()</title>
+<indexterm><primary>HAL_PCD_DisconnectCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_DisconnectCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_DisconnectCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Disconnect callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a8f4041d553ef2fb326c6e483797f99a8"/><section>
+    <title>HAL_PCD_ISOINIncompleteCallback()</title>
+<indexterm><primary>HAL_PCD_ISOINIncompleteCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_ISOINIncompleteCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ISOINIncompleteCallback (PCD_HandleTypeDef * hpcd, uint8_t epnum)</computeroutput></para><para>
+
+<para>ISOINIncomplete callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>epnum</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a4274f129d782f0a3c9a10b5bbe022cd4"/><section>
+    <title>HAL_PCD_ISOOUTIncompleteCallback()</title>
+<indexterm><primary>HAL_PCD_ISOOUTIncompleteCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_ISOOUTIncompleteCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ISOOUTIncompleteCallback (PCD_HandleTypeDef * hpcd, uint8_t epnum)</computeroutput></para><para>
+
+<para>ISOOUTIncomplete callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>epnum</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a0a53f3c7c744fcfa7bdba6e9badc70d4"/><section>
+    <title>HAL_PCD_MspDeInit()</title>
+<indexterm><primary>HAL_PCD_MspDeInit</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_MspDeInit (PCD_HandleTypeDef * pcdHandle)</computeroutput></para>
+<para>USB_OTG_HS GPIO Configuration PC0 ---&#8212;&gt; USB_OTG_HS_ULPI_STP PC2 ---&#8212;&gt; USB_OTG_HS_ULPI_DIR PC3 ---&#8212;&gt; USB_OTG_HS_ULPI_NXT PA3 ---&#8212;&gt; USB_OTG_HS_ULPI_D0 PA5 ---&#8212;&gt; USB_OTG_HS_ULPI_CK PB0 ---&#8212;&gt; USB_OTG_HS_ULPI_D1 PB1 ---&#8212;&gt; USB_OTG_HS_ULPI_D2 PB10 ---&#8212;&gt; USB_OTG_HS_ULPI_D3 PB11 ---&#8212;&gt; USB_OTG_HS_ULPI_D4 PB12 ---&#8212;&gt; USB_OTG_HS_ULPI_D5 PB13 ---&#8212;&gt; USB_OTG_HS_ULPI_D6 PB5 ---&#8212;&gt; USB_OTG_HS_ULPI_D7</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ab88e6d72062dc5d478ab12b435695ccb"/><section>
+    <title>HAL_PCD_MspInit()</title>
+<indexterm><primary>HAL_PCD_MspInit</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_MspInit (PCD_HandleTypeDef * pcdHandle)</computeroutput></para>
+<para>USB_OTG_HS GPIO Configuration PC0 ---&#8212;&gt; USB_OTG_HS_ULPI_STP PC2 ---&#8212;&gt; USB_OTG_HS_ULPI_DIR PC3 ---&#8212;&gt; USB_OTG_HS_ULPI_NXT PA3 ---&#8212;&gt; USB_OTG_HS_ULPI_D0 PA5 ---&#8212;&gt; USB_OTG_HS_ULPI_CK PB0 ---&#8212;&gt; USB_OTG_HS_ULPI_D1 PB1 ---&#8212;&gt; USB_OTG_HS_ULPI_D2 PB10 ---&#8212;&gt; USB_OTG_HS_ULPI_D3 PB11 ---&#8212;&gt; USB_OTG_HS_ULPI_D4 PB12 ---&#8212;&gt; USB_OTG_HS_ULPI_D5 PB13 ---&#8212;&gt; USB_OTG_HS_ULPI_D6 PB5 ---&#8212;&gt; USB_OTG_HS_ULPI_D7</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1af4fbef977092aa525c6b1668ffbec77b"/><section>
+    <title>HAL_PCD_ResetCallback()</title>
+<indexterm><primary>HAL_PCD_ResetCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_ResetCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ResetCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Reset callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_af4fbef977092aa525c6b1668ffbec77b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a0386a36b921cd51dd6e50103c3cd33b1"/><section>
+    <title>HAL_PCD_ResumeCallback()</title>
+<indexterm><primary>HAL_PCD_ResumeCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_ResumeCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_ResumeCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Resume callback. When Low power mode is enabled the debug cannot be used (IAR, Keil doesn&apos;t support it) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a9d72aa4d3d984b164047b081d4566f6d"/><section>
+    <title>HAL_PCD_SetupStageCallback()</title>
+<indexterm><primary>HAL_PCD_SetupStageCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_SetupStageCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SetupStageCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Setup stage callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a85c99eeb4aa17d8ff5298efff92ac28e"/><section>
+    <title>HAL_PCD_SOFCallback()</title>
+<indexterm><primary>HAL_PCD_SOFCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_SOFCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SOFCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>SOF callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a0e14acd4564979743bc0a89aa5f15428"/><section>
+    <title>HAL_PCD_SuspendCallback()</title>
+<indexterm><primary>HAL_PCD_SuspendCallback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCD_SuspendCallback</secondary></indexterm>
+<para><computeroutput>void HAL_PCD_SuspendCallback (PCD_HandleTypeDef * hpcd)</computeroutput></para><para>
+
+<para>Suspend callback. When Low power mode is enabled the debug cannot be used (IAR, Keil doesn&apos;t support it) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1aedfa3f41ed63ea8c934e211448c61443"/><section>
+    <title>HAL_PCDEx_LPM_Callback()</title>
+<indexterm><primary>HAL_PCDEx_LPM_Callback</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>HAL_PCDEx_LPM_Callback</secondary></indexterm>
+<para><computeroutput>void HAL_PCDEx_LPM_Callback (PCD_HandleTypeDef * hpcd, PCD_LPM_MsgTypeDef msg)</computeroutput></para><para>
+
+<para>Send LPM message to user layer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hpcd</entry><entry>
+<para>PCD handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msg</entry><entry>
+<para>LPM message </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a70af21c671abfcc773614a9a4f63d920"/><section>
+    <title>SystemClock_Config()</title>
+<indexterm><primary>SystemClock_Config</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>SystemClock_Config</secondary></indexterm>
+<para><computeroutput>void SystemClock_Config (void )</computeroutput></para><para>
+
+<para>System Clock Configuration. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>Configure the main internal regulator output voltage</para>
+
+<para>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</para>
+
+<para>Activate the Over-Drive mode</para>
+
+<para>Initializes the CPU, AHB and APB buses clocks</para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a70af21c671abfcc773614a9a4f63d920_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a70af21c671abfcc773614a9a4f63d920_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a71e72e29fe464c7f3be4edf36806355e"/><section>
+    <title>USBD_Get_USB_Status()</title>
+<indexterm><primary>USBD_Get_USB_Status</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_Get_USB_Status</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_Get_USB_Status (HAL_StatusTypeDef hal_status)</computeroutput></para><para>
+
+<para>Returns the USB status depending on the HAL status: </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hal_status</entry><entry>
+<para>HAL status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USB</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a71e72e29fe464c7f3be4edf36806355e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ad4fa6f2eeefe95d07148c6c53d111eae"/><section>
+    <title>USBD_LL_ClearStallEP()</title>
+<indexterm><primary>USBD_LL_ClearStallEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_ClearStallEP</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_ClearStallEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Clears a Stall condition on an endpoint of the Low Level Driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_ad4fa6f2eeefe95d07148c6c53d111eae_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ae12e7de3c398d5663976bf11faa63572"/><section>
+    <title>USBD_LL_CloseEP()</title>
+<indexterm><primary>USBD_LL_CloseEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_CloseEP</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_CloseEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Closes an endpoint of the low level driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_ae12e7de3c398d5663976bf11faa63572_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1aae9bfb6a27b11f232fc55a1d1b28be24"/><section>
+    <title>USBD_LL_DeInit()</title>
+<indexterm><primary>USBD_LL_DeInit</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_DeInit</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_DeInit (USBD_HandleTypeDef * pdev)</computeroutput></para><para>
+
+<para>De-Initializes the low level portion of the device driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_aae9bfb6a27b11f232fc55a1d1b28be24_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a383d9a41089cf426cdc61b5b24e2ca0a"/><section>
+    <title>USBD_LL_Delay()</title>
+<indexterm><primary>USBD_LL_Delay</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_Delay</secondary></indexterm>
+<para><computeroutput>void USBD_LL_Delay (uint32_t Delay)</computeroutput></para><para>
+
+<para>Delays routine for the USB device library. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Delay</entry><entry>
+<para>Delay in ms </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a10080ed9555110afba809de968314985"/><section>
+    <title>USBD_LL_FlushEP()</title>
+<indexterm><primary>USBD_LL_FlushEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_FlushEP</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_FlushEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Flushes an endpoint of the Low Level Driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a10080ed9555110afba809de968314985_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1aeb80f50482e04c046ba41f5ea58a1b2b"/><section>
+    <title>USBD_LL_GetRxDataSize()</title>
+<indexterm><primary>USBD_LL_GetRxDataSize</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_GetRxDataSize</secondary></indexterm>
+<para><computeroutput>uint32_t USBD_LL_GetRxDataSize (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Returns the last transferred packet size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Received</entry><entry>
+<para>Data Size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a24b61e95db7e4c7ad30a835e8d905943"/><section>
+    <title>USBD_LL_Init()</title>
+<indexterm><primary>USBD_LL_Init</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_Init</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_Init (USBD_HandleTypeDef * pdev)</computeroutput></para><para>
+
+<para>Initializes the low level portion of the device driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a24b61e95db7e4c7ad30a835e8d905943_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a2a0f10f93cc4246272b63661051a64b7"/><section>
+    <title>USBD_LL_IsStallEP()</title>
+<indexterm><primary>USBD_LL_IsStallEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_IsStallEP</secondary></indexterm>
+<para><computeroutput>uint8_t USBD_LL_IsStallEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Returns Stall condition. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Stall</entry><entry>
+<para>(1: Yes, 0: No) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ad96254d74d95496ffb5f6f2248585cb0"/><section>
+    <title>USBD_LL_OpenEP()</title>
+<indexterm><primary>USBD_LL_OpenEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_OpenEP</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_OpenEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr, uint8_t ep_type, uint16_t ep_mps)</computeroutput></para><para>
+
+<para>Opens an endpoint of the low level driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_type</entry><entry>
+<para>Endpoint type </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_mps</entry><entry>
+<para>Endpoint max packet size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_ad96254d74d95496ffb5f6f2248585cb0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a7018483ecc085a931fd7bf5353030b99"/><section>
+    <title>USBD_LL_PrepareReceive()</title>
+<indexterm><primary>USBD_LL_PrepareReceive</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_PrepareReceive</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_PrepareReceive (USBD_HandleTypeDef * pdev, uint8_t ep_addr, uint8_t * pbuf, uint32_t size)</computeroutput></para><para>
+
+<para>Prepares an endpoint for reception. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pbuf</entry><entry>
+<para>Pointer to data to be received </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Data size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a7018483ecc085a931fd7bf5353030b99_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ad3674ea3c4a9c4bbe7c73192727f922f"/><section>
+    <title>USBD_LL_SetUSBAddress()</title>
+<indexterm><primary>USBD_LL_SetUSBAddress</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_SetUSBAddress</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_SetUSBAddress (USBD_HandleTypeDef * pdev, uint8_t dev_addr)</computeroutput></para><para>
+
+<para>Assigns a USB address to the device. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dev_addr</entry><entry>
+<para>Device address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_ad3674ea3c4a9c4bbe7c73192727f922f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1abc2b4a7c8307e04955b015fd32057ec7"/><section>
+    <title>USBD_LL_StallEP()</title>
+<indexterm><primary>USBD_LL_StallEP</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_StallEP</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_StallEP (USBD_HandleTypeDef * pdev, uint8_t ep_addr)</computeroutput></para><para>
+
+<para>Sets a Stall condition on an endpoint of the Low Level Driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_abc2b4a7c8307e04955b015fd32057ec7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a43e53e424e9850d8261e1f9a1be53348"/><section>
+    <title>USBD_LL_Start()</title>
+<indexterm><primary>USBD_LL_Start</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_Start</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_Start (USBD_HandleTypeDef * pdev)</computeroutput></para><para>
+
+<para>Starts the low level portion of the device driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a43e53e424e9850d8261e1f9a1be53348_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1ac522b28139c1868a2e24d044fc8288fd"/><section>
+    <title>USBD_LL_Stop()</title>
+<indexterm><primary>USBD_LL_Stop</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_Stop</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_Stop (USBD_HandleTypeDef * pdev)</computeroutput></para><para>
+
+<para>Stops the low level portion of the device driver. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_ac522b28139c1868a2e24d044fc8288fd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_usbd__conf_8c_1a0388dbff915f441dd990896e28509dd9"/><section>
+    <title>USBD_LL_Transmit()</title>
+<indexterm><primary>USBD_LL_Transmit</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>USBD_LL_Transmit</secondary></indexterm>
+<para><computeroutput>USBD_StatusTypeDef USBD_LL_Transmit (USBD_HandleTypeDef * pdev, uint8_t ep_addr, uint8_t * pbuf, uint32_t size)</computeroutput></para><para>
+
+<para>Transmits data over an endpoint. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pdev</entry><entry>
+<para>Device handle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ep_addr</entry><entry>
+<para>Endpoint number </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pbuf</entry><entry>
+<para>Pointer to data to be sent </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Data size </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>USBD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8c_a0388dbff915f441dd990896e28509dd9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_usbd__conf_8c_1a0a95840304203648c1cce34ad1365090"/><section>
+    <title>hpcd_USB_OTG_HS</title>
+<indexterm><primary>hpcd_USB_OTG_HS</primary><secondary>usbd_conf.c</secondary></indexterm>
+<indexterm><primary>usbd_conf.c</primary><secondary>hpcd_USB_OTG_HS</secondary></indexterm>
+<para><computeroutput>PCD_HandleTypeDef hpcd_USB_OTG_HS</computeroutput></para></section>
+</section>
+</section>

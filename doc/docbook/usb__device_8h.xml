@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usb__device_8h" xml:lang="ru">
+<title>Файл USB_DEVICE/App/usb_device.h</title>
+<indexterm><primary>USB_DEVICE/App/usb_device.h</primary></indexterm>
+<para>
+
+<para>: Header for <link linkend="_usb__device_8c">usb_device.c</link> file. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f7xx.h&quot;<?linebreak?>#include &quot;stm32f7xx_hal.h&quot;<?linebreak?>#include &quot;usbd_def.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для usb_device.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usb__device_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usb__device_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af">MX_USB_DEVICE_Init</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: Header for <link linkend="_usb__device_8c">usb_device.c</link> file. </para>
+
+<para><formalpara><title>Версия</title>
+
+<para>: v1.0_Cube </para>
+</formalpara>
+<caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+</section>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_456a9e298739d9e400611b6af5d9aad0" xml:lang="ru">
+<title>Содержание директории FATFS/Target</title>
+<indexterm><primary>Содержание директории FATFS/Target</primary></indexterm>
+Директория графа зависимостей Target:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_456a9e298739d9e400611b6af5d9aad0_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_bsp__driver__sd_8c">bsp_driver_sd.c</link></para>
+
+<para>This file includes a generic uSD card driver. To be completed by the user according to the board used for the project. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_bsp__driver__sd_8h">bsp_driver_sd.h</link></para>
+
+<para>This file contains the common defines and functions prototypes for the <link linkend="_bsp__driver__sd_8c">bsp_driver_sd.c</link> driver. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_ffconf_8h">ffconf.h</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_sd__diskio_8c">sd_diskio.c</link></para>
+
+<para>SD Disk I/O driver. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_sd__diskio_8h">sd_diskio.h</link></para>
+
+<para>Header for <link linkend="_sd__diskio_8c">sd_diskio.c</link> module. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

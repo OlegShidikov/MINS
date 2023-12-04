@@ -1,0 +1,81 @@
+\doxysubsection{USBD\+\_\+\+STORAGE}
+\hypertarget{group___u_s_b_d___s_t_o_r_a_g_e}{}\label{group___u_s_b_d___s_t_o_r_a_g_e}\index{USBD\_STORAGE@{USBD\_STORAGE}}
+
+
+Usb mass storage device module.  
+
+
+Граф связей класса USBD\+\_\+\+STORAGE\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___u_s_b_d___s_t_o_r_a_g_e}
+\end{center}
+\end{figure}
+\doxysubsubsubsection*{Группы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___types_definitions}{USBD\+\_\+\+STORAGE\+\_\+\+Private\+\_\+\+Types\+Definitions}}
+\begin{DoxyCompactList}\small\item\em Private types. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___defines}{USBD\+\_\+\+STORAGE\+\_\+\+Private\+\_\+\+Defines}}
+\begin{DoxyCompactList}\small\item\em Private defines. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___macros}{USBD\+\_\+\+STORAGE\+\_\+\+Private\+\_\+\+Macros}}
+\begin{DoxyCompactList}\small\item\em Private macros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___variables}{USBD\+\_\+\+STORAGE\+\_\+\+Private\+\_\+\+Variables}}
+\begin{DoxyCompactList}\small\item\em Private variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___exported___variables}{USBD\+\_\+\+STORAGE\+\_\+\+Exported\+\_\+\+Variables}}
+\begin{DoxyCompactList}\small\item\em Public variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___function_prototypes}{USBD\+\_\+\+STORAGE\+\_\+\+Private\+\_\+\+Function\+Prototypes}}
+\begin{DoxyCompactList}\small\item\em Private functions declaration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___exported___defines}{USBD\+\_\+\+STORAGE\+\_\+\+Exported\+\_\+\+Defines}}
+\begin{DoxyCompactList}\small\item\em Defines. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___exported___types}{USBD\+\_\+\+STORAGE\+\_\+\+Exported\+\_\+\+Types}}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___exported___macros}{USBD\+\_\+\+STORAGE\+\_\+\+Exported\+\_\+\+Macros}}
+\begin{DoxyCompactList}\small\item\em Aliases. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___exported___functions_prototype}{USBD\+\_\+\+STORAGE\+\_\+\+Exported\+\_\+\+Functions\+Prototype}}
+\begin{DoxyCompactList}\small\item\em Public functions declaration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+USBD\+\_\+\+Storage\+Type\+Def \mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e_ga6e9e9e24e717b09df4341124e05b6aad}{USBD\+\_\+\+Storage\+\_\+\+Interface\+\_\+fops\+\_\+\+HS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Подробное описание}
+Usb mass storage device module. 
+
+Header file for the usb\+\_\+storage\+\_\+if.\+c file.
+
+\doxysubsubsection{Переменные}
+\Hypertarget{group___u_s_b_d___s_t_o_r_a_g_e_ga6e9e9e24e717b09df4341124e05b6aad}\label{group___u_s_b_d___s_t_o_r_a_g_e_ga6e9e9e24e717b09df4341124e05b6aad} 
+\index{USBD\_STORAGE@{USBD\_STORAGE}!USBD\_Storage\_Interface\_fops\_HS@{USBD\_Storage\_Interface\_fops\_HS}}
+\index{USBD\_Storage\_Interface\_fops\_HS@{USBD\_Storage\_Interface\_fops\_HS}!USBD\_STORAGE@{USBD\_STORAGE}}
+\doxysubsubsubsection{\texorpdfstring{USBD\_Storage\_Interface\_fops\_HS}{USBD\_Storage\_Interface\_fops\_HS}}
+{\footnotesize\ttfamily USBD\+\_\+\+Storage\+Type\+Def USBD\+\_\+\+Storage\+\_\+\+Interface\+\_\+fops\+\_\+\+HS}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ STORAGE\_Init\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_GetCapacity\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_IsReady\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_IsWriteProtected\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_Read\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_Write\_HS,}
+\DoxyCodeLine{\ \ STORAGE\_GetMaxLun\_HS,}
+\DoxyCodeLine{\ \ (int8\_t\ *)\mbox{\hyperlink{group___u_s_b_d___s_t_o_r_a_g_e___private___variables_ga07ad430c2a071af8c793c65ff55e60a0}{STORAGE\_Inquirydata\_HS}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+STORAGE Interface callback. \input{group___u_s_b_d___s_t_o_r_a_g_e___private___types_definitions}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___private___defines}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___private___macros}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___private___variables}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___exported___variables}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___private___function_prototypes}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___exported___defines}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___exported___types}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___exported___macros}
+\input{group___u_s_b_d___s_t_o_r_a_g_e___exported___functions_prototype}

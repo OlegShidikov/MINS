@@ -1,0 +1,78 @@
+\doxysection{Файл USB\+\_\+\+DEVICE/\+Target/usbd\+\_\+conf.h}
+\hypertarget{usbd__conf_8h}{}\label{usbd__conf_8h}\index{USB\_DEVICE/Target/usbd\_conf.h@{USB\_DEVICE/Target/usbd\_conf.h}}
+
+
+\+: Header for \doxylink{usbd__conf_8c}{usbd\+\_\+conf.\+c} file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f7xx.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f7xx\+\_\+hal.\+h"{}}\newline
+Граф включаемых заголовочных файлов для usbd\+\_\+conf.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usbd__conf_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{usbd__conf_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga121d6d45e8011e1f372a365986126d0e}{USBD\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+INTERFACES}}~1U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_gaef1f76fda5677f5ad43c25a2ba4ebcde}{USBD\+\_\+\+MAX\+\_\+\+NUM\+\_\+\+CONFIGURATION}}~1U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga056ff3fee04cffde6a1ccccd566f8682}{USBD\+\_\+\+MAX\+\_\+\+STR\+\_\+\+DESC\+\_\+\+SIZ}}~512U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_gae7364a789408417d945d5ca96679ccf7}{USBD\+\_\+\+DEBUG\+\_\+\+LEVEL}}~0U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga61c094d920ba8d41bd826e6d51a3d80e}{USBD\+\_\+\+LPM\+\_\+\+ENABLED}}~1U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga07065dc40f090f051dd1dd6d5901930a}{USBD\+\_\+\+SELF\+\_\+\+POWERED}}~1U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_gad6139d971967c2467d2bfd7468c08333}{MSC\+\_\+\+MEDIA\+\_\+\+PACKET}}~512U
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga609db9b232fa154e9b1c86bcdd17e97c}{DEVICE\+\_\+\+FS}}~0
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_ga4743bb97c140c3615b999a81a0301815}{DEVICE\+\_\+\+HS}}~1
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga35ff353194f56823357f503e546ccf4b}{USBD\+\_\+malloc}}~malloc
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_gab44fcf9b4d7bfbe8b1308eca76975fe5}{USBD\+\_\+free}}~free
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_gaf7b31857d15ef0abbd84e0e70a2b903f}{USBD\+\_\+memset}}~memset
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga18d9c17ef2afe7244b559ed428ca1e81}{USBD\+\_\+memcpy}}~memcpy
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga78993b66136329032c26d0c13a78e963}{USBD\+\_\+\+Delay}}~HAL\+\_\+\+Delay
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_gad0adad09bbf4f06418659a39edc0f6c6}{USBD\+\_\+\+Usr\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga077a76b66987212e70c3c4db2ca73a8b}{USBD\+\_\+\+Err\+Log}}(...)
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___macros_ga009d0ba418c356a4668fac6115b07ac5}{USBD\+\_\+\+Dbg\+Log}}(...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\+: Header for \doxylink{usbd__conf_8c}{usbd\+\_\+conf.\+c} file. 
+
+\begin{DoxyVersion}{Версия}
+\+: v1.\+0\+\_\+\+Cube 
+\end{DoxyVersion}
+\begin{DoxyAttention}{Внимание}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

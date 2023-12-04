@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__conf_8h" xml:lang="ru">
+<title>Файл USB_DEVICE/Target/usbd_conf.h</title>
+<indexterm><primary>USB_DEVICE/Target/usbd_conf.h</primary></indexterm>
+<para>
+
+<para>: Header for <link linkend="_usbd__conf_8c">usbd_conf.c</link> file. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &quot;main.h&quot;<?linebreak?>#include &quot;stm32f7xx.h&quot;<?linebreak?>#include &quot;stm32f7xx_hal.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для usbd_conf.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__conf_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga121d6d45e8011e1f372a365986126d0e">USBD_MAX_NUM_INTERFACES</link>&#160;&#160;&#160;1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1gaef1f76fda5677f5ad43c25a2ba4ebcde">USBD_MAX_NUM_CONFIGURATION</link>&#160;&#160;&#160;1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga056ff3fee04cffde6a1ccccd566f8682">USBD_MAX_STR_DESC_SIZ</link>&#160;&#160;&#160;512U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1gae7364a789408417d945d5ca96679ccf7">USBD_DEBUG_LEVEL</link>&#160;&#160;&#160;0U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga61c094d920ba8d41bd826e6d51a3d80e">USBD_LPM_ENABLED</link>&#160;&#160;&#160;1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga07065dc40f090f051dd1dd6d5901930a">USBD_SELF_POWERED</link>&#160;&#160;&#160;1U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1gad6139d971967c2467d2bfd7468c08333">MSC_MEDIA_PACKET</link>&#160;&#160;&#160;512U</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga609db9b232fa154e9b1c86bcdd17e97c">DEVICE_FS</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1ga4743bb97c140c3615b999a81a0301815">DEVICE_HS</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga35ff353194f56823357f503e546ccf4b">USBD_malloc</link>&#160;&#160;&#160;malloc</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gab44fcf9b4d7bfbe8b1308eca76975fe5">USBD_free</link>&#160;&#160;&#160;free</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gaf7b31857d15ef0abbd84e0e70a2b903f">USBD_memset</link>&#160;&#160;&#160;memset</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga18d9c17ef2afe7244b559ed428ca1e81">USBD_memcpy</link>&#160;&#160;&#160;memcpy</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga78993b66136329032c26d0c13a78e963">USBD_Delay</link>&#160;&#160;&#160;HAL_Delay</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1gad0adad09bbf4f06418659a39edc0f6c6">USBD_UsrLog</link>(...)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga077a76b66987212e70c3c4db2ca73a8b">USBD_ErrLog</link>(...)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___c_o_n_f___exported___macros_1ga009d0ba418c356a4668fac6115b07ac5">USBD_DbgLog</link>(...)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: Header for <link linkend="_usbd__conf_8c">usbd_conf.c</link> file. </para>
+
+<para><formalpara><title>Версия</title>
+
+<para>: v1.0_Cube </para>
+</formalpara>
+<caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+</section>

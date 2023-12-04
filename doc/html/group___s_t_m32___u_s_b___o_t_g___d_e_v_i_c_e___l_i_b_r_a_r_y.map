@@ -1,0 +1,5 @@
+<map id="STM32_USB_OTG_DEVICE_LIBRARY" name="STM32_USB_OTG_DEVICE_LIBRARY">
+<area shape="rect" id="Node000001" title="Usb device." alt="" coords="5,31,253,57"/>
+<area shape="rect" id="Node000002" href="$group___u_s_b_d___d_e_s_c.html" title="Usb device descriptors module." alt="" coords="314,5,415,32"/>
+<area shape="rect" id="Node000003" href="$group___u_s_b_d___s_t_o_r_a_g_e.html" title="Usb mass storage device module." alt="" coords="301,56,428,83"/>
+</map>

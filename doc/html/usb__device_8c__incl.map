@@ -1,0 +1,21 @@
+<map id="USB_DEVICE/App/usb_device.c" name="USB_DEVICE/App/usb_device.c">
+<area shape="rect" id="Node000001" title=": This file implements the USB Device" alt="" coords="283,5,492,32"/>
+<area shape="rect" id="Node000002" href="$usb__device_8h.html" title=": Header for usb_device.c file." alt="" coords="103,80,200,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="347,35,208,78,207,72,346,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="224,80,316,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="368,35,305,74,302,69,366,30"/>
+<area shape="rect" id="Node000007" href="$usbd__desc_8h.html" title=" " alt="" coords="340,80,435,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="390,33,390,64,385,64,385,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="461,155,554,181"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="403,30,450,78,494,140,490,143,445,82,399,34"/>
+<area shape="rect" id="Node000009" href="$usbd__storage__if_8h.html" title=": Header for usbd_storage_if.c file." alt="" coords="510,80,633,107"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="421,30,526,71,524,76,419,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,98,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,109,83,147,80,143,133,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="121,155,238,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,106,172,139,167,141,154,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="317,155,402,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="189,105,310,147,308,152,187,110"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="385,108,372,141,367,139,380,106"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="562,109,531,145,527,141,558,105"/>
+</map>

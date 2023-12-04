@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___s_t_o_r_a_g_e___private___macros" xml:lang="ru">
+<title>USBD_STORAGE_Private_Macros</title>
+<indexterm><primary>USBD_STORAGE_Private_Macros</primary></indexterm>
+<para>
+
+<para>Private macros. </para>
+ 
+</para>
+Граф связей класса USBD_STORAGE_Private_Macros:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___s_t_o_r_a_g_e___private___macros.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+
+<para>Private macros. </para>
+</section>

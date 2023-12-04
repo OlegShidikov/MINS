@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sd__diskio_8c" xml:lang="ru">
+<title>Файл FATFS/Target/sd_diskio.c</title>
+<indexterm><primary>FATFS/Target/sd_diskio.c</primary></indexterm>
+<para>
+
+<para>SD Disk I/O driver. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;ff_gen_drv.h&quot;<?linebreak?>#include &quot;sd_diskio.h&quot;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для sd_diskio.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sd__diskio_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_sd__diskio_8c_1a142810068f1b99cd93d3fc9f0e160e02">QUEUE_SIZE</link>&#160;&#160;&#160;(uint32_t) 10</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sd__diskio_8c_1ad2cc981dbb8705da878c9c8fd510647b">READ_CPLT_MSG</link>&#160;&#160;&#160;(uint32_t) 1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sd__diskio_8c_1ae387182dbdbb4c60396d9f6ac7958340">WRITE_CPLT_MSG</link>&#160;&#160;&#160;(uint32_t) 2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sd__diskio_8c_1a28be5b4ad518f3d24d247e50f0385a9b">SD_TIMEOUT</link>&#160;&#160;&#160;30 * 1000</para>
+</listitem>
+            <listitem><para>#define <link linkend="_sd__diskio_8c_1ae38517ff312078360458aa555211e1df">SD_DEFAULT_BLOCK_SIZE</link>&#160;&#160;&#160;512</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>DSTATUS <link linkend="_sd__diskio_8c_1aad7ae36100f45de75e573a0f5fd3addd">SD_initialize</link> (BYTE lun)</para>
+
+<para>Initializes a Drive. </para>
+</listitem>
+            <listitem><para>DSTATUS <link linkend="_sd__diskio_8c_1a21ca54e56dca1f40b54f458ac35470e3">SD_status</link> (BYTE lun)</para>
+
+<para>Gets Disk Status. </para>
+</listitem>
+            <listitem><para>DRESULT <link linkend="_sd__diskio_8c_1a1f2ee4a775d8a3877f368533db97cbe4">SD_read</link> (BYTE lun, BYTE *buff, DWORD sector, UINT count)</para>
+
+<para>Reads Sector(s) </para>
+</listitem>
+            <listitem><para>void <link linkend="_sd__diskio_8c_1afc4f1ecdf361e0c0808803167f31d61b">BSP_SD_WriteCpltCallback</link> (void)</para>
+
+<para>Writes Sector(s) </para>
+</listitem>
+            <listitem><para>void <link linkend="_sd__diskio_8c_1a8d66ac35cee6a454f7e584f0051bc9f8">BSP_SD_ReadCpltCallback</link> (void)</para>
+
+<para>Rx Transfer completed callbacks. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>const Diskio_drvTypeDef <link linkend="_sd__diskio_8c_1a1a12762eb7b74c246045197fa41f1296">SD_Driver</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>SD Disk I/O driver. </para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Макросы</title>
+<anchor xml:id="_sd__diskio_8c_1a142810068f1b99cd93d3fc9f0e160e02"/><section>
+    <title>QUEUE_SIZE</title>
+<indexterm><primary>QUEUE_SIZE</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>QUEUE_SIZE</secondary></indexterm>
+<para><computeroutput>#define QUEUE_SIZE&#160;&#160;&#160;(uint32_t) 10</computeroutput></para></section>
+<anchor xml:id="_sd__diskio_8c_1ad2cc981dbb8705da878c9c8fd510647b"/><section>
+    <title>READ_CPLT_MSG</title>
+<indexterm><primary>READ_CPLT_MSG</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>READ_CPLT_MSG</secondary></indexterm>
+<para><computeroutput>#define READ_CPLT_MSG&#160;&#160;&#160;(uint32_t) 1</computeroutput></para></section>
+<anchor xml:id="_sd__diskio_8c_1ae38517ff312078360458aa555211e1df"/><section>
+    <title>SD_DEFAULT_BLOCK_SIZE</title>
+<indexterm><primary>SD_DEFAULT_BLOCK_SIZE</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_DEFAULT_BLOCK_SIZE</secondary></indexterm>
+<para><computeroutput>#define SD_DEFAULT_BLOCK_SIZE&#160;&#160;&#160;512</computeroutput></para></section>
+<anchor xml:id="_sd__diskio_8c_1a28be5b4ad518f3d24d247e50f0385a9b"/><section>
+    <title>SD_TIMEOUT</title>
+<indexterm><primary>SD_TIMEOUT</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define SD_TIMEOUT&#160;&#160;&#160;30 * 1000</computeroutput></para></section>
+<anchor xml:id="_sd__diskio_8c_1ae387182dbdbb4c60396d9f6ac7958340"/><section>
+    <title>WRITE_CPLT_MSG</title>
+<indexterm><primary>WRITE_CPLT_MSG</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>WRITE_CPLT_MSG</secondary></indexterm>
+<para><computeroutput>#define WRITE_CPLT_MSG&#160;&#160;&#160;(uint32_t) 2</computeroutput></para></section>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_sd__diskio_8c_1a8d66ac35cee6a454f7e584f0051bc9f8"/><section>
+    <title>BSP_SD_ReadCpltCallback()</title>
+<indexterm><primary>BSP_SD_ReadCpltCallback</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>BSP_SD_ReadCpltCallback</secondary></indexterm>
+<para><computeroutput>void BSP_SD_ReadCpltCallback (void )</computeroutput></para><para>
+
+<para>Rx Transfer completed callbacks. </para>
+</para>
+
+<para>BSP Rx Transfer completed callback.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hsd</entry><entry>
+<para>SD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_sd__diskio_8c_1afc4f1ecdf361e0c0808803167f31d61b"/><section>
+    <title>BSP_SD_WriteCpltCallback()</title>
+<indexterm><primary>BSP_SD_WriteCpltCallback</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>BSP_SD_WriteCpltCallback</secondary></indexterm>
+<para><computeroutput>void BSP_SD_WriteCpltCallback (void )</computeroutput></para><para>
+
+<para>Writes Sector(s) </para>
+</para>
+
+<para>BSP Tx Transfer completed callback.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lun</entry><entry>
+<para>: not used </para>
+</entry>
+                            </row>
+                            <row>
+<entry>*buff</entry><entry>
+<para>Data to be written </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sector</entry><entry>
+<para>Sector address (LBA) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>Number of sectors to write (1..128) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>DRESULT</entry><entry>
+<para>Operation result</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                I/O control operation 
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lun</entry><entry>
+<para>: not used </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cmd</entry><entry>
+<para>Control code </para>
+</entry>
+                            </row>
+                            <row>
+<entry>*buff</entry><entry>
+<para>Buffer to send/receive control data </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>DRESULT</entry><entry>
+<para>Operation result</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Tx Transfer completed callbacks 
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hsd</entry><entry>
+<para>SD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_sd__diskio_8c_1aad7ae36100f45de75e573a0f5fd3addd"/><section>
+    <title>SD_initialize()</title>
+<indexterm><primary>SD_initialize</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_initialize</secondary></indexterm>
+<para><computeroutput>DSTATUS SD_initialize (BYTE lun)</computeroutput></para><para>
+
+<para>Initializes a Drive. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lun</entry><entry>
+<para>: not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>DSTATUS</entry><entry>
+<para>Operation status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sd__diskio_8c_aad7ae36100f45de75e573a0f5fd3addd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_sd__diskio_8c_1a1f2ee4a775d8a3877f368533db97cbe4"/><section>
+    <title>SD_read()</title>
+<indexterm><primary>SD_read</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_read</secondary></indexterm>
+<para><computeroutput>DRESULT SD_read (BYTE lun, BYTE * buff, DWORD sector, UINT count)</computeroutput></para><para>
+
+<para>Reads Sector(s) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lun</entry><entry>
+<para>: not used </para>
+</entry>
+                            </row>
+                            <row>
+<entry>*buff</entry><entry>
+<para>Data buffer to store read data </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sector</entry><entry>
+<para>Sector address (LBA) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>count</entry><entry>
+<para>Number of sectors to read (1..128) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>DRESULT</entry><entry>
+<para>Operation result </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sd__diskio_8c_a1f2ee4a775d8a3877f368533db97cbe4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_sd__diskio_8c_1a21ca54e56dca1f40b54f458ac35470e3"/><section>
+    <title>SD_status()</title>
+<indexterm><primary>SD_status</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_status</secondary></indexterm>
+<para><computeroutput>DSTATUS SD_status (BYTE lun)</computeroutput></para><para>
+
+<para>Gets Disk Status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>lun</entry><entry>
+<para>: not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>DSTATUS</entry><entry>
+<para>Operation status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_sd__diskio_8c_1a1a12762eb7b74c246045197fa41f1296"/><section>
+    <title>SD_Driver</title>
+<indexterm><primary>SD_Driver</primary><secondary>sd_diskio.c</secondary></indexterm>
+<indexterm><primary>sd_diskio.c</primary><secondary>SD_Driver</secondary></indexterm>
+<para><computeroutput>const Diskio_drvTypeDef SD_Driver</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=
+{
+&#32;&#32;<link linkend="_sd__diskio_8c_1aad7ae36100f45de75e573a0f5fd3addd">SD_initialize</link>,
+&#32;&#32;<link linkend="_sd__diskio_8c_1a21ca54e56dca1f40b54f458ac35470e3">SD_status</link>,
+&#32;&#32;<link linkend="_sd__diskio_8c_1a1f2ee4a775d8a3877f368533db97cbe4">SD_read</link>,
+
+
+&#32;
+
+
+
+&#32;
+}
+</programlisting></section>
+</section>
+</section>

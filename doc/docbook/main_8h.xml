@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8h" xml:lang="ru">
+<title>Файл Core/Inc/main.h</title>
+<indexterm><primary>Core/Inc/main.h</primary></indexterm>
+<para>
+
+<para>: Header for <link linkend="_main_8c">main.c</link> file. This file contains the common defines of the application. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f7xx_hal.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для main.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_main_8h_1ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</link> (TIM_HandleTypeDef *htim)</para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8h_1a1730ffe1e560465665eb47d9264826f9">Error_Handler</link> (void)</para>
+
+<para>This function is executed in case of error occurrence. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: Header for <link linkend="_main_8c">main.c</link> file. This file contains the common defines of the application. </para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_main_8h_1a1730ffe1e560465665eb47d9264826f9"/><section>
+    <title>Error_Handler()</title>
+<indexterm><primary>Error_Handler</primary><secondary>main.h</secondary></indexterm>
+<indexterm><primary>main.h</primary><secondary>Error_Handler</secondary></indexterm>
+<para><computeroutput>void Error_Handler (void )</computeroutput></para><para>
+
+<para>This function is executed in case of error occurrence. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8h_a1730ffe1e560465665eb47d9264826f9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8h_1ae70bce6c39d0b570a7523b86738cec4b"/><section>
+    <title>HAL_TIM_MspPostInit()</title>
+<indexterm><primary>HAL_TIM_MspPostInit</primary><secondary>main.h</secondary></indexterm>
+<indexterm><primary>main.h</primary><secondary>HAL_TIM_MspPostInit</secondary></indexterm>
+<para><computeroutput>void HAL_TIM_MspPostInit (TIM_HandleTypeDef * htim)</computeroutput></para>
+<para>TIM12 GPIO Configuration PB14 ---&#8212;&gt; TIM12_CH1</para>
+
+<para>TIM12 GPIO Configuration PB14 ---&#8212;&gt; TIM12_CH1</para>
+</section>
+</section>
+</section>

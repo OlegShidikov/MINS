@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___o_t_g___d_r_i_v_e_r" xml:lang="ru">
+<title>USBD_OTG_DRIVER</title>
+<indexterm><primary>USBD_OTG_DRIVER</primary></indexterm>
+Граф связей класса USBD_OTG_DRIVER:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___o_t_g___d_r_i_v_e_r.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___u_s_b_d___d_e_v_i_c_e">USBD_DEVICE</link></para>
+
+<para>Device file for Usb otg low level driver. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___c_o_n_f">USBD_CONF</link></para>
+
+<para>Configuration file for Usb otg low level driver. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+    <xi:include href="group___u_s_b_d___d_e_v_i_c_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___c_o_n_f.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>

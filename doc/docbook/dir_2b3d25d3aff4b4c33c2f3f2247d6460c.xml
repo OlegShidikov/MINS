@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2b3d25d3aff4b4c33c2f3f2247d6460c" xml:lang="ru">
+<title>Содержание директории USB_DEVICE/Target</title>
+<indexterm><primary>Содержание директории USB_DEVICE/Target</primary></indexterm>
+Директория графа зависимостей Target:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2b3d25d3aff4b4c33c2f3f2247d6460c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_usbd__conf_8c">usbd_conf.c</link></para>
+
+<para>: This file implements the board support package for the USB device library </para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__conf_8h">usbd_conf.h</link></para>
+
+<para>: Header for <link linkend="_usbd__conf_8c">usbd_conf.c</link> file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

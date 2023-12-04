@@ -1,0 +1,25 @@
+<map id="USBD_Get_USB_Status" name="USBD_Get_USB_Status">
+<area shape="rect" id="Node000001" title="Returns the USB status depending on the HAL status:" alt="" coords="234,259,398,285"/>
+<area shape="rect" id="Node000002" href="$usbd__conf_8c.html#ad4fa6f2eeefe95d07148c6c53d111eae" title="Clears a Stall condition on an endpoint of the Low Level Driver." alt="" coords="16,5,175,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,245,288,201,263,147,229,92,208,68,184,46,165,35,168,30,187,42,211,64,233,89,268,145,293,199,309,243"/>
+<area shape="rect" id="Node000003" href="$usbd__conf_8c.html#ae12e7de3c398d5663976bf11faa63572" title="Closes an endpoint of the low level driver." alt="" coords="27,56,164,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="299,246,281,211,255,171,223,131,184,97,163,86,165,81,187,92,227,127,260,168,286,208,304,243"/>
+<area shape="rect" id="Node000004" href="$usbd__conf_8c.html#aae9bfb6a27b11f232fc55a1d1b28be24" title="De&#45;Initializes the low level portion of the device driver." alt="" coords="36,107,155,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="293,248,247,197,217,170,184,148,154,134,156,130,187,143,220,166,251,193,297,245"/>
+<area shape="rect" id="Node000005" href="$usbd__conf_8c.html#a10080ed9555110afba809de968314985" title="Flushes an endpoint of the Low Level Driver." alt="" coords="28,157,163,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="281,252,236,225,185,198,153,187,155,182,187,194,239,220,284,248"/>
+<area shape="rect" id="Node000006" href="$usbd__conf_8c.html#ad96254d74d95496ffb5f6f2248585cb0" title="Opens an endpoint of the low level driver." alt="" coords="28,208,163,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="239,257,156,238,157,233,240,252"/>
+<area shape="rect" id="Node000007" href="$usbd__conf_8c.html#a7018483ecc085a931fd7bf5353030b99" title="Prepares an endpoint for reception." alt="" coords="8,259,183,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="218,275,184,275,184,269,218,269"/>
+<area shape="rect" id="Node000008" href="$usbd__conf_8c.html#ad3674ea3c4a9c4bbe7c73192727f922f" title="Assigns a USB address to the device." alt="" coords="5,309,186,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="240,292,157,311,156,306,239,287"/>
+<area shape="rect" id="Node000009" href="$usbd__conf_8c.html#abc2b4a7c8307e04955b015fd32057ec7" title="Sets a Stall condition on an endpoint of the Low Level Driver." alt="" coords="31,360,160,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="284,296,239,324,187,350,155,362,153,357,185,346,236,319,281,292"/>
+<area shape="rect" id="Node000010" href="$usbd__conf_8c.html#a43e53e424e9850d8261e1f9a1be53348" title="Starts the low level portion of the device driver." alt="" coords="39,411,152,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="297,299,251,351,220,378,187,401,154,415,152,410,184,396,217,374,247,347,293,296"/>
+<area shape="rect" id="Node000011" href="$usbd__conf_8c.html#ac522b28139c1868a2e24d044fc8288fd" title="Stops the low level portion of the device driver." alt="" coords="39,461,152,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="304,301,286,336,260,376,227,417,187,452,153,467,151,463,184,447,223,413,255,373,281,333,299,298"/>
+<area shape="rect" id="Node000012" href="$usbd__conf_8c.html#a0388dbff915f441dd990896e28509dd9" title="Transmits data over an endpoint." alt="" coords="28,512,163,539"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="309,301,293,345,268,399,233,455,211,480,187,502,165,515,162,510,184,498,208,476,229,452,263,397,288,343,304,299"/>
+</map>

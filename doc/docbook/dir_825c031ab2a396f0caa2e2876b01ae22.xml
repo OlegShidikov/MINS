@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_825c031ab2a396f0caa2e2876b01ae22" xml:lang="ru">
+<title>Содержание директории Debug/Drivers</title>
+<indexterm><primary>Содержание директории Debug/Drivers</primary></indexterm>
+Директория графа зависимостей Drivers:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_825c031ab2a396f0caa2e2876b01ae22_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_658d105081159f79e18930a91ed947e4">STM32F7xx_HAL_Driver</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

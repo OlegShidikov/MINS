@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype" xml:lang="ru">
+<title>USBD_DEVICE_Exported_FunctionsPrototype</title>
+<indexterm><primary>USBD_DEVICE_Exported_FunctionsPrototype</primary></indexterm>
+<para>
+
+<para>Declaration of public functions for Usb device. </para>
+ 
+</para>
+Граф связей класса USBD_DEVICE_Exported_FunctionsPrototype:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af">MX_USB_DEVICE_Init</link> (void)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Declaration of public functions for Usb device. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_1gadab4f7fc1db4ce2be073d3913209d2af"/><section>
+    <title>MX_USB_DEVICE_Init()</title>
+<indexterm><primary>MX_USB_DEVICE_Init</primary><secondary>USBD_DEVICE_Exported_FunctionsPrototype</secondary></indexterm>
+<indexterm><primary>USBD_DEVICE_Exported_FunctionsPrototype</primary><secondary>MX_USB_DEVICE_Init</secondary></indexterm>
+<para><computeroutput>void MX_USB_DEVICE_Init (void )</computeroutput></para>
+<para>USB Device initialization function.</para>
+
+<para>Init USB device Library, add supported class and start the library 
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_gadab4f7fc1db4ce2be073d3913209d2af_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype_gadab4f7fc1db4ce2be073d3913209d2af_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

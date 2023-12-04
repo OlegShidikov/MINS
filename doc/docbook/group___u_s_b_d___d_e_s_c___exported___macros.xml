@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___exported___macros" xml:lang="ru">
+<title>USBD_DESC_Exported_Macros</title>
+<indexterm><primary>USBD_DESC_Exported_Macros</primary></indexterm>
+<para>
+
+<para>Aliases. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Exported_Macros:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___exported___macros.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+
+<para>Aliases. </para>
+</section>

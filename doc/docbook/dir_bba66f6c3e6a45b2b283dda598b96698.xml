@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_bba66f6c3e6a45b2b283dda598b96698" xml:lang="ru">
+<title>Содержание директории Debug/Middlewares/USB_Device_Library</title>
+<indexterm><primary>Содержание директории Debug/Middlewares/USB_Device_Library</primary></indexterm>
+Директория графа зависимостей USB_Device_Library:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_bba66f6c3e6a45b2b283dda598b96698_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_usbd__core_8d">usbd_core.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__ctlreq_8d">usbd_ctlreq.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__ioreq_8d">usbd_ioreq.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__msc_8d">usbd_msc.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__msc__bot_8d">usbd_msc_bot.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__msc__data_8d">usbd_msc_data.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__msc__scsi_8d">usbd_msc_scsi.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

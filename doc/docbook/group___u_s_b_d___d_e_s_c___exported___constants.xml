@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___exported___constants" xml:lang="ru">
+<title>USBD_DESC_Exported_Constants</title>
+<indexterm><primary>USBD_DESC_Exported_Constants</primary></indexterm>
+<para>
+
+<para>Constants. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Exported_Constants:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___exported___constants.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1gacba0623797117dcaf178232d734c9c24">DEVICE_ID1</link>&#160;&#160;&#160;(UID_BASE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1gacb8818cd7029deb2affd8a8a482bc86a">DEVICE_ID2</link>&#160;&#160;&#160;(UID_BASE + 0x4)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1ga2b63a0afba377e3cf5a76f78abb2a970">DEVICE_ID3</link>&#160;&#160;&#160;(UID_BASE + 0x8)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1ga76287dc6e5f3cf4566406bd9b2eb7a2f">USB_SIZ_STRING_SERIAL</link>&#160;&#160;&#160;0x1A</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Constants. </para>
+</section>
+<section>
+<title>Макросы</title>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___exported___constants_1gacba0623797117dcaf178232d734c9c24"/><section>
+    <title>DEVICE_ID1</title>
+<indexterm><primary>DEVICE_ID1</primary><secondary>USBD_DESC_Exported_Constants</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Exported_Constants</primary><secondary>DEVICE_ID1</secondary></indexterm>
+<para><computeroutput>#define DEVICE_ID1&#160;&#160;&#160;(UID_BASE)</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___exported___constants_1gacb8818cd7029deb2affd8a8a482bc86a"/><section>
+    <title>DEVICE_ID2</title>
+<indexterm><primary>DEVICE_ID2</primary><secondary>USBD_DESC_Exported_Constants</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Exported_Constants</primary><secondary>DEVICE_ID2</secondary></indexterm>
+<para><computeroutput>#define DEVICE_ID2&#160;&#160;&#160;(UID_BASE + 0x4)</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___exported___constants_1ga2b63a0afba377e3cf5a76f78abb2a970"/><section>
+    <title>DEVICE_ID3</title>
+<indexterm><primary>DEVICE_ID3</primary><secondary>USBD_DESC_Exported_Constants</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Exported_Constants</primary><secondary>DEVICE_ID3</secondary></indexterm>
+<para><computeroutput>#define DEVICE_ID3&#160;&#160;&#160;(UID_BASE + 0x8)</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___exported___constants_1ga76287dc6e5f3cf4566406bd9b2eb7a2f"/><section>
+    <title>USB_SIZ_STRING_SERIAL</title>
+<indexterm><primary>USB_SIZ_STRING_SERIAL</primary><secondary>USBD_DESC_Exported_Constants</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Exported_Constants</primary><secondary>USB_SIZ_STRING_SERIAL</secondary></indexterm>
+<para><computeroutput>#define USB_SIZ_STRING_SERIAL&#160;&#160;&#160;0x1A</computeroutput></para></section>
+</section>
+</section>

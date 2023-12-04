@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ffconf_8h_source" xml:lang="ru">
+<title>ffconf.h</title>
+<indexterm><primary>FATFS/Target/ffconf.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+17 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+18 
+19 <emphasis role="preprocessor">#ifndef&#32;_FFCONF</emphasis>
+20 <emphasis role="preprocessor">#define&#32;_FFCONF&#32;68300&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Revision&#32;ID&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+21 
+22 <emphasis role="comment">/*-----------------------------------------------------------------------------/</emphasis>
+23 <emphasis role="comment">/&#32;Additional&#32;user&#32;header&#32;to&#32;be&#32;used</emphasis>
+24 <emphasis role="comment">/-----------------------------------------------------------------------------*/</emphasis>
+25 
+26 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_main_8h">main.h</link>&quot;</emphasis>
+27 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx_hal.h&quot;</emphasis>
+28 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_bsp__driver__sd_8h">bsp_driver_sd.h</link>&quot;</emphasis>
+29 <emphasis role="preprocessor">#include&#32;&quot;cmsis_os.h&quot;</emphasis>&#32;<emphasis role="comment">/*&#32;_FS_REENTRANT&#32;set&#32;to&#32;1&#32;and&#32;CMSIS&#32;API&#32;chosen&#32;*/</emphasis>
+30 
+31 <emphasis role="comment">/*-----------------------------------------------------------------------------/</emphasis>
+32 <emphasis role="comment">/&#32;Function&#32;Configurations</emphasis>
+33 <emphasis role="comment">/-----------------------------------------------------------------------------*/</emphasis>
+34 
+35 <emphasis role="preprocessor">#define&#32;_FS_READONLY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Read/Write&#32;or&#32;1:Read&#32;only&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+36 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;read-only&#32;configuration.&#32;(0:Read/Write&#32;or&#32;1:Read-only)</emphasis>
+37 <emphasis role="comment">/&#32;&#32;Read-only&#32;configuration&#32;removes&#32;writing&#32;API&#32;functions,&#32;f_write(),&#32;f_sync(),</emphasis>
+38 <emphasis role="comment">/&#32;&#32;f_unlink(),&#32;f_mkdir(),&#32;f_chmod(),&#32;f_rename(),&#32;f_truncate(),&#32;f_getfree()</emphasis>
+39 <emphasis role="comment">/&#32;&#32;and&#32;optional&#32;writing&#32;functions&#32;as&#32;well.&#32;*/</emphasis>
+40 
+41 <emphasis role="preprocessor">#define&#32;_FS_MINIMIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0&#32;to&#32;3&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+42 <emphasis role="comment">/*&#32;This&#32;option&#32;defines&#32;minimization&#32;level&#32;to&#32;remove&#32;some&#32;basic&#32;API&#32;functions.</emphasis>
+43 <emphasis role="comment">/</emphasis>
+44 <emphasis role="comment">/&#32;&#32;&#32;0:&#32;All&#32;basic&#32;functions&#32;are&#32;enabled.</emphasis>
+45 <emphasis role="comment">/&#32;&#32;&#32;1:&#32;f_stat(),&#32;f_getfree(),&#32;f_unlink(),&#32;f_mkdir(),&#32;f_truncate()&#32;and&#32;f_rename()</emphasis>
+46 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;are&#32;removed.</emphasis>
+47 <emphasis role="comment">/&#32;&#32;&#32;2:&#32;f_opendir(),&#32;f_readdir()&#32;and&#32;f_closedir()&#32;are&#32;removed&#32;in&#32;addition&#32;to&#32;1.</emphasis>
+48 <emphasis role="comment">/&#32;&#32;&#32;3:&#32;f_lseek()&#32;function&#32;is&#32;removed&#32;in&#32;addition&#32;to&#32;2.&#32;*/</emphasis>
+49 
+50 <emphasis role="preprocessor">#define&#32;_USE_STRFUNC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Disable&#32;or&#32;1-2:Enable&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+51 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;string&#32;functions,&#32;f_gets(),&#32;f_putc(),&#32;f_puts()&#32;and</emphasis>
+52 <emphasis role="comment">/&#32;&#32;f_printf().</emphasis>
+53 <emphasis role="comment">/</emphasis>
+54 <emphasis role="comment">/&#32;&#32;0:&#32;Disable&#32;string&#32;functions.</emphasis>
+55 <emphasis role="comment">/&#32;&#32;1:&#32;Enable&#32;without&#32;LF-CRLF&#32;conversion.</emphasis>
+56 <emphasis role="comment">/&#32;&#32;2:&#32;Enable&#32;with&#32;LF-CRLF&#32;conversion.&#32;*/</emphasis>
+57 
+58 <emphasis role="preprocessor">#define&#32;_USE_FIND&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+59 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;filtered&#32;directory&#32;read&#32;functions,&#32;f_findfirst()&#32;and</emphasis>
+60 <emphasis role="comment">/&#32;&#32;f_findnext().&#32;(0:Disable,&#32;1:Enable&#32;2:Enable&#32;with&#32;matching&#32;altname[]&#32;too)&#32;*/</emphasis>
+61 
+62 <emphasis role="preprocessor">#define&#32;_USE_MKFS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+63 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;f_mkfs()&#32;function.&#32;(0:Disable&#32;or&#32;1:Enable)&#32;*/</emphasis>
+64 
+65 <emphasis role="preprocessor">#define&#32;_USE_FASTSEEK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+66 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;fast&#32;seek&#32;feature.&#32;(0:Disable&#32;or&#32;1:Enable)&#32;*/</emphasis>
+67 
+68 <emphasis role="preprocessor">#define&#32;_USE_EXPAND&#32;&#32;&#32;&#32;&#32;0</emphasis>
+69 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;f_expand&#32;function.&#32;(0:Disable&#32;or&#32;1:Enable)&#32;*/</emphasis>
+70 
+71 <emphasis role="preprocessor">#define&#32;_USE_CHMOD&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+72 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;attribute&#32;manipulation&#32;functions,&#32;f_chmod()&#32;and&#32;f_utime().</emphasis>
+73 <emphasis role="comment">/&#32;&#32;(0:Disable&#32;or&#32;1:Enable)&#32;Also&#32;_FS_READONLY&#32;needs&#32;to&#32;be&#32;0&#32;to&#32;enable&#32;this&#32;option.&#32;*/</emphasis>
+74 
+75 <emphasis role="preprocessor">#define&#32;_USE_LABEL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+76 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;volume&#32;label&#32;functions,&#32;f_getlabel()&#32;and&#32;f_setlabel().</emphasis>
+77 <emphasis role="comment">/&#32;&#32;(0:Disable&#32;or&#32;1:Enable)&#32;*/</emphasis>
+78 
+79 <emphasis role="preprocessor">#define&#32;_USE_FORWARD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+80 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;f_forward()&#32;function.&#32;(0:Disable&#32;or&#32;1:Enable)&#32;*/</emphasis>
+81 
+82 <emphasis role="comment">/*-----------------------------------------------------------------------------/</emphasis>
+83 <emphasis role="comment">/&#32;Locale&#32;and&#32;Namespace&#32;Configurations</emphasis>
+84 <emphasis role="comment">/-----------------------------------------------------------------------------*/</emphasis>
+85 
+86 <emphasis role="preprocessor">#define&#32;_CODE_PAGE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;850</emphasis>
+87 <emphasis role="comment">/*&#32;This&#32;option&#32;specifies&#32;the&#32;OEM&#32;code&#32;page&#32;to&#32;be&#32;used&#32;on&#32;the&#32;target&#32;system.</emphasis>
+88 <emphasis role="comment">/&#32;&#32;Incorrect&#32;setting&#32;of&#32;the&#32;code&#32;page&#32;can&#32;cause&#32;a&#32;file&#32;open&#32;failure.</emphasis>
+89 <emphasis role="comment">/</emphasis>
+90 <emphasis role="comment">/&#32;&#32;&#32;1&#32;&#32;&#32;-&#32;ASCII&#32;(No&#32;extended&#32;character.&#32;Non-LFN&#32;cfg.&#32;only)</emphasis>
+91 <emphasis role="comment">/&#32;&#32;&#32;437&#32;-&#32;U.S.</emphasis>
+92 <emphasis role="comment">/&#32;&#32;&#32;720&#32;-&#32;Arabic</emphasis>
+93 <emphasis role="comment">/&#32;&#32;&#32;737&#32;-&#32;Greek</emphasis>
+94 <emphasis role="comment">/&#32;&#32;&#32;771&#32;-&#32;KBL</emphasis>
+95 <emphasis role="comment">/&#32;&#32;&#32;775&#32;-&#32;Baltic</emphasis>
+96 <emphasis role="comment">/&#32;&#32;&#32;850&#32;-&#32;Latin&#32;1</emphasis>
+97 <emphasis role="comment">/&#32;&#32;&#32;852&#32;-&#32;Latin&#32;2</emphasis>
+98 <emphasis role="comment">/&#32;&#32;&#32;855&#32;-&#32;Cyrillic</emphasis>
+99 <emphasis role="comment">/&#32;&#32;&#32;857&#32;-&#32;Turkish</emphasis>
+100 <emphasis role="comment">/&#32;&#32;&#32;860&#32;-&#32;Portuguese</emphasis>
+101 <emphasis role="comment">/&#32;&#32;&#32;861&#32;-&#32;Icelandic</emphasis>
+102 <emphasis role="comment">/&#32;&#32;&#32;862&#32;-&#32;Hebrew</emphasis>
+103 <emphasis role="comment">/&#32;&#32;&#32;863&#32;-&#32;Canadian&#32;French</emphasis>
+104 <emphasis role="comment">/&#32;&#32;&#32;864&#32;-&#32;Arabic</emphasis>
+105 <emphasis role="comment">/&#32;&#32;&#32;865&#32;-&#32;Nordic</emphasis>
+106 <emphasis role="comment">/&#32;&#32;&#32;866&#32;-&#32;Russian</emphasis>
+107 <emphasis role="comment">/&#32;&#32;&#32;869&#32;-&#32;Greek&#32;2</emphasis>
+108 <emphasis role="comment">/&#32;&#32;&#32;932&#32;-&#32;Japanese&#32;(DBCS)</emphasis>
+109 <emphasis role="comment">/&#32;&#32;&#32;936&#32;-&#32;Simplified&#32;Chinese&#32;(DBCS)</emphasis>
+110 <emphasis role="comment">/&#32;&#32;&#32;949&#32;-&#32;Korean&#32;(DBCS)</emphasis>
+111 <emphasis role="comment">/&#32;&#32;&#32;950&#32;-&#32;Traditional&#32;Chinese&#32;(DBCS)</emphasis>
+112 <emphasis role="comment">*/</emphasis>
+113 
+114 <emphasis role="preprocessor">#define&#32;_USE_LFN&#32;&#32;&#32;&#32;&#32;0&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0&#32;to&#32;3&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+115 <emphasis role="preprocessor">#define&#32;_MAX_LFN&#32;&#32;&#32;&#32;&#32;255&#32;&#32;</emphasis><emphasis role="comment">/*&#32;Maximum&#32;LFN&#32;length&#32;to&#32;handle&#32;(12&#32;to&#32;255)&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+116 <emphasis role="comment">/*&#32;The&#32;_USE_LFN&#32;switches&#32;the&#32;support&#32;of&#32;long&#32;file&#32;name&#32;(LFN).</emphasis>
+117 <emphasis role="comment">/</emphasis>
+118 <emphasis role="comment">/&#32;&#32;&#32;0:&#32;Disable&#32;support&#32;of&#32;LFN.&#32;_MAX_LFN&#32;has&#32;no&#32;effect.</emphasis>
+119 <emphasis role="comment">/&#32;&#32;&#32;1:&#32;Enable&#32;LFN&#32;with&#32;static&#32;working&#32;buffer&#32;on&#32;the&#32;BSS.&#32;Always&#32;NOT&#32;thread-safe.</emphasis>
+120 <emphasis role="comment">/&#32;&#32;&#32;2:&#32;Enable&#32;LFN&#32;with&#32;dynamic&#32;working&#32;buffer&#32;on&#32;the&#32;STACK.</emphasis>
+121 <emphasis role="comment">/&#32;&#32;&#32;3:&#32;Enable&#32;LFN&#32;with&#32;dynamic&#32;working&#32;buffer&#32;on&#32;the&#32;HEAP.</emphasis>
+122 <emphasis role="comment">/</emphasis>
+123 <emphasis role="comment">/&#32;&#32;To&#32;enable&#32;the&#32;LFN,&#32;Unicode&#32;handling&#32;functions&#32;(option/unicode.c)&#32;must&#32;be&#32;added</emphasis>
+124 <emphasis role="comment">/&#32;&#32;to&#32;the&#32;project.&#32;The&#32;working&#32;buffer&#32;occupies&#32;(_MAX_LFN&#32;+&#32;1)&#32;*&#32;2&#32;bytes&#32;and</emphasis>
+125 <emphasis role="comment">/&#32;&#32;additional&#32;608&#32;bytes&#32;at&#32;exFAT&#32;enabled.&#32;_MAX_LFN&#32;can&#32;be&#32;in&#32;range&#32;from&#32;12&#32;to&#32;255.</emphasis>
+126 <emphasis role="comment">/&#32;&#32;It&#32;should&#32;be&#32;set&#32;255&#32;to&#32;support&#32;full&#32;featured&#32;LFN&#32;operations.</emphasis>
+127 <emphasis role="comment">/&#32;&#32;When&#32;use&#32;stack&#32;for&#32;the&#32;working&#32;buffer,&#32;take&#32;care&#32;on&#32;stack&#32;overflow.&#32;When&#32;use&#32;heap</emphasis>
+128 <emphasis role="comment">/&#32;&#32;memory&#32;for&#32;the&#32;working&#32;buffer,&#32;memory&#32;management&#32;functions,&#32;ff_memalloc()&#32;and</emphasis>
+129 <emphasis role="comment">/&#32;&#32;ff_memfree(),&#32;must&#32;be&#32;added&#32;to&#32;the&#32;project.&#32;*/</emphasis>
+130 
+131 <emphasis role="preprocessor">#define&#32;_LFN_UNICODE&#32;&#32;&#32;&#32;0&#32;</emphasis><emphasis role="comment">/*&#32;0:ANSI/OEM&#32;or&#32;1:Unicode&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+132 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;character&#32;encoding&#32;on&#32;the&#32;API.&#32;(0:ANSI/OEM&#32;or&#32;1:UTF-16)</emphasis>
+133 <emphasis role="comment">/&#32;&#32;To&#32;use&#32;Unicode&#32;string&#32;for&#32;the&#32;path&#32;name,&#32;enable&#32;LFN&#32;and&#32;set&#32;_LFN_UNICODE&#32;=&#32;1.</emphasis>
+134 <emphasis role="comment">/&#32;&#32;This&#32;option&#32;also&#32;affects&#32;behavior&#32;of&#32;string&#32;I/O&#32;functions.&#32;*/</emphasis>
+135 
+136 <emphasis role="preprocessor">#define&#32;_STRF_ENCODE&#32;&#32;&#32;&#32;3</emphasis>
+137 <emphasis role="comment">/*&#32;When&#32;_LFN_UNICODE&#32;==&#32;1,&#32;this&#32;option&#32;selects&#32;the&#32;character&#32;encoding&#32;ON&#32;THE&#32;FILE&#32;to</emphasis>
+138 <emphasis role="comment">/&#32;&#32;be&#32;read/written&#32;via&#32;string&#32;I/O&#32;functions,&#32;f_gets(),&#32;f_putc(),&#32;f_puts&#32;and&#32;f_printf().</emphasis>
+139 <emphasis role="comment">/</emphasis>
+140 <emphasis role="comment">/&#32;&#32;0:&#32;ANSI/OEM</emphasis>
+141 <emphasis role="comment">/&#32;&#32;1:&#32;UTF-16LE</emphasis>
+142 <emphasis role="comment">/&#32;&#32;2:&#32;UTF-16BE</emphasis>
+143 <emphasis role="comment">/&#32;&#32;3:&#32;UTF-8</emphasis>
+144 <emphasis role="comment">/</emphasis>
+145 <emphasis role="comment">/&#32;&#32;This&#32;option&#32;has&#32;no&#32;effect&#32;when&#32;_LFN_UNICODE&#32;==&#32;0.&#32;*/</emphasis>
+146 
+147 <emphasis role="preprocessor">#define&#32;_FS_RPATH&#32;&#32;&#32;&#32;&#32;&#32;&#32;0&#32;</emphasis><emphasis role="comment">/*&#32;0&#32;to&#32;2&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+148 <emphasis role="comment">/*&#32;This&#32;option&#32;configures&#32;support&#32;of&#32;relative&#32;path.</emphasis>
+149 <emphasis role="comment">/</emphasis>
+150 <emphasis role="comment">/&#32;&#32;&#32;0:&#32;Disable&#32;relative&#32;path&#32;and&#32;remove&#32;related&#32;functions.</emphasis>
+151 <emphasis role="comment">/&#32;&#32;&#32;1:&#32;Enable&#32;relative&#32;path.&#32;f_chdir()&#32;and&#32;f_chdrive()&#32;are&#32;available.</emphasis>
+152 <emphasis role="comment">/&#32;&#32;&#32;2:&#32;f_getcwd()&#32;function&#32;is&#32;available&#32;in&#32;addition&#32;to&#32;1.</emphasis>
+153 <emphasis role="comment">*/</emphasis>
+154 
+155 <emphasis role="comment">/*---------------------------------------------------------------------------/</emphasis>
+156 <emphasis role="comment">/&#32;Drive/Volume&#32;Configurations</emphasis>
+157 <emphasis role="comment">/----------------------------------------------------------------------------*/</emphasis>
+158 
+159 <emphasis role="preprocessor">#define&#32;_VOLUMES&#32;&#32;&#32;&#32;1</emphasis>
+160 <emphasis role="comment">/*&#32;Number&#32;of&#32;volumes&#32;(logical&#32;drives)&#32;to&#32;be&#32;used.&#32;*/</emphasis>
+161 
+162 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Volumes&#32;*/</emphasis>
+163 <emphasis role="preprocessor">#define&#32;_STR_VOLUME_ID&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Use&#32;only&#32;0-9&#32;for&#32;drive&#32;ID,&#32;1:Use&#32;strings&#32;for&#32;drive&#32;ID&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+164 <emphasis role="preprocessor">#define&#32;_VOLUME_STRS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;RAM&quot;,&quot;NAND&quot;,&quot;CF&quot;,&quot;SD1&quot;,&quot;SD2&quot;,&quot;USB1&quot;,&quot;USB2&quot;,&quot;USB3&quot;</emphasis>
+165 <emphasis role="comment">/*&#32;_STR_VOLUME_ID&#32;switches&#32;string&#32;support&#32;of&#32;volume&#32;ID.</emphasis>
+166 <emphasis role="comment">/&#32;&#32;When&#32;_STR_VOLUME_ID&#32;is&#32;set&#32;to&#32;1,&#32;also&#32;pre-defined&#32;strings&#32;can&#32;be&#32;used&#32;as&#32;drive</emphasis>
+167 <emphasis role="comment">/&#32;&#32;number&#32;in&#32;the&#32;path&#32;name.&#32;_VOLUME_STRS&#32;defines&#32;the&#32;drive&#32;ID&#32;strings&#32;for&#32;each</emphasis>
+168 <emphasis role="comment">/&#32;&#32;logical&#32;drives.&#32;Number&#32;of&#32;items&#32;must&#32;be&#32;equal&#32;to&#32;_VOLUMES.&#32;Valid&#32;characters&#32;for</emphasis>
+169 <emphasis role="comment">/&#32;&#32;the&#32;drive&#32;ID&#32;strings&#32;are:&#32;A-Z&#32;and&#32;0-9.&#32;*/</emphasis>
+170 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Volumes&#32;*/</emphasis>
+171 
+172 <emphasis role="preprocessor">#define&#32;_MULTI_PARTITION&#32;&#32;&#32;&#32;&#32;0&#32;</emphasis><emphasis role="comment">/*&#32;0:Single&#32;partition,&#32;1:Multiple&#32;partition&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+173 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;support&#32;of&#32;multi-partition&#32;on&#32;a&#32;physical&#32;drive.</emphasis>
+174 <emphasis role="comment">/&#32;&#32;By&#32;default&#32;(0),&#32;each&#32;logical&#32;drive&#32;number&#32;is&#32;bound&#32;to&#32;the&#32;same&#32;physical&#32;drive</emphasis>
+175 <emphasis role="comment">/&#32;&#32;number&#32;and&#32;only&#32;an&#32;FAT&#32;volume&#32;found&#32;on&#32;the&#32;physical&#32;drive&#32;will&#32;be&#32;mounted.</emphasis>
+176 <emphasis role="comment">/&#32;&#32;When&#32;multi-partition&#32;is&#32;enabled&#32;(1),&#32;each&#32;logical&#32;drive&#32;number&#32;can&#32;be&#32;bound&#32;to</emphasis>
+177 <emphasis role="comment">/&#32;&#32;arbitrary&#32;physical&#32;drive&#32;and&#32;partition&#32;listed&#32;in&#32;the&#32;VolToPart[].&#32;Also&#32;f_fdisk()</emphasis>
+178 <emphasis role="comment">/&#32;&#32;function&#32;will&#32;be&#32;available.&#32;*/</emphasis>
+179 <emphasis role="preprocessor">#define&#32;_MIN_SS&#32;&#32;&#32;&#32;512&#32;&#32;</emphasis><emphasis role="comment">/*&#32;512,&#32;1024,&#32;2048&#32;or&#32;4096&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+180 <emphasis role="preprocessor">#define&#32;_MAX_SS&#32;&#32;&#32;&#32;512&#32;&#32;</emphasis><emphasis role="comment">/*&#32;512,&#32;1024,&#32;2048&#32;or&#32;4096&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+181 <emphasis role="comment">/*&#32;These&#32;options&#32;configure&#32;the&#32;range&#32;of&#32;sector&#32;size&#32;to&#32;be&#32;supported.&#32;(512,&#32;1024,</emphasis>
+182 <emphasis role="comment">/&#32;&#32;2048&#32;or&#32;4096)&#32;Always&#32;set&#32;both&#32;512&#32;for&#32;most&#32;systems,&#32;all&#32;type&#32;of&#32;memory&#32;cards&#32;and</emphasis>
+183 <emphasis role="comment">/&#32;&#32;harddisk.&#32;But&#32;a&#32;larger&#32;value&#32;may&#32;be&#32;required&#32;for&#32;on-board&#32;flash&#32;memory&#32;and&#32;some</emphasis>
+184 <emphasis role="comment">/&#32;&#32;type&#32;of&#32;optical&#32;media.&#32;When&#32;_MAX_SS&#32;is&#32;larger&#32;than&#32;_MIN_SS,&#32;FatFs&#32;is&#32;configured</emphasis>
+185 <emphasis role="comment">/&#32;&#32;to&#32;variable&#32;sector&#32;size&#32;and&#32;GET_SECTOR_SIZE&#32;command&#32;must&#32;be&#32;implemented&#32;to&#32;the</emphasis>
+186 <emphasis role="comment">/&#32;&#32;disk_ioctl()&#32;function.&#32;*/</emphasis>
+187 
+188 <emphasis role="preprocessor">#define&#32;_USE_TRIM&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+189 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;support&#32;of&#32;ATA-TRIM.&#32;(0:Disable&#32;or&#32;1:Enable)</emphasis>
+190 <emphasis role="comment">/&#32;&#32;To&#32;enable&#32;Trim&#32;function,&#32;also&#32;CTRL_TRIM&#32;command&#32;should&#32;be&#32;implemented&#32;to&#32;the</emphasis>
+191 <emphasis role="comment">/&#32;&#32;disk_ioctl()&#32;function.&#32;*/</emphasis>
+192 
+193 <emphasis role="preprocessor">#define&#32;_FS_NOFSINFO&#32;&#32;&#32;&#32;0&#32;</emphasis><emphasis role="comment">/*&#32;0,1,2&#32;or&#32;3&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+194 <emphasis role="comment">/*&#32;If&#32;you&#32;need&#32;to&#32;know&#32;correct&#32;free&#32;space&#32;on&#32;the&#32;FAT32&#32;volume,&#32;set&#32;bit&#32;0&#32;of&#32;this</emphasis>
+195 <emphasis role="comment">/&#32;&#32;option,&#32;and&#32;f_getfree()&#32;function&#32;at&#32;first&#32;time&#32;after&#32;volume&#32;mount&#32;will&#32;force</emphasis>
+196 <emphasis role="comment">/&#32;&#32;a&#32;full&#32;FAT&#32;scan.&#32;Bit&#32;1&#32;controls&#32;the&#32;use&#32;of&#32;last&#32;allocated&#32;cluster&#32;number.</emphasis>
+197 <emphasis role="comment">/</emphasis>
+198 <emphasis role="comment">/&#32;&#32;bit0=0:&#32;Use&#32;free&#32;cluster&#32;count&#32;in&#32;the&#32;FSINFO&#32;if&#32;available.</emphasis>
+199 <emphasis role="comment">/&#32;&#32;bit0=1:&#32;Do&#32;not&#32;trust&#32;free&#32;cluster&#32;count&#32;in&#32;the&#32;FSINFO.</emphasis>
+200 <emphasis role="comment">/&#32;&#32;bit1=0:&#32;Use&#32;last&#32;allocated&#32;cluster&#32;number&#32;in&#32;the&#32;FSINFO&#32;if&#32;available.</emphasis>
+201 <emphasis role="comment">/&#32;&#32;bit1=1:&#32;Do&#32;not&#32;trust&#32;last&#32;allocated&#32;cluster&#32;number&#32;in&#32;the&#32;FSINFO.</emphasis>
+202 <emphasis role="comment">*/</emphasis>
+203 
+204 <emphasis role="comment">/*---------------------------------------------------------------------------/</emphasis>
+205 <emphasis role="comment">/&#32;System&#32;Configurations</emphasis>
+206 <emphasis role="comment">/----------------------------------------------------------------------------*/</emphasis>
+207 
+208 <emphasis role="preprocessor">#define&#32;_FS_TINY&#32;&#32;&#32;&#32;0&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Normal&#32;or&#32;1:Tiny&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+209 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;tiny&#32;buffer&#32;configuration.&#32;(0:Normal&#32;or&#32;1:Tiny)</emphasis>
+210 <emphasis role="comment">/&#32;&#32;At&#32;the&#32;tiny&#32;configuration,&#32;size&#32;of&#32;file&#32;object&#32;(FIL)&#32;is&#32;reduced&#32;_MAX_SS&#32;bytes.</emphasis>
+211 <emphasis role="comment">/&#32;&#32;Instead&#32;of&#32;private&#32;sector&#32;buffer&#32;eliminated&#32;from&#32;the&#32;file&#32;object,&#32;common&#32;sector</emphasis>
+212 <emphasis role="comment">/&#32;&#32;buffer&#32;in&#32;the&#32;file&#32;system&#32;object&#32;(FATFS)&#32;is&#32;used&#32;for&#32;the&#32;file&#32;data&#32;transfer.&#32;*/</emphasis>
+213 
+214 <emphasis role="preprocessor">#define&#32;_FS_EXFAT&#32;&#32;&#32;0</emphasis>
+215 <emphasis role="comment">/*&#32;This&#32;option&#32;switches&#32;support&#32;of&#32;exFAT&#32;file&#32;system.&#32;(0:Disable&#32;or&#32;1:Enable)</emphasis>
+216 <emphasis role="comment">/&#32;&#32;When&#32;enable&#32;exFAT,&#32;also&#32;LFN&#32;needs&#32;to&#32;be&#32;enabled.&#32;(_USE_LFN&#32;&gt;=&#32;1)</emphasis>
+217 <emphasis role="comment">/&#32;&#32;Note&#32;that&#32;enabling&#32;exFAT&#32;discards&#32;C89&#32;compatibility.&#32;*/</emphasis>
+218 
+219 <emphasis role="preprocessor">#define&#32;_FS_NORTC&#32;&#32;&#32;0</emphasis>
+220 <emphasis role="preprocessor">#define&#32;_NORTC_MON&#32;&#32;6</emphasis>
+221 <emphasis role="preprocessor">#define&#32;_NORTC_MDAY&#32;4</emphasis>
+222 <emphasis role="preprocessor">#define&#32;_NORTC_YEAR&#32;2015</emphasis>
+223 <emphasis role="comment">/*&#32;The&#32;option&#32;_FS_NORTC&#32;switches&#32;timestamp&#32;functiton.&#32;If&#32;the&#32;system&#32;does&#32;not&#32;have</emphasis>
+224 <emphasis role="comment">/&#32;&#32;any&#32;RTC&#32;function&#32;or&#32;valid&#32;timestamp&#32;is&#32;not&#32;needed,&#32;set&#32;_FS_NORTC&#32;=&#32;1&#32;to&#32;disable</emphasis>
+225 <emphasis role="comment">/&#32;&#32;the&#32;timestamp&#32;function.&#32;All&#32;objects&#32;modified&#32;by&#32;FatFs&#32;will&#32;have&#32;a&#32;fixed&#32;timestamp</emphasis>
+226 <emphasis role="comment">/&#32;&#32;defined&#32;by&#32;_NORTC_MON,&#32;_NORTC_MDAY&#32;and&#32;_NORTC_YEAR&#32;in&#32;local&#32;time.</emphasis>
+227 <emphasis role="comment">/&#32;&#32;To&#32;enable&#32;timestamp&#32;function&#32;(_FS_NORTC&#32;=&#32;0),&#32;get_fattime()&#32;function&#32;need&#32;to&#32;be</emphasis>
+228 <emphasis role="comment">/&#32;&#32;added&#32;to&#32;the&#32;project&#32;to&#32;get&#32;current&#32;time&#32;form&#32;real-time&#32;clock.&#32;_NORTC_MON,</emphasis>
+229 <emphasis role="comment">/&#32;&#32;_NORTC_MDAY&#32;and&#32;_NORTC_YEAR&#32;have&#32;no&#32;effect.</emphasis>
+230 <emphasis role="comment">/&#32;&#32;These&#32;options&#32;have&#32;no&#32;effect&#32;at&#32;read-only&#32;configuration&#32;(_FS_READONLY&#32;=&#32;1).&#32;*/</emphasis>
+231 
+232 <emphasis role="preprocessor">#define&#32;_FS_LOCK&#32;&#32;&#32;&#32;2&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Disable&#32;or&#32;&gt;=1:Enable&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+233 <emphasis role="comment">/*&#32;The&#32;option&#32;_FS_LOCK&#32;switches&#32;file&#32;lock&#32;function&#32;to&#32;control&#32;duplicated&#32;file&#32;open</emphasis>
+234 <emphasis role="comment">/&#32;&#32;and&#32;illegal&#32;operation&#32;to&#32;open&#32;objects.&#32;This&#32;option&#32;must&#32;be&#32;0&#32;when&#32;_FS_READONLY</emphasis>
+235 <emphasis role="comment">/&#32;&#32;is&#32;1.</emphasis>
+236 <emphasis role="comment">/</emphasis>
+237 <emphasis role="comment">/&#32;&#32;0:&#32;&#32;Disable&#32;file&#32;lock&#32;function.&#32;To&#32;avoid&#32;volume&#32;corruption,&#32;application&#32;program</emphasis>
+238 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;should&#32;avoid&#32;illegal&#32;open,&#32;remove&#32;and&#32;rename&#32;to&#32;the&#32;open&#32;objects.</emphasis>
+239 <emphasis role="comment">/&#32;&#32;&gt;0:&#32;Enable&#32;file&#32;lock&#32;function.&#32;The&#32;value&#32;defines&#32;how&#32;many&#32;files/sub-directories</emphasis>
+240 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;can&#32;be&#32;opened&#32;simultaneously&#32;under&#32;file&#32;lock&#32;control.&#32;Note&#32;that&#32;the&#32;file</emphasis>
+241 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;lock&#32;control&#32;is&#32;independent&#32;of&#32;re-entrancy.&#32;*/</emphasis>
+242 
+243 <emphasis role="preprocessor">#define&#32;_FS_REENTRANT&#32;&#32;&#32;&#32;1&#32;&#32;</emphasis><emphasis role="comment">/*&#32;0:Disable&#32;or&#32;1:Enable&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+244 <emphasis role="preprocessor">#define&#32;_FS_TIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;1000&#32;</emphasis><emphasis role="comment">/*&#32;Timeout&#32;period&#32;in&#32;unit&#32;of&#32;time&#32;ticks&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+245 <emphasis role="preprocessor">#define&#32;_SYNC_t&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;osSemaphoreId_t</emphasis>
+246 <emphasis role="comment">/*&#32;The&#32;option&#32;_FS_REENTRANT&#32;switches&#32;the&#32;re-entrancy&#32;(thread&#32;safe)&#32;of&#32;the&#32;FatFs</emphasis>
+247 <emphasis role="comment">/&#32;&#32;module&#32;itself.&#32;Note&#32;that&#32;regardless&#32;of&#32;this&#32;option,&#32;file&#32;access&#32;to&#32;different</emphasis>
+248 <emphasis role="comment">/&#32;&#32;volume&#32;is&#32;always&#32;re-entrant&#32;and&#32;volume&#32;control&#32;functions,&#32;f_mount(),&#32;f_mkfs()</emphasis>
+249 <emphasis role="comment">/&#32;&#32;and&#32;f_fdisk()&#32;function,&#32;are&#32;always&#32;not&#32;re-entrant.&#32;Only&#32;file/directory&#32;access</emphasis>
+250 <emphasis role="comment">/&#32;&#32;to&#32;the&#32;same&#32;volume&#32;is&#32;under&#32;control&#32;of&#32;this&#32;function.</emphasis>
+251 <emphasis role="comment">/</emphasis>
+252 <emphasis role="comment">/&#32;&#32;&#32;0:&#32;Disable&#32;re-entrancy.&#32;_FS_TIMEOUT&#32;and&#32;_SYNC_t&#32;have&#32;no&#32;effect.</emphasis>
+253 <emphasis role="comment">/&#32;&#32;&#32;1:&#32;Enable&#32;re-entrancy.&#32;Also&#32;user&#32;provided&#32;synchronization&#32;handlers,</emphasis>
+254 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;ff_req_grant(),&#32;ff_rel_grant(),&#32;ff_del_syncobj()&#32;and&#32;ff_cre_syncobj()</emphasis>
+255 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;function,&#32;must&#32;be&#32;added&#32;to&#32;the&#32;project.&#32;Samples&#32;are&#32;available&#32;in</emphasis>
+256 <emphasis role="comment">/&#32;&#32;&#32;&#32;&#32;&#32;option/syscall.c.</emphasis>
+257 <emphasis role="comment">/</emphasis>
+258 <emphasis role="comment">/&#32;&#32;The&#32;_FS_TIMEOUT&#32;defines&#32;timeout&#32;period&#32;in&#32;unit&#32;of&#32;time&#32;tick.</emphasis>
+259 <emphasis role="comment">/&#32;&#32;The&#32;_SYNC_t&#32;defines&#32;O/S&#32;dependent&#32;sync&#32;object&#32;type.&#32;e.g.&#32;HANDLE,&#32;ID,&#32;OS_EVENT*,</emphasis>
+260 <emphasis role="comment">/&#32;&#32;SemaphoreHandle_t&#32;and&#32;etc..&#32;A&#32;header&#32;file&#32;for&#32;O/S&#32;definitions&#32;needs&#32;to&#32;be</emphasis>
+261 <emphasis role="comment">/&#32;&#32;included&#32;somewhere&#32;in&#32;the&#32;scope&#32;of&#32;ff.h.&#32;*/</emphasis>
+262 
+263 <emphasis role="comment">/*&#32;define&#32;the&#32;ff_malloc&#32;ff_free&#32;macros&#32;as&#32;FreeRTOS&#32;pvPortMalloc&#32;and&#32;vPortFree&#32;macros&#32;*/</emphasis>
+264 <emphasis role="preprocessor">#if&#32;!defined(ff_malloc)&#32;&amp;&amp;&#32;!defined(ff_free)</emphasis>
+265 <emphasis role="preprocessor">#define&#32;ff_malloc&#32;&#32;pvPortMalloc</emphasis>
+266 <emphasis role="preprocessor">#define&#32;ff_free&#32;&#32;vPortFree</emphasis>
+267 <emphasis role="preprocessor">#endif</emphasis>
+268 
+269 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;_FFCONF&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

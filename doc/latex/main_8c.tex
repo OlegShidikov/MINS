@@ -1,0 +1,552 @@
+\doxysection{Файл Core/\+Src/main.c}
+\hypertarget{main_8c}{}\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include "{}fatfs.\+h"{}}\newline
+{\ttfamily \#include "{}usb\+\_\+device.\+h"{}}\newline
+Граф включаемых заголовочных файлов для main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a4aec512f5ea58a32add39c04e89dc7ce}{start\+Logging\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the logging\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a957161ee39c150382e39fd3ec9d03e1e}{start\+Calculation\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the calculation\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_af8644c1b001f7d8c6e4495b10629ecb9}{start\+Bridge\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the bridge\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a084f3112a502531b9994c4f4a669768a}{start\+Gyro\+Module\+Task}} (void \texorpdfstring{$\ast$}{*}argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the gyro\+Module\+Task thread. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+I2\+C\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\item 
+I2\+C\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a818789480a74b70bbcaf6d73e8e763ed}{hi2c4}}
+\item 
+RTC\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}{hrtc}}
+\item 
+SD\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_ad0b867cf724e111d6329c1eb91f3b30b}{hsd1}}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a31f6f787777409af5ed0d131b52b7988}{htim9}}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_aab9f881b6ce706635a5be2e500f5c6cc}{htim12}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_ae273feb3e0dc44e38892650faa58fced}{huart4}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a5a00c3ec9efd91cc4d43997e347a9e1d}{huart7}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a5c07cbc82baf01ac2608c07b86332a67}{huart8}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1}{huart3}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a38905dda1d2fbff006c69db48eddba9d}{huart6}}
+\item 
+os\+Thread\+Id\+\_\+t \mbox{\hyperlink{main_8c_adba482216705f0b6f710bf03238ae09e}{logging\+Task\+Handle}}
+\item 
+const os\+Thread\+Attr\+\_\+t \mbox{\hyperlink{main_8c_af2108f85a3e34366701da5806d17773e}{logging\+Task\+\_\+attributes}}
+\item 
+os\+Thread\+Id\+\_\+t \mbox{\hyperlink{main_8c_ab3ed9a7dfcf1ece98b8a01c5f7652b9d}{calculation\+Task\+Handle}}
+\item 
+const os\+Thread\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a6f2ffbf22b8c350b5d43db008b6d778a}{calculation\+Task\+\_\+attributes}}
+\item 
+os\+Thread\+Id\+\_\+t \mbox{\hyperlink{main_8c_ac3a64ece4c3f0786f8bb22ef582566a8}{bridge\+Task\+Handle}}
+\item 
+const os\+Thread\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a6cb2a8e4278b4fc4f32b8ac9219616b0}{bridge\+Task\+\_\+attributes}}
+\item 
+os\+Thread\+Id\+\_\+t \mbox{\hyperlink{main_8c_a2adbc23545292c938807370deb68639e}{gyro\+Module\+Task\+Handle}}
+\item 
+const os\+Thread\+Attr\+\_\+t \mbox{\hyperlink{main_8c_aaa89319826f9f9b1be05ca84632be309}{gyro\+Module\+Task\+\_\+attributes}}
+\item 
+os\+Message\+Queue\+Id\+\_\+t \mbox{\hyperlink{main_8c_ab7bdf080634b0ace6c5173282cf1c8f7}{logging\+Queue\+Handle}}
+\item 
+const os\+Message\+Queue\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a7451894273818f14882f35dbd770c950}{logging\+Queue\+\_\+attributes}}
+\item 
+os\+Message\+Queue\+Id\+\_\+t \mbox{\hyperlink{main_8c_a3f22ff9ce07e72c7cf160e2fe416b1af}{calculation\+Queue\+Handle}}
+\item 
+const os\+Message\+Queue\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a5fdbb5a4e167b2f07ffad3085f59b22b}{calculation\+Queue\+\_\+attributes}}
+\item 
+os\+Message\+Queue\+Id\+\_\+t \mbox{\hyperlink{main_8c_ada047f338330cc148ea634481e4c9dac}{bridge\+Queue\+Handle}}
+\item 
+const os\+Message\+Queue\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a4c878e855a191cf311420900b747267a}{bridge\+Queue\+\_\+attributes}}
+\item 
+os\+Message\+Queue\+Id\+\_\+t \mbox{\hyperlink{main_8c_a18b8971a4b2b5ffda08d5d326726a98e}{gyro\+Module\+Queue\+Handle}}
+\item 
+const os\+Message\+Queue\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a2aa761491443e7dad4e178b8af82ef83}{gyro\+Module\+Queue\+\_\+attributes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\+: Main program body 
+
+\begin{DoxyAttention}{Внимание}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Функции}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a1730ffe1e560465665eb47d9264826f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_af8644c1b001f7d8c6e4495b10629ecb9}\label{main_8c_af8644c1b001f7d8c6e4495b10629ecb9} 
+\index{main.c@{main.c}!startBridgeTask@{startBridgeTask}}
+\index{startBridgeTask@{startBridgeTask}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{startBridgeTask()}{startBridgeTask()}}
+{\footnotesize\ttfamily void start\+Bridge\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the bridge\+Task thread. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{main_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a957161ee39c150382e39fd3ec9d03e1e}\label{main_8c_a957161ee39c150382e39fd3ec9d03e1e} 
+\index{main.c@{main.c}!startCalculationTask@{startCalculationTask}}
+\index{startCalculationTask@{startCalculationTask}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{startCalculationTask()}{startCalculationTask()}}
+{\footnotesize\ttfamily void start\+Calculation\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the calculation\+Task thread. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{main_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a084f3112a502531b9994c4f4a669768a}\label{main_8c_a084f3112a502531b9994c4f4a669768a} 
+\index{main.c@{main.c}!startGyroModuleTask@{startGyroModuleTask}}
+\index{startGyroModuleTask@{startGyroModuleTask}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{startGyroModuleTask()}{startGyroModuleTask()}}
+{\footnotesize\ttfamily void start\+Gyro\+Module\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the gyro\+Module\+Task thread. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{main_8c_a084f3112a502531b9994c4f4a669768a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a4aec512f5ea58a32add39c04e89dc7ce}\label{main_8c_a4aec512f5ea58a32add39c04e89dc7ce} 
+\index{main.c@{main.c}!startLoggingTask@{startLoggingTask}}
+\index{startLoggingTask@{startLoggingTask}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{startLoggingTask()}{startLoggingTask()}}
+{\footnotesize\ttfamily void start\+Logging\+Task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the logging\+Task thread. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{main_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Activate the Over-\/\+Drive mode
+
+Initializes the CPU, AHB and APB buses clocksГраф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{main_8c_a70af21c671abfcc773614a9a4f63d920_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{main_8c_a70af21c671abfcc773614a9a4f63d920_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Переменные}
+\Hypertarget{main_8c_a4c878e855a191cf311420900b747267a}\label{main_8c_a4c878e855a191cf311420900b747267a} 
+\index{main.c@{main.c}!bridgeQueue\_attributes@{bridgeQueue\_attributes}}
+\index{bridgeQueue\_attributes@{bridgeQueue\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bridgeQueue\_attributes}{bridgeQueue\_attributes}}
+{\footnotesize\ttfamily const os\+Message\+Queue\+Attr\+\_\+t bridge\+Queue\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}bridgeQueue"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_ada047f338330cc148ea634481e4c9dac}\label{main_8c_ada047f338330cc148ea634481e4c9dac} 
+\index{main.c@{main.c}!bridgeQueueHandle@{bridgeQueueHandle}}
+\index{bridgeQueueHandle@{bridgeQueueHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bridgeQueueHandle}{bridgeQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Queue\+Id\+\_\+t bridge\+Queue\+Handle}
+
+\Hypertarget{main_8c_a6cb2a8e4278b4fc4f32b8ac9219616b0}\label{main_8c_a6cb2a8e4278b4fc4f32b8ac9219616b0} 
+\index{main.c@{main.c}!bridgeTask\_attributes@{bridgeTask\_attributes}}
+\index{bridgeTask\_attributes@{bridgeTask\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bridgeTask\_attributes}{bridgeTask\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t bridge\+Task\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}bridgeTask"{}},}
+\DoxyCodeLine{\ \ .stack\_size\ =\ 128\ *\ 4,}
+\DoxyCodeLine{\ \ .priority\ =\ (osPriority\_t)\ osPriorityLow,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_ac3a64ece4c3f0786f8bb22ef582566a8}\label{main_8c_ac3a64ece4c3f0786f8bb22ef582566a8} 
+\index{main.c@{main.c}!bridgeTaskHandle@{bridgeTaskHandle}}
+\index{bridgeTaskHandle@{bridgeTaskHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bridgeTaskHandle}{bridgeTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id\+\_\+t bridge\+Task\+Handle}
+
+\Hypertarget{main_8c_a5fdbb5a4e167b2f07ffad3085f59b22b}\label{main_8c_a5fdbb5a4e167b2f07ffad3085f59b22b} 
+\index{main.c@{main.c}!calculationQueue\_attributes@{calculationQueue\_attributes}}
+\index{calculationQueue\_attributes@{calculationQueue\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculationQueue\_attributes}{calculationQueue\_attributes}}
+{\footnotesize\ttfamily const os\+Message\+Queue\+Attr\+\_\+t calculation\+Queue\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}calculationQueue"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a3f22ff9ce07e72c7cf160e2fe416b1af}\label{main_8c_a3f22ff9ce07e72c7cf160e2fe416b1af} 
+\index{main.c@{main.c}!calculationQueueHandle@{calculationQueueHandle}}
+\index{calculationQueueHandle@{calculationQueueHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculationQueueHandle}{calculationQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Queue\+Id\+\_\+t calculation\+Queue\+Handle}
+
+\Hypertarget{main_8c_a6f2ffbf22b8c350b5d43db008b6d778a}\label{main_8c_a6f2ffbf22b8c350b5d43db008b6d778a} 
+\index{main.c@{main.c}!calculationTask\_attributes@{calculationTask\_attributes}}
+\index{calculationTask\_attributes@{calculationTask\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculationTask\_attributes}{calculationTask\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t calculation\+Task\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}calculationTask"{}},}
+\DoxyCodeLine{\ \ .stack\_size\ =\ 128\ *\ 4,}
+\DoxyCodeLine{\ \ .priority\ =\ (osPriority\_t)\ osPriorityAboveNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_ab3ed9a7dfcf1ece98b8a01c5f7652b9d}\label{main_8c_ab3ed9a7dfcf1ece98b8a01c5f7652b9d} 
+\index{main.c@{main.c}!calculationTaskHandle@{calculationTaskHandle}}
+\index{calculationTaskHandle@{calculationTaskHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calculationTaskHandle}{calculationTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id\+\_\+t calculation\+Task\+Handle}
+
+\Hypertarget{main_8c_a2aa761491443e7dad4e178b8af82ef83}\label{main_8c_a2aa761491443e7dad4e178b8af82ef83} 
+\index{main.c@{main.c}!gyroModuleQueue\_attributes@{gyroModuleQueue\_attributes}}
+\index{gyroModuleQueue\_attributes@{gyroModuleQueue\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gyroModuleQueue\_attributes}{gyroModuleQueue\_attributes}}
+{\footnotesize\ttfamily const os\+Message\+Queue\+Attr\+\_\+t gyro\+Module\+Queue\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}gyroModuleQueue"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a18b8971a4b2b5ffda08d5d326726a98e}\label{main_8c_a18b8971a4b2b5ffda08d5d326726a98e} 
+\index{main.c@{main.c}!gyroModuleQueueHandle@{gyroModuleQueueHandle}}
+\index{gyroModuleQueueHandle@{gyroModuleQueueHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gyroModuleQueueHandle}{gyroModuleQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Queue\+Id\+\_\+t gyro\+Module\+Queue\+Handle}
+
+\Hypertarget{main_8c_aaa89319826f9f9b1be05ca84632be309}\label{main_8c_aaa89319826f9f9b1be05ca84632be309} 
+\index{main.c@{main.c}!gyroModuleTask\_attributes@{gyroModuleTask\_attributes}}
+\index{gyroModuleTask\_attributes@{gyroModuleTask\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gyroModuleTask\_attributes}{gyroModuleTask\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t gyro\+Module\+Task\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}gyroModuleTask"{}},}
+\DoxyCodeLine{\ \ .stack\_size\ =\ 128\ *\ 4,}
+\DoxyCodeLine{\ \ .priority\ =\ (osPriority\_t)\ osPriorityLow,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_a2adbc23545292c938807370deb68639e}\label{main_8c_a2adbc23545292c938807370deb68639e} 
+\index{main.c@{main.c}!gyroModuleTaskHandle@{gyroModuleTaskHandle}}
+\index{gyroModuleTaskHandle@{gyroModuleTaskHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{gyroModuleTaskHandle}{gyroModuleTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id\+\_\+t gyro\+Module\+Task\+Handle}
+
+\Hypertarget{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7} 
+\index{main.c@{main.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def hi2c1}
+
+\Hypertarget{main_8c_a818789480a74b70bbcaf6d73e8e763ed}\label{main_8c_a818789480a74b70bbcaf6d73e8e763ed} 
+\index{main.c@{main.c}!hi2c4@{hi2c4}}
+\index{hi2c4@{hi2c4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hi2c4}{hi2c4}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def hi2c4}
+
+\Hypertarget{main_8c_aa0c7fca836406ade332e1e3f1039d8ab}\label{main_8c_aa0c7fca836406ade332e1e3f1039d8ab} 
+\index{main.c@{main.c}!hrtc@{hrtc}}
+\index{hrtc@{hrtc}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hrtc}{hrtc}}
+{\footnotesize\ttfamily RTC\+\_\+\+Handle\+Type\+Def hrtc}
+
+\Hypertarget{main_8c_ad0b867cf724e111d6329c1eb91f3b30b}\label{main_8c_ad0b867cf724e111d6329c1eb91f3b30b} 
+\index{main.c@{main.c}!hsd1@{hsd1}}
+\index{hsd1@{hsd1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hsd1}{hsd1}}
+{\footnotesize\ttfamily SD\+\_\+\+Handle\+Type\+Def hsd1}
+
+\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+\index{main.c@{main.c}!htim1@{htim1}}
+\index{htim1@{htim1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim1}
+
+\Hypertarget{main_8c_aab9f881b6ce706635a5be2e500f5c6cc}\label{main_8c_aab9f881b6ce706635a5be2e500f5c6cc} 
+\index{main.c@{main.c}!htim12@{htim12}}
+\index{htim12@{htim12}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim12}{htim12}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim12}
+
+\Hypertarget{main_8c_a31f6f787777409af5ed0d131b52b7988}\label{main_8c_a31f6f787777409af5ed0d131b52b7988} 
+\index{main.c@{main.c}!htim9@{htim9}}
+\index{htim9@{htim9}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim9}{htim9}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim9}
+
+\Hypertarget{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{main.c@{main.c}!huart1@{huart1}}
+\index{huart1@{huart1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart1}
+
+\Hypertarget{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main_8c_aa9479c261d65eecedd3d9582f7f0f89c} 
+\index{main.c@{main.c}!huart2@{huart2}}
+\index{huart2@{huart2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2}
+
+\Hypertarget{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1}\label{main_8c_ab7c63c1b0f65db92b6a4ea19edf957e1} 
+\index{main.c@{main.c}!huart3@{huart3}}
+\index{huart3@{huart3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart3}{huart3}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart3}
+
+\Hypertarget{main_8c_ae273feb3e0dc44e38892650faa58fced}\label{main_8c_ae273feb3e0dc44e38892650faa58fced} 
+\index{main.c@{main.c}!huart4@{huart4}}
+\index{huart4@{huart4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart4}{huart4}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart4}
+
+\Hypertarget{main_8c_a38905dda1d2fbff006c69db48eddba9d}\label{main_8c_a38905dda1d2fbff006c69db48eddba9d} 
+\index{main.c@{main.c}!huart6@{huart6}}
+\index{huart6@{huart6}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart6}{huart6}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart6}
+
+\Hypertarget{main_8c_a5a00c3ec9efd91cc4d43997e347a9e1d}\label{main_8c_a5a00c3ec9efd91cc4d43997e347a9e1d} 
+\index{main.c@{main.c}!huart7@{huart7}}
+\index{huart7@{huart7}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart7}{huart7}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart7}
+
+\Hypertarget{main_8c_a5c07cbc82baf01ac2608c07b86332a67}\label{main_8c_a5c07cbc82baf01ac2608c07b86332a67} 
+\index{main.c@{main.c}!huart8@{huart8}}
+\index{huart8@{huart8}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart8}{huart8}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart8}
+
+\Hypertarget{main_8c_a7451894273818f14882f35dbd770c950}\label{main_8c_a7451894273818f14882f35dbd770c950} 
+\index{main.c@{main.c}!loggingQueue\_attributes@{loggingQueue\_attributes}}
+\index{loggingQueue\_attributes@{loggingQueue\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loggingQueue\_attributes}{loggingQueue\_attributes}}
+{\footnotesize\ttfamily const os\+Message\+Queue\+Attr\+\_\+t logging\+Queue\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}loggingQueue"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_ab7bdf080634b0ace6c5173282cf1c8f7}\label{main_8c_ab7bdf080634b0ace6c5173282cf1c8f7} 
+\index{main.c@{main.c}!loggingQueueHandle@{loggingQueueHandle}}
+\index{loggingQueueHandle@{loggingQueueHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loggingQueueHandle}{loggingQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Queue\+Id\+\_\+t logging\+Queue\+Handle}
+
+\Hypertarget{main_8c_af2108f85a3e34366701da5806d17773e}\label{main_8c_af2108f85a3e34366701da5806d17773e} 
+\index{main.c@{main.c}!loggingTask\_attributes@{loggingTask\_attributes}}
+\index{loggingTask\_attributes@{loggingTask\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loggingTask\_attributes}{loggingTask\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t logging\+Task\+\_\+attributes}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}loggingTask"{}},}
+\DoxyCodeLine{\ \ .stack\_size\ =\ 128\ *\ 4,}
+\DoxyCodeLine{\ \ .priority\ =\ (osPriority\_t)\ osPriorityNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8c_adba482216705f0b6f710bf03238ae09e}\label{main_8c_adba482216705f0b6f710bf03238ae09e} 
+\index{main.c@{main.c}!loggingTaskHandle@{loggingTaskHandle}}
+\index{loggingTaskHandle@{loggingTaskHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loggingTaskHandle}{loggingTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id\+\_\+t logging\+Task\+Handle}
+

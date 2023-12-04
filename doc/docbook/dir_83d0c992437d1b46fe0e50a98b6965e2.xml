@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_83d0c992437d1b46fe0e50a98b6965e2" xml:lang="ru">
+<title>Содержание директории Debug/Core/Startup</title>
+<indexterm><primary>Содержание директории Debug/Core/Startup</primary></indexterm>
+Директория графа зависимостей Startup:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_83d0c992437d1b46fe0e50a98b6965e2_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_startup__stm32f746vgtx_8d">startup_stm32f746vgtx.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,37 @@
+\doxysection{fatfs.\+h}
+\hypertarget{fatfs_8h_source}{}\label{fatfs_8h_source}\index{FATFS/App/fatfs.h@{FATFS/App/fatfs.h}}
+\mbox{\hyperlink{fatfs_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00018\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ \_\_fatfs\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ \_\_fatfs\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}ff.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}ff\_gen\_drv.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sd__diskio_8h}{sd\_diskio.h}}"{}}\ \textcolor{comment}{/*\ defines\ SD\_Driver\ as\ external\ */}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Includes\ */}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/*\ USER\ CODE\ END\ Includes\ */}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{extern}\ uint8\_t\ \mbox{\hyperlink{fatfs_8h_ab5eb61c3cf0ce65bdb6f8973d2ddaca5}{retSD}};\ \textcolor{comment}{/*\ Return\ value\ for\ SD\ */}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{fatfs_8h_afe5c7eca20c5b43d6d1a3bda215941bb}{SDPath}}[4];\ \textcolor{comment}{/*\ SD\ logical\ drive\ path\ */}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ FATFS\ \mbox{\hyperlink{fatfs_8h_a23b38dea75a427fda6997c2a56014e95}{SDFatFS}};\ \textcolor{comment}{/*\ File\ system\ object\ for\ SD\ logical\ drive\ */}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ FIL\ \mbox{\hyperlink{fatfs_8h_ac80bcdc112ce2f3eb3aea1e1e78f97d4}{SDFile}};\ \textcolor{comment}{/*\ File\ object\ for\ SD\ */}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{fatfs_8h_a3712bd1d3043334cf9343acc30bd2604}{MX\_FATFS\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Prototypes\ */}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{/*\ USER\ CODE\ END\ Prototypes\ */}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\_\_fatfs\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

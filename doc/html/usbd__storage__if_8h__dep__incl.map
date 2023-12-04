@@ -1,0 +1,7 @@
+<map id="USB_DEVICE/App/usbd_storage_if.h" name="USB_DEVICE/App/usbd_storage_if.h">
+<area shape="rect" id="Node000001" title=": Header for usbd_storage_if.c file." alt="" coords="115,5,351,32"/>
+<area shape="rect" id="Node000002" href="$usb__device_8c.html" title=": This file implements the USB Device" alt="" coords="5,80,215,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,43,133,82,130,77,197,38"/>
+<area shape="rect" id="Node000003" href="$usbd__storage__if_8c.html" title=": Memory management layer." alt="" coords="239,80,475,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,38,336,77,334,82,266,42"/>
+</map>

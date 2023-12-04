@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__free_r_t_o_s_config_8h" xml:lang="ru">
+<title>Файл Core/Inc/FreeRTOSConfig.h</title>
+<indexterm><primary>Core/Inc/FreeRTOSConfig.h</primary></indexterm>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a8c0327c63db06fda2294df6965508791">configENABLE_FPU</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a60e94635ea7d211347de3bf09aa1a292">configENABLE_MPU</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1adde83486022745409c40605922b0bdd6">configUSE_PREEMPTION</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a1d6797a53b62d501b095f964036a7ac4">configSUPPORT_STATIC_ALLOCATION</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1afa3f8d6510699d972c9af08fa41f66dc">configSUPPORT_DYNAMIC_ALLOCATION</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ac637ae45863c19fa2e919db0ed49301f">configUSE_IDLE_HOOK</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a23c5922c077106fad3f70b54d9071466">configUSE_TICK_HOOK</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aa68082df879e6fc96bcb9b26513639e7">configCPU_CLOCK_HZ</link>&#160;&#160;&#160;( <link linkend="_group___s_t_m32_f7xx___system___private___variables_1gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</link> )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a2f0258dd1e3b877e5bc013be54c2db6a">configTICK_RATE_HZ</link>&#160;&#160;&#160;((TickType_t)1000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a9a78f5ac61e6cb172dadf2a51f11db38">configMAX_PRIORITIES</link>&#160;&#160;&#160;( 56 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a6c534a6cf8a00528fe0be42083484f9a">configMINIMAL_STACK_SIZE</link>&#160;&#160;&#160;((uint16_t)128)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a9f213227674effff0122a75d94d87938">configTOTAL_HEAP_SIZE</link>&#160;&#160;&#160;((size_t)15360)</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ac388dc4041aab6997348828eb27fc1a8">configMAX_TASK_NAME_LEN</link>&#160;&#160;&#160;( 16 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a27f5ee137dc9f125681a31f0b0a4b3be">configUSE_TRACE_FACILITY</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aac311ed9b9e5ae4d2d9648b33a24acce">configUSE_16_BIT_TICKS</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a543bf3c79008974cc1d36bab51d94fbf">configUSE_MUTEXES</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aa4b5138c4e42a180f0abd4f2455f90fb">configQUEUE_REGISTRY_SIZE</link>&#160;&#160;&#160;8</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a9fe02d866cb1c4fbaa0c3de79f53d42d">configUSE_RECURSIVE_MUTEXES</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a55778995203c57369d2fbfb10224943d">configUSE_COUNTING_SEMAPHORES</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aebb8c3a87d591f60f974772be0ee798d">configUSE_PORT_OPTIMISED_TASK_SELECTION</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a019c8bfcdd8eca676c7b9993bda95967">configMESSAGE_BUFFER_LENGTH_TYPE</link>&#160;&#160;&#160;size_t</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a57990715eb06402474b8b47e1d562616">configUSE_CO_ROUTINES</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ae8f3fd645e6e78dfeb8a6e874af6195a">configMAX_CO_ROUTINE_PRIORITIES</link>&#160;&#160;&#160;( 2 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ac342ae309b0c53828d2ecad3e6de355b">configUSE_TIMERS</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a05c75ff9029ba3f0ab5bde9196f1e873">configTIMER_TASK_PRIORITY</link>&#160;&#160;&#160;( 2 )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1abb9aa0f31c1f3b14a15083a3c6120918">configTIMER_QUEUE_LENGTH</link>&#160;&#160;&#160;10</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aed7c7ebcdee603583a55e8ce04e55841">configTIMER_TASK_STACK_DEPTH</link>&#160;&#160;&#160;256</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ad6858ac8aaf726007fd19752956ef1bd">INCLUDE_vTaskPrioritySet</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a1279eb797355460aeeec06aa524e91df">INCLUDE_uxTaskPriorityGet</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a5ae1434fdf995108dc749ff9329f53bd">INCLUDE_vTaskDelete</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a7ee138825e57f243c8ee5fd4207b9e26">INCLUDE_vTaskCleanUpResources</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aef8fbb97819ad3d962f334ac298206d1">INCLUDE_vTaskSuspend</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ae8459bfd5b428319bb10de9f504a53aa">INCLUDE_vTaskDelayUntil</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a24361a6eb816a965f1ee4e2e08e364f8">INCLUDE_vTaskDelay</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a9ed60ede556830584e6bfd4a3ab4f9de">INCLUDE_xTaskGetSchedulerState</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a4b4336acd61a8e513ca2376be84326b5">INCLUDE_xTimerPendFunctionCall</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a4e2902143b6abf777065c15940321911">INCLUDE_xQueueGetMutexHolder</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a23c7b4b41fe9b575cf2329c7cbe78b86">INCLUDE_uxTaskGetStackHighWaterMark</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a4fd1d67d54044ac86e8ffc890180f9f6">INCLUDE_eTaskGetState</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1aa8fbc1e49cee1a13bd45454893aa874d">USE_FreeRTOS_HEAP_4</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba">configPRIO_BITS</link>&#160;&#160;&#160;4</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a10da20f180ec9bd131b0052a802dbc39">configLIBRARY_LOWEST_INTERRUPT_PRIORITY</link>&#160;&#160;&#160;15</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a2254bd235d882be3061bcad0b1e8be98">configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</link>&#160;&#160;&#160;5</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ac42cff506ad61d4174fa23e952e3225e">configKERNEL_INTERRUPT_PRIORITY</link>&#160;&#160;&#160;( <link linkend="__free_r_t_o_s_config_8h_1a10da20f180ec9bd131b0052a802dbc39">configLIBRARY_LOWEST_INTERRUPT_PRIORITY</link> &lt;&lt; (8 - <link linkend="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba">configPRIO_BITS</link>) )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a54bfc31c410ee452577a25a4552c3704">configMAX_SYSCALL_INTERRUPT_PRIORITY</link>&#160;&#160;&#160;( <link linkend="__free_r_t_o_s_config_8h_1a2254bd235d882be3061bcad0b1e8be98">configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</link> &lt;&lt; (8 - <link linkend="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba">configPRIO_BITS</link>) )</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a228c70cd48927d6ab730ed1a6dfbe35f">configASSERT</link>(x)&#160;&#160;&#160;if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1ad43047b3ea0a146673e30637488bf754">vPortSVCHandler</link>&#160;&#160;&#160;SVC_Handler</para>
+</listitem>
+            <listitem><para>#define <link linkend="__free_r_t_o_s_config_8h_1a6f30022da7d797dd31f1b8a11cae9a35">xPortPendSVHandler</link>&#160;&#160;&#160;PendSV_Handler</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Макросы</title>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a228c70cd48927d6ab730ed1a6dfbe35f"/><section>
+    <title>configASSERT</title>
+<indexterm><primary>configASSERT</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configASSERT</secondary></indexterm>
+<para><computeroutput>#define configASSERT( x)&#160;&#160;&#160;if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aa68082df879e6fc96bcb9b26513639e7"/><section>
+    <title>configCPU_CLOCK_HZ</title>
+<indexterm><primary>configCPU_CLOCK_HZ</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configCPU_CLOCK_HZ</secondary></indexterm>
+<para><computeroutput>#define configCPU_CLOCK_HZ&#160;&#160;&#160;( <link linkend="_group___s_t_m32_f7xx___system___private___variables_1gaa3cd3e43291e81e795d642b79b6088e6">SystemCoreClock</link> )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a8c0327c63db06fda2294df6965508791"/><section>
+    <title>configENABLE_FPU</title>
+<indexterm><primary>configENABLE_FPU</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configENABLE_FPU</secondary></indexterm>
+<para><computeroutput>#define configENABLE_FPU&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a60e94635ea7d211347de3bf09aa1a292"/><section>
+    <title>configENABLE_MPU</title>
+<indexterm><primary>configENABLE_MPU</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configENABLE_MPU</secondary></indexterm>
+<para><computeroutput>#define configENABLE_MPU&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ac42cff506ad61d4174fa23e952e3225e"/><section>
+    <title>configKERNEL_INTERRUPT_PRIORITY</title>
+<indexterm><primary>configKERNEL_INTERRUPT_PRIORITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configKERNEL_INTERRUPT_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define configKERNEL_INTERRUPT_PRIORITY&#160;&#160;&#160;( <link linkend="__free_r_t_o_s_config_8h_1a10da20f180ec9bd131b0052a802dbc39">configLIBRARY_LOWEST_INTERRUPT_PRIORITY</link> &lt;&lt; (8 - <link linkend="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba">configPRIO_BITS</link>) )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a10da20f180ec9bd131b0052a802dbc39"/><section>
+    <title>configLIBRARY_LOWEST_INTERRUPT_PRIORITY</title>
+<indexterm><primary>configLIBRARY_LOWEST_INTERRUPT_PRIORITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configLIBRARY_LOWEST_INTERRUPT_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define configLIBRARY_LOWEST_INTERRUPT_PRIORITY&#160;&#160;&#160;15</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a2254bd235d882be3061bcad0b1e8be98"/><section>
+    <title>configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</title>
+<indexterm><primary>configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY&#160;&#160;&#160;5</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ae8f3fd645e6e78dfeb8a6e874af6195a"/><section>
+    <title>configMAX_CO_ROUTINE_PRIORITIES</title>
+<indexterm><primary>configMAX_CO_ROUTINE_PRIORITIES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMAX_CO_ROUTINE_PRIORITIES</secondary></indexterm>
+<para><computeroutput>#define configMAX_CO_ROUTINE_PRIORITIES&#160;&#160;&#160;( 2 )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a9a78f5ac61e6cb172dadf2a51f11db38"/><section>
+    <title>configMAX_PRIORITIES</title>
+<indexterm><primary>configMAX_PRIORITIES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMAX_PRIORITIES</secondary></indexterm>
+<para><computeroutput>#define configMAX_PRIORITIES&#160;&#160;&#160;( 56 )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a54bfc31c410ee452577a25a4552c3704"/><section>
+    <title>configMAX_SYSCALL_INTERRUPT_PRIORITY</title>
+<indexterm><primary>configMAX_SYSCALL_INTERRUPT_PRIORITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMAX_SYSCALL_INTERRUPT_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define configMAX_SYSCALL_INTERRUPT_PRIORITY&#160;&#160;&#160;( <link linkend="__free_r_t_o_s_config_8h_1a2254bd235d882be3061bcad0b1e8be98">configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY</link> &lt;&lt; (8 - <link linkend="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba">configPRIO_BITS</link>) )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ac388dc4041aab6997348828eb27fc1a8"/><section>
+    <title>configMAX_TASK_NAME_LEN</title>
+<indexterm><primary>configMAX_TASK_NAME_LEN</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMAX_TASK_NAME_LEN</secondary></indexterm>
+<para><computeroutput>#define configMAX_TASK_NAME_LEN&#160;&#160;&#160;( 16 )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a019c8bfcdd8eca676c7b9993bda95967"/><section>
+    <title>configMESSAGE_BUFFER_LENGTH_TYPE</title>
+<indexterm><primary>configMESSAGE_BUFFER_LENGTH_TYPE</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMESSAGE_BUFFER_LENGTH_TYPE</secondary></indexterm>
+<para><computeroutput>#define configMESSAGE_BUFFER_LENGTH_TYPE&#160;&#160;&#160;size_t</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a6c534a6cf8a00528fe0be42083484f9a"/><section>
+    <title>configMINIMAL_STACK_SIZE</title>
+<indexterm><primary>configMINIMAL_STACK_SIZE</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configMINIMAL_STACK_SIZE</secondary></indexterm>
+<para><computeroutput>#define configMINIMAL_STACK_SIZE&#160;&#160;&#160;((uint16_t)128)</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a5796db11ec6f9aa38d017d2ac393c5ba"/><section>
+    <title>configPRIO_BITS</title>
+<indexterm><primary>configPRIO_BITS</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configPRIO_BITS</secondary></indexterm>
+<para><computeroutput>#define configPRIO_BITS&#160;&#160;&#160;4</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aa4b5138c4e42a180f0abd4f2455f90fb"/><section>
+    <title>configQUEUE_REGISTRY_SIZE</title>
+<indexterm><primary>configQUEUE_REGISTRY_SIZE</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configQUEUE_REGISTRY_SIZE</secondary></indexterm>
+<para><computeroutput>#define configQUEUE_REGISTRY_SIZE&#160;&#160;&#160;8</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1afa3f8d6510699d972c9af08fa41f66dc"/><section>
+    <title>configSUPPORT_DYNAMIC_ALLOCATION</title>
+<indexterm><primary>configSUPPORT_DYNAMIC_ALLOCATION</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configSUPPORT_DYNAMIC_ALLOCATION</secondary></indexterm>
+<para><computeroutput>#define configSUPPORT_DYNAMIC_ALLOCATION&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a1d6797a53b62d501b095f964036a7ac4"/><section>
+    <title>configSUPPORT_STATIC_ALLOCATION</title>
+<indexterm><primary>configSUPPORT_STATIC_ALLOCATION</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configSUPPORT_STATIC_ALLOCATION</secondary></indexterm>
+<para><computeroutput>#define configSUPPORT_STATIC_ALLOCATION&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a2f0258dd1e3b877e5bc013be54c2db6a"/><section>
+    <title>configTICK_RATE_HZ</title>
+<indexterm><primary>configTICK_RATE_HZ</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configTICK_RATE_HZ</secondary></indexterm>
+<para><computeroutput>#define configTICK_RATE_HZ&#160;&#160;&#160;((TickType_t)1000)</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1abb9aa0f31c1f3b14a15083a3c6120918"/><section>
+    <title>configTIMER_QUEUE_LENGTH</title>
+<indexterm><primary>configTIMER_QUEUE_LENGTH</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configTIMER_QUEUE_LENGTH</secondary></indexterm>
+<para><computeroutput>#define configTIMER_QUEUE_LENGTH&#160;&#160;&#160;10</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a05c75ff9029ba3f0ab5bde9196f1e873"/><section>
+    <title>configTIMER_TASK_PRIORITY</title>
+<indexterm><primary>configTIMER_TASK_PRIORITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configTIMER_TASK_PRIORITY</secondary></indexterm>
+<para><computeroutput>#define configTIMER_TASK_PRIORITY&#160;&#160;&#160;( 2 )</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aed7c7ebcdee603583a55e8ce04e55841"/><section>
+    <title>configTIMER_TASK_STACK_DEPTH</title>
+<indexterm><primary>configTIMER_TASK_STACK_DEPTH</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configTIMER_TASK_STACK_DEPTH</secondary></indexterm>
+<para><computeroutput>#define configTIMER_TASK_STACK_DEPTH&#160;&#160;&#160;256</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a9f213227674effff0122a75d94d87938"/><section>
+    <title>configTOTAL_HEAP_SIZE</title>
+<indexterm><primary>configTOTAL_HEAP_SIZE</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configTOTAL_HEAP_SIZE</secondary></indexterm>
+<para><computeroutput>#define configTOTAL_HEAP_SIZE&#160;&#160;&#160;((size_t)15360)</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aac311ed9b9e5ae4d2d9648b33a24acce"/><section>
+    <title>configUSE_16_BIT_TICKS</title>
+<indexterm><primary>configUSE_16_BIT_TICKS</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_16_BIT_TICKS</secondary></indexterm>
+<para><computeroutput>#define configUSE_16_BIT_TICKS&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a57990715eb06402474b8b47e1d562616"/><section>
+    <title>configUSE_CO_ROUTINES</title>
+<indexterm><primary>configUSE_CO_ROUTINES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_CO_ROUTINES</secondary></indexterm>
+<para><computeroutput>#define configUSE_CO_ROUTINES&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a55778995203c57369d2fbfb10224943d"/><section>
+    <title>configUSE_COUNTING_SEMAPHORES</title>
+<indexterm><primary>configUSE_COUNTING_SEMAPHORES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_COUNTING_SEMAPHORES</secondary></indexterm>
+<para><computeroutput>#define configUSE_COUNTING_SEMAPHORES&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ac637ae45863c19fa2e919db0ed49301f"/><section>
+    <title>configUSE_IDLE_HOOK</title>
+<indexterm><primary>configUSE_IDLE_HOOK</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_IDLE_HOOK</secondary></indexterm>
+<para><computeroutput>#define configUSE_IDLE_HOOK&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a543bf3c79008974cc1d36bab51d94fbf"/><section>
+    <title>configUSE_MUTEXES</title>
+<indexterm><primary>configUSE_MUTEXES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_MUTEXES</secondary></indexterm>
+<para><computeroutput>#define configUSE_MUTEXES&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aebb8c3a87d591f60f974772be0ee798d"/><section>
+    <title>configUSE_PORT_OPTIMISED_TASK_SELECTION</title>
+<indexterm><primary>configUSE_PORT_OPTIMISED_TASK_SELECTION</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_PORT_OPTIMISED_TASK_SELECTION</secondary></indexterm>
+<para><computeroutput>#define configUSE_PORT_OPTIMISED_TASK_SELECTION&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1adde83486022745409c40605922b0bdd6"/><section>
+    <title>configUSE_PREEMPTION</title>
+<indexterm><primary>configUSE_PREEMPTION</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_PREEMPTION</secondary></indexterm>
+<para><computeroutput>#define configUSE_PREEMPTION&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a9fe02d866cb1c4fbaa0c3de79f53d42d"/><section>
+    <title>configUSE_RECURSIVE_MUTEXES</title>
+<indexterm><primary>configUSE_RECURSIVE_MUTEXES</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_RECURSIVE_MUTEXES</secondary></indexterm>
+<para><computeroutput>#define configUSE_RECURSIVE_MUTEXES&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a23c5922c077106fad3f70b54d9071466"/><section>
+    <title>configUSE_TICK_HOOK</title>
+<indexterm><primary>configUSE_TICK_HOOK</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_TICK_HOOK</secondary></indexterm>
+<para><computeroutput>#define configUSE_TICK_HOOK&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ac342ae309b0c53828d2ecad3e6de355b"/><section>
+    <title>configUSE_TIMERS</title>
+<indexterm><primary>configUSE_TIMERS</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_TIMERS</secondary></indexterm>
+<para><computeroutput>#define configUSE_TIMERS&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a27f5ee137dc9f125681a31f0b0a4b3be"/><section>
+    <title>configUSE_TRACE_FACILITY</title>
+<indexterm><primary>configUSE_TRACE_FACILITY</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>configUSE_TRACE_FACILITY</secondary></indexterm>
+<para><computeroutput>#define configUSE_TRACE_FACILITY&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a4fd1d67d54044ac86e8ffc890180f9f6"/><section>
+    <title>INCLUDE_eTaskGetState</title>
+<indexterm><primary>INCLUDE_eTaskGetState</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_eTaskGetState</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_eTaskGetState&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a23c7b4b41fe9b575cf2329c7cbe78b86"/><section>
+    <title>INCLUDE_uxTaskGetStackHighWaterMark</title>
+<indexterm><primary>INCLUDE_uxTaskGetStackHighWaterMark</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_uxTaskGetStackHighWaterMark</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_uxTaskGetStackHighWaterMark&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a1279eb797355460aeeec06aa524e91df"/><section>
+    <title>INCLUDE_uxTaskPriorityGet</title>
+<indexterm><primary>INCLUDE_uxTaskPriorityGet</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_uxTaskPriorityGet</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_uxTaskPriorityGet&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a7ee138825e57f243c8ee5fd4207b9e26"/><section>
+    <title>INCLUDE_vTaskCleanUpResources</title>
+<indexterm><primary>INCLUDE_vTaskCleanUpResources</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskCleanUpResources</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskCleanUpResources&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a24361a6eb816a965f1ee4e2e08e364f8"/><section>
+    <title>INCLUDE_vTaskDelay</title>
+<indexterm><primary>INCLUDE_vTaskDelay</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskDelay</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskDelay&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ae8459bfd5b428319bb10de9f504a53aa"/><section>
+    <title>INCLUDE_vTaskDelayUntil</title>
+<indexterm><primary>INCLUDE_vTaskDelayUntil</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskDelayUntil</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskDelayUntil&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a5ae1434fdf995108dc749ff9329f53bd"/><section>
+    <title>INCLUDE_vTaskDelete</title>
+<indexterm><primary>INCLUDE_vTaskDelete</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskDelete</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskDelete&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ad6858ac8aaf726007fd19752956ef1bd"/><section>
+    <title>INCLUDE_vTaskPrioritySet</title>
+<indexterm><primary>INCLUDE_vTaskPrioritySet</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskPrioritySet</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskPrioritySet&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aef8fbb97819ad3d962f334ac298206d1"/><section>
+    <title>INCLUDE_vTaskSuspend</title>
+<indexterm><primary>INCLUDE_vTaskSuspend</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_vTaskSuspend</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_vTaskSuspend&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a4e2902143b6abf777065c15940321911"/><section>
+    <title>INCLUDE_xQueueGetMutexHolder</title>
+<indexterm><primary>INCLUDE_xQueueGetMutexHolder</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_xQueueGetMutexHolder</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_xQueueGetMutexHolder&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a9ed60ede556830584e6bfd4a3ab4f9de"/><section>
+    <title>INCLUDE_xTaskGetSchedulerState</title>
+<indexterm><primary>INCLUDE_xTaskGetSchedulerState</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_xTaskGetSchedulerState</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_xTaskGetSchedulerState&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a4b4336acd61a8e513ca2376be84326b5"/><section>
+    <title>INCLUDE_xTimerPendFunctionCall</title>
+<indexterm><primary>INCLUDE_xTimerPendFunctionCall</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>INCLUDE_xTimerPendFunctionCall</secondary></indexterm>
+<para><computeroutput>#define INCLUDE_xTimerPendFunctionCall&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1aa8fbc1e49cee1a13bd45454893aa874d"/><section>
+    <title>USE_FreeRTOS_HEAP_4</title>
+<indexterm><primary>USE_FreeRTOS_HEAP_4</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>USE_FreeRTOS_HEAP_4</secondary></indexterm>
+<para><computeroutput>#define USE_FreeRTOS_HEAP_4</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1ad43047b3ea0a146673e30637488bf754"/><section>
+    <title>vPortSVCHandler</title>
+<indexterm><primary>vPortSVCHandler</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>vPortSVCHandler</secondary></indexterm>
+<para><computeroutput>#define vPortSVCHandler&#160;&#160;&#160;SVC_Handler</computeroutput></para></section>
+<anchor xml:id="__free_r_t_o_s_config_8h_1a6f30022da7d797dd31f1b8a11cae9a35"/><section>
+    <title>xPortPendSVHandler</title>
+<indexterm><primary>xPortPendSVHandler</primary><secondary>FreeRTOSConfig.h</secondary></indexterm>
+<indexterm><primary>FreeRTOSConfig.h</primary><secondary>xPortPendSVHandler</secondary></indexterm>
+<para><computeroutput>#define xPortPendSVHandler&#160;&#160;&#160;PendSV_Handler</computeroutput></para></section>
+</section>
+</section>

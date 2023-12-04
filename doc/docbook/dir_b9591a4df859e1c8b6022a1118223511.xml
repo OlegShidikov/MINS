@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b9591a4df859e1c8b6022a1118223511" xml:lang="ru">
+<title>Содержание директории USB_DEVICE/App</title>
+<indexterm><primary>Содержание директории USB_DEVICE/App</primary></indexterm>
+Директория графа зависимостей App:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_b9591a4df859e1c8b6022a1118223511_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_usb__device_8c">usb_device.c</link></para>
+
+<para>: This file implements the USB Device </para>
+</listitem>
+            <listitem><para>файл <link linkend="_usb__device_8h">usb_device.h</link></para>
+
+<para>: Header for <link linkend="_usb__device_8c">usb_device.c</link> file. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__desc_8c">usbd_desc.c</link></para>
+
+<para>: This file implements the USB device descriptors. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__desc_8h">usbd_desc.h</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__storage__if_8c">usbd_storage_if.c</link></para>
+
+<para>: Memory management layer. </para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__storage__if_8h">usbd_storage_if.h</link></para>
+
+<para>: Header for <link linkend="_usbd__storage__if_8c">usbd_storage_if.c</link> file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

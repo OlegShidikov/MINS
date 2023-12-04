@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sd__diskio_8h_source" xml:lang="ru">
+<title>sd_diskio.h</title>
+<indexterm><primary>FATFS/Target/sd_diskio.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+18 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+19 
+20 <emphasis role="comment">/*&#32;Note:&#32;code&#32;generation&#32;based&#32;on&#32;sd_diskio_dma_rtos_template.h&#32;*/</emphasis>
+21 
+22 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+23 <emphasis role="preprocessor">#ifndef&#32;__SD_DISKIO_H</emphasis>
+24 <emphasis role="preprocessor">#define&#32;__SD_DISKIO_H</emphasis>
+25 
+26 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;firstSection&#32;*/</emphasis>
+27 <emphasis role="comment">/*&#32;can&#32;be&#32;used&#32;to&#32;modify&#32;/&#32;undefine&#32;following&#32;code&#32;or&#32;add&#32;new&#32;definitions&#32;*/</emphasis>
+28 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;firstSection&#32;*/</emphasis>
+29 
+30 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_bsp__driver__sd_8h">bsp_driver_sd.h</link>&quot;</emphasis>
+32 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+33 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+34 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+35 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;Diskio_drvTypeDef&#32;&#32;<link linkend="_sd__diskio_8h_1a1a12762eb7b74c246045197fa41f1296">SD_Driver</link>;
+36 
+37 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;lastSection&#32;*/</emphasis>
+38 <emphasis role="comment">/*&#32;can&#32;be&#32;used&#32;to&#32;modify&#32;/&#32;undefine&#32;previous&#32;code&#32;or&#32;add&#32;new&#32;definitions&#32;*/</emphasis>
+39 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;lastSection&#32;*/</emphasis>
+40 
+41 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__SD_DISKIO_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

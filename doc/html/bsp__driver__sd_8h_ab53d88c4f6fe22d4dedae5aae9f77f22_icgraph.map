@@ -1,0 +1,5 @@
+<map id="BSP_SD_GetCardState" name="BSP_SD_GetCardState">
+<area shape="rect" id="Node000001" title="Gets the current SD card data status." alt="" coords="125,5,284,32"/>
+<area shape="rect" id="Node000002" href="$sd__diskio_8c.html#a1f2ee4a775d8a3877f368533db97cbe4" title="Reads Sector(s)" alt="" coords="5,5,77,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,21,77,21,77,16,109,16"/>
+</map>

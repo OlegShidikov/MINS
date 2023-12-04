@@ -1,0 +1,95 @@
+\doxysubsubsection{USBD\+\_\+\+DESC\+\_\+\+Private\+\_\+\+Variables}
+\hypertarget{group___u_s_b_d___d_e_s_c___private___variables}{}\label{group___u_s_b_d___d_e_s_c___private___variables}\index{USBD\_DESC\_Private\_Variables@{USBD\_DESC\_Private\_Variables}}
+
+
+Private variables.  
+
+
+Граф связей класса USBD\+\_\+\+DESC\+\_\+\+Private\+\_\+\+Variables\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{group___u_s_b_d___d_e_s_c___private___variables}
+\end{center}
+\end{figure}
+\doxysubsubsubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+USBD\+\_\+\+Descriptors\+Type\+Def \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_ga89f0dd7f68532841d99af34b1be3cd0c}{HS\+\_\+\+Desc}}
+\item 
+\+\_\+\+\_\+\+ALIGN\+\_\+\+BEGIN uint8\+\_\+t USBD\+\_\+\+HS\+\_\+\+Device\+Desc\mbox{[}USB\+\_\+\+LEN\+\_\+\+DEV\+\_\+\+DESC\mbox{]} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_ga542bfea0b6dcf06e06a505bdc49c7e04}{\+\_\+\+\_\+\+ALIGN\+\_\+\+END}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Подробное описание}
+Private variables. 
+
+
+
+\doxysubsubsubsection{Переменные}
+\Hypertarget{group___u_s_b_d___d_e_s_c___private___variables_ga542bfea0b6dcf06e06a505bdc49c7e04}\label{group___u_s_b_d___d_e_s_c___private___variables_ga542bfea0b6dcf06e06a505bdc49c7e04} 
+\index{USBD\_DESC\_Private\_Variables@{USBD\_DESC\_Private\_Variables}!\_\_ALIGN\_END@{\_\_ALIGN\_END}}
+\index{\_\_ALIGN\_END@{\_\_ALIGN\_END}!USBD\_DESC\_Private\_Variables@{USBD\_DESC\_Private\_Variables}}
+\doxysubsubsubsubsection{\texorpdfstring{\_\_ALIGN\_END}{\_\_ALIGN\_END}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+ALIGN\+\_\+\+BEGIN uint8\+\_\+t USBD\+\_\+\+String\+Serial \mbox{[}\mbox{\hyperlink{group___u_s_b_d___d_e_s_c___exported___constants_ga76287dc6e5f3cf4566406bd9b2eb7a2f}{USB\+\_\+\+SIZ\+\_\+\+STRING\+\_\+\+SERIAL}}\mbox{]} \+\_\+\+\_\+\+ALIGN\+\_\+\+END}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ 0x12,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ USB\_DESC\_TYPE\_DEVICE,\ \ \ \ \ \ \ }
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ 0x02,}
+\DoxyCodeLine{\ \ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ USB\_MAX\_EP0\_SIZE,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ LOBYTE(\mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_gac5251397ce2246b546b472cd802e6d62}{USBD\_VID}}),\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ HIBYTE(\mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_gac5251397ce2246b546b472cd802e6d62}{USBD\_VID}}),\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ LOBYTE(\mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga5c6d9f613aca0d87a9cf87ebfd442c17}{USBD\_PID\_HS}}),\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ HIBYTE(\mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga5c6d9f613aca0d87a9cf87ebfd442c17}{USBD\_PID\_HS}}),\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ 0x00,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ 0x02,}
+\DoxyCodeLine{\ \ USBD\_IDX\_MFC\_STR,\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ USBD\_IDX\_PRODUCT\_STR,\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ USBD\_IDX\_SERIAL\_STR,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \mbox{\hyperlink{group___u_s_b_d___c_o_n_f___exported___defines_gaef1f76fda5677f5ad43c25a2ba4ebcde}{USBD\_MAX\_NUM\_CONFIGURATION}}\ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+USB standard device descriptor.
+
+USB lang identifier descriptor.
+
+IAR Compiler \Hypertarget{group___u_s_b_d___d_e_s_c___private___variables_ga89f0dd7f68532841d99af34b1be3cd0c}\label{group___u_s_b_d___d_e_s_c___private___variables_ga89f0dd7f68532841d99af34b1be3cd0c} 
+\index{USBD\_DESC\_Private\_Variables@{USBD\_DESC\_Private\_Variables}!HS\_Desc@{HS\_Desc}}
+\index{HS\_Desc@{HS\_Desc}!USBD\_DESC\_Private\_Variables@{USBD\_DESC\_Private\_Variables}}
+\doxysubsubsubsubsection{\texorpdfstring{HS\_Desc}{HS\_Desc}}
+{\footnotesize\ttfamily USBD\+\_\+\+Descriptors\+Type\+Def HS\+\_\+\+Desc}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaef234919e37b4261ded7cf0a6b6f9adb}{USBD\_HS\_DeviceDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga1f97488a1b688c2e36828091adb1714b}{USBD\_HS\_LangIDStrDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaa6fc1499569c6e5129cc16789ad10094}{USBD\_HS\_ManufacturerStrDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga61c64a916bb03b9bf0d0715839bb2718}{USBD\_HS\_ProductStrDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga804ea4a4ff7a927047c831e60658c13c}{USBD\_HS\_SerialStrDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaf1d641e2167f37fe9dca9cf7e9c400e7}{USBD\_HS\_ConfigStrDescriptor}}}
+\DoxyCodeLine{,\ \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga77299bb83b65537496ac8d3f94219b27}{USBD\_HS\_InterfaceStrDescriptor}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Descriptor for the Usb device. 

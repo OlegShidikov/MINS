@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___private___variables" xml:lang="ru">
+<title>USBD_DESC_Private_Variables</title>
+<indexterm><primary>USBD_DESC_Private_Variables</primary></indexterm>
+<para>
+
+<para>Private variables. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Private_Variables:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___private___variables.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>USBD_DescriptorsTypeDef <link linkend="_group___u_s_b_d___d_e_s_c___private___variables_1ga89f0dd7f68532841d99af34b1be3cd0c">HS_Desc</link></para>
+</listitem>
+            <listitem><para>__ALIGN_BEGIN uint8_t USBD_HS_DeviceDesc[USB_LEN_DEV_DESC] <link linkend="_group___u_s_b_d___d_e_s_c___private___variables_1ga542bfea0b6dcf06e06a505bdc49c7e04">__ALIGN_END</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Private variables. </para>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___variables_1ga542bfea0b6dcf06e06a505bdc49c7e04"/><section>
+    <title>__ALIGN_END</title>
+<indexterm><primary>__ALIGN_END</primary><secondary>USBD_DESC_Private_Variables</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Variables</primary><secondary>__ALIGN_END</secondary></indexterm>
+<para><computeroutput>__ALIGN_BEGIN uint8_t USBD_StringSerial [<link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1ga76287dc6e5f3cf4566406bd9b2eb7a2f">USB_SIZ_STRING_SERIAL</link>] __ALIGN_END</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=
+{
+&#32;&#32;0x12,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;USB_DESC_TYPE_DEVICE,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+
+
+
+
+
+&#32;&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+
+
+&#32;&#32;0x02,
+&#32;&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;USB_MAX_EP0_SIZE,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;LOBYTE(<link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62">USBD_VID</link>),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;HIBYTE(<link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62">USBD_VID</link>),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;LOBYTE(<link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga5c6d9f613aca0d87a9cf87ebfd442c17">USBD_PID_HS</link>),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;HIBYTE(<link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga5c6d9f613aca0d87a9cf87ebfd442c17">USBD_PID_HS</link>),&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;0x02,
+&#32;&#32;USBD_IDX_MFC_STR,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;USBD_IDX_PRODUCT_STR,&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;USBD_IDX_SERIAL_STR,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+&#32;&#32;<link linkend="_group___u_s_b_d___c_o_n_f___exported___defines_1gaef1f76fda5677f5ad43c25a2ba4ebcde">USBD_MAX_NUM_CONFIGURATION</link>&#32;&#32;
+}
+</programlisting>
+<para>USB standard device descriptor.</para>
+
+<para>USB lang identifier descriptor.</para>
+
+<para>IAR Compiler </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___variables_1ga89f0dd7f68532841d99af34b1be3cd0c"/><section>
+    <title>HS_Desc</title>
+<indexterm><primary>HS_Desc</primary><secondary>USBD_DESC_Private_Variables</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Variables</primary><secondary>HS_Desc</secondary></indexterm>
+<para><computeroutput>USBD_DescriptorsTypeDef HS_Desc</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=
+{
+&#32;&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaef234919e37b4261ded7cf0a6b6f9adb">USBD_HS_DeviceDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga1f97488a1b688c2e36828091adb1714b">USBD_HS_LangIDStrDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaa6fc1499569c6e5129cc16789ad10094">USBD_HS_ManufacturerStrDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga61c64a916bb03b9bf0d0715839bb2718">USBD_HS_ProductStrDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga804ea4a4ff7a927047c831e60658c13c">USBD_HS_SerialStrDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaf1d641e2167f37fe9dca9cf7e9c400e7">USBD_HS_ConfigStrDescriptor</link>
+,&#32;<link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga77299bb83b65537496ac8d3f94219b27">USBD_HS_InterfaceStrDescriptor</link>
+
+
+&#32;
+}
+</programlisting>
+<para>Descriptor for the Usb device. </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,7 @@
+<map id="SD_read" name="SD_read">
+<area shape="rect" id="Node000001" title="Reads Sector(s)" alt="" coords="5,31,77,57"/>
+<area shape="rect" id="Node000002" href="$bsp__driver__sd_8c.html#ad7cfcf73b9f505d0675ec1c2516dbd4c" title="Gets the current SD card data status." alt="" coords="138,5,298,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,36,122,30,123,35,78,42"/>
+<area shape="rect" id="Node000003" href="$bsp__driver__sd_8c.html#aa907652a44281179bcb9bc575e3e8709" title="Reads block(s) from a specified address in an SD card, in DMA mode." alt="" coords="125,56,311,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="78,46,109,51,108,56,77,52"/>
+</map>

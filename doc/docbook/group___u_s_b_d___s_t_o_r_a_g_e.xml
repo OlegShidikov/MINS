@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___s_t_o_r_a_g_e" xml:lang="ru">
+<title>USBD_STORAGE</title>
+<indexterm><primary>USBD_STORAGE</primary></indexterm>
+<para>
+
+<para>Usb mass storage device module. </para>
+ 
+</para>
+Граф связей класса USBD_STORAGE:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___s_t_o_r_a_g_e.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___types_definitions">USBD_STORAGE_Private_TypesDefinitions</link></para>
+
+<para>Private types. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___defines">USBD_STORAGE_Private_Defines</link></para>
+
+<para>Private defines. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___macros">USBD_STORAGE_Private_Macros</link></para>
+
+<para>Private macros. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___variables">USBD_STORAGE_Private_Variables</link></para>
+
+<para>Private variables. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___variables">USBD_STORAGE_Exported_Variables</link></para>
+
+<para>Public variables. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___function_prototypes">USBD_STORAGE_Private_FunctionPrototypes</link></para>
+
+<para>Private functions declaration. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___defines">USBD_STORAGE_Exported_Defines</link></para>
+
+<para>Defines. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___types">USBD_STORAGE_Exported_Types</link></para>
+
+<para>Types. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___macros">USBD_STORAGE_Exported_Macros</link></para>
+
+<para>Aliases. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___functions_prototype">USBD_STORAGE_Exported_FunctionsPrototype</link></para>
+
+<para>Public functions declaration. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>USBD_StorageTypeDef <link linkend="_group___u_s_b_d___s_t_o_r_a_g_e_1ga6e9e9e24e717b09df4341124e05b6aad">USBD_Storage_Interface_fops_HS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Usb mass storage device module. </para>
+
+<para>Header file for the usb_storage_if.c file.</para>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_group___u_s_b_d___s_t_o_r_a_g_e_1ga6e9e9e24e717b09df4341124e05b6aad"/><section>
+    <title>USBD_Storage_Interface_fops_HS</title>
+<indexterm><primary>USBD_Storage_Interface_fops_HS</primary><secondary>USBD_STORAGE</secondary></indexterm>
+<indexterm><primary>USBD_STORAGE</primary><secondary>USBD_Storage_Interface_fops_HS</secondary></indexterm>
+<para><computeroutput>USBD_StorageTypeDef USBD_Storage_Interface_fops_HS</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=
+{
+&#32;&#32;STORAGE_Init_HS,
+&#32;&#32;STORAGE_GetCapacity_HS,
+&#32;&#32;STORAGE_IsReady_HS,
+&#32;&#32;STORAGE_IsWriteProtected_HS,
+&#32;&#32;STORAGE_Read_HS,
+&#32;&#32;STORAGE_Write_HS,
+&#32;&#32;STORAGE_GetMaxLun_HS,
+&#32;&#32;(int8_t&#32;*)<link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___variables_1ga07ad430c2a071af8c793c65ff55e60a0">STORAGE_Inquirydata_HS</link>
+}
+</programlisting>
+<para>STORAGE Interface callback. </para>
+</section>
+</section>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___private___types_definitions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___private___defines.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___private___macros.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___private___variables.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___exported___variables.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___private___function_prototypes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___exported___defines.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___exported___types.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___exported___macros.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e___exported___functions_prototype.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>

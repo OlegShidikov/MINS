@@ -1,0 +1,7 @@
+<map id="SD_initialize" name="SD_initialize">
+<area shape="rect" id="Node000001" title="Initializes a Drive." alt="" coords="5,5,99,32"/>
+<area shape="rect" id="Node000002" href="$bsp__driver__sd_8c.html#afe208758d02f97e12c2eecbf604c1726" title="Initializes the SD card device." alt="" coords="147,5,244,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" id="Node000003" href="$bsp__driver__sd_8c.html#a80c0a2c6722e29b76aa3e3d8a57ee27a" title="Detects if SD card is correctly plugged in the memory slot or not." alt="" coords="292,5,434,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,16,276,16,276,21,244,21"/>
+</map>

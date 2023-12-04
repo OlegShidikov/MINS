@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes" xml:lang="ru">
+<title>USBD_DESC_Private_FunctionPrototypes</title>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary></indexterm>
+<para>
+
+<para>Private functions declaration. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Private_FunctionPrototypes:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___private___function_prototypes.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaef234919e37b4261ded7cf0a6b6f9adb">USBD_HS_DeviceDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the device descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga1f97488a1b688c2e36828091adb1714b">USBD_HS_LangIDStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the LangID string descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaa6fc1499569c6e5129cc16789ad10094">USBD_HS_ManufacturerStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the manufacturer string descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga61c64a916bb03b9bf0d0715839bb2718">USBD_HS_ProductStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the product string descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga804ea4a4ff7a927047c831e60658c13c">USBD_HS_SerialStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the serial number string descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaf1d641e2167f37fe9dca9cf7e9c400e7">USBD_HS_ConfigStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the configuration string descriptor. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga77299bb83b65537496ac8d3f94219b27">USBD_HS_InterfaceStrDescriptor</link> (USBD_SpeedTypeDef speed, uint16_t *length)</para>
+
+<para>Return the interface string descriptor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Private functions declaration. </para>
+
+<para>Private functions declaration for HS.</para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaf1d641e2167f37fe9dca9cf7e9c400e7"/><section>
+    <title>USBD_HS_ConfigStrDescriptor()</title>
+<indexterm><primary>USBD_HS_ConfigStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_ConfigStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_ConfigStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the configuration string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaef234919e37b4261ded7cf0a6b6f9adb"/><section>
+    <title>USBD_HS_DeviceDescriptor()</title>
+<indexterm><primary>USBD_HS_DeviceDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_DeviceDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_DeviceDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the device descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga77299bb83b65537496ac8d3f94219b27"/><section>
+    <title>USBD_HS_InterfaceStrDescriptor()</title>
+<indexterm><primary>USBD_HS_InterfaceStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_InterfaceStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_InterfaceStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the interface string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga1f97488a1b688c2e36828091adb1714b"/><section>
+    <title>USBD_HS_LangIDStrDescriptor()</title>
+<indexterm><primary>USBD_HS_LangIDStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_LangIDStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_LangIDStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the LangID string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1gaa6fc1499569c6e5129cc16789ad10094"/><section>
+    <title>USBD_HS_ManufacturerStrDescriptor()</title>
+<indexterm><primary>USBD_HS_ManufacturerStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_ManufacturerStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_ManufacturerStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the manufacturer string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga61c64a916bb03b9bf0d0715839bb2718"/><section>
+    <title>USBD_HS_ProductStrDescriptor()</title>
+<indexterm><primary>USBD_HS_ProductStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_ProductStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_ProductStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the product string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___function_prototypes_1ga804ea4a4ff7a927047c831e60658c13c"/><section>
+    <title>USBD_HS_SerialStrDescriptor()</title>
+<indexterm><primary>USBD_HS_SerialStrDescriptor</primary><secondary>USBD_DESC_Private_FunctionPrototypes</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_FunctionPrototypes</primary><secondary>USBD_HS_SerialStrDescriptor</secondary></indexterm>
+<para><computeroutput>uint8_t * USBD_HS_SerialStrDescriptor (USBD_SpeedTypeDef speed, uint16_t * length)</computeroutput></para><para>
+
+<para>Return the serial number string descriptor. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>speed</entry><entry>
+<para>: Current device speed </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>: Pointer to data length variable </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Pointer</entry><entry>
+<para>to descriptor buffer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

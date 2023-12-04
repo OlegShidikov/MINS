@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fatfs_8c" xml:lang="ru">
+<title>Файл FATFS/App/fatfs.c</title>
+<indexterm><primary>FATFS/App/fatfs.c</primary></indexterm>
+<para>
+
+<para>Code for fatfs applications. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;fatfs.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для fatfs.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="fatfs_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_fatfs_8c_1a3712bd1d3043334cf9343acc30bd2604">MX_FATFS_Init</link> (void)</para>
+</listitem>
+            <listitem><para>DWORD <link linkend="_fatfs_8c_1af58b536abfd30f77213f4ecaf2ac52f5">get_fattime</link> (void)</para>
+
+<para>Gets Time from RTC. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_fatfs_8c_1ab5eb61c3cf0ce65bdb6f8973d2ddaca5">retSD</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_fatfs_8c_1afe5c7eca20c5b43d6d1a3bda215941bb">SDPath</link> [4]</para>
+</listitem>
+            <listitem><para>FATFS <link linkend="_fatfs_8c_1a23b38dea75a427fda6997c2a56014e95">SDFatFS</link></para>
+</listitem>
+            <listitem><para>FIL <link linkend="_fatfs_8c_1ac80bcdc112ce2f3eb3aea1e1e78f97d4">SDFile</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Code for fatfs applications. </para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_fatfs_8c_1af58b536abfd30f77213f4ecaf2ac52f5"/><section>
+    <title>get_fattime()</title>
+<indexterm><primary>get_fattime</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>get_fattime</secondary></indexterm>
+<para><computeroutput>DWORD get_fattime (void )</computeroutput></para><para>
+
+<para>Gets Time from RTC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Time</entry><entry>
+<para>in DWORD </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_fatfs_8c_1a3712bd1d3043334cf9343acc30bd2604"/><section>
+    <title>MX_FATFS_Init()</title>
+<indexterm><primary>MX_FATFS_Init</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>MX_FATFS_Init</secondary></indexterm>
+<para><computeroutput>void MX_FATFS_Init (void )</computeroutput></para>Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="fatfs_8c_a3712bd1d3043334cf9343acc30bd2604_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_fatfs_8c_1ab5eb61c3cf0ce65bdb6f8973d2ddaca5"/><section>
+    <title>retSD</title>
+<indexterm><primary>retSD</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>retSD</secondary></indexterm>
+<para><computeroutput>uint8_t retSD</computeroutput></para></section>
+<anchor xml:id="_fatfs_8c_1a23b38dea75a427fda6997c2a56014e95"/><section>
+    <title>SDFatFS</title>
+<indexterm><primary>SDFatFS</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>SDFatFS</secondary></indexterm>
+<para><computeroutput>FATFS SDFatFS</computeroutput></para></section>
+<anchor xml:id="_fatfs_8c_1ac80bcdc112ce2f3eb3aea1e1e78f97d4"/><section>
+    <title>SDFile</title>
+<indexterm><primary>SDFile</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>SDFile</secondary></indexterm>
+<para><computeroutput>FIL SDFile</computeroutput></para></section>
+<anchor xml:id="_fatfs_8c_1afe5c7eca20c5b43d6d1a3bda215941bb"/><section>
+    <title>SDPath</title>
+<indexterm><primary>SDPath</primary><secondary>fatfs.c</secondary></indexterm>
+<indexterm><primary>fatfs.c</primary><secondary>SDPath</secondary></indexterm>
+<para><computeroutput>char SDPath[4]</computeroutput></para></section>
+</section>
+</section>

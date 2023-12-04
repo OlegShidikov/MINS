@@ -1,0 +1,93 @@
+\doxysection{Файл FATFS/\+App/fatfs.h}
+\hypertarget{fatfs_8h}{}\label{fatfs_8h}\index{FATFS/App/fatfs.h@{FATFS/App/fatfs.h}}
+
+
+Header for fatfs applications.  
+
+
+{\ttfamily \#include "{}ff.\+h"{}}\newline
+{\ttfamily \#include "{}ff\+\_\+gen\+\_\+drv.\+h"{}}\newline
+{\ttfamily \#include "{}sd\+\_\+diskio.\+h"{}}\newline
+Граф включаемых заголовочных файлов для fatfs.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{fatfs_8h__incl}
+\end{center}
+\end{figure}
+Граф файлов, в которые включается этот файл\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{fatfs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fatfs_8h_a3712bd1d3043334cf9343acc30bd2604}{MX\+\_\+\+FATFS\+\_\+\+Init}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{fatfs_8h_ab5eb61c3cf0ce65bdb6f8973d2ddaca5}{ret\+SD}}
+\item 
+char \mbox{\hyperlink{fatfs_8h_afe5c7eca20c5b43d6d1a3bda215941bb}{SDPath}} \mbox{[}4\mbox{]}
+\item 
+FATFS \mbox{\hyperlink{fatfs_8h_a23b38dea75a427fda6997c2a56014e95}{SDFat\+FS}}
+\item 
+FIL \mbox{\hyperlink{fatfs_8h_ac80bcdc112ce2f3eb3aea1e1e78f97d4}{SDFile}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Header for fatfs applications. 
+
+\begin{DoxyAttention}{Внимание}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Функции}
+\Hypertarget{fatfs_8h_a3712bd1d3043334cf9343acc30bd2604}\label{fatfs_8h_a3712bd1d3043334cf9343acc30bd2604} 
+\index{fatfs.h@{fatfs.h}!MX\_FATFS\_Init@{MX\_FATFS\_Init}}
+\index{MX\_FATFS\_Init@{MX\_FATFS\_Init}!fatfs.h@{fatfs.h}}
+\doxysubsubsection{\texorpdfstring{MX\_FATFS\_Init()}{MX\_FATFS\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+FATFS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{fatfs_8h_a3712bd1d3043334cf9343acc30bd2604_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Переменные}
+\Hypertarget{fatfs_8h_ab5eb61c3cf0ce65bdb6f8973d2ddaca5}\label{fatfs_8h_ab5eb61c3cf0ce65bdb6f8973d2ddaca5} 
+\index{fatfs.h@{fatfs.h}!retSD@{retSD}}
+\index{retSD@{retSD}!fatfs.h@{fatfs.h}}
+\doxysubsubsection{\texorpdfstring{retSD}{retSD}}
+{\footnotesize\ttfamily uint8\+\_\+t ret\+SD\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{fatfs_8h_a23b38dea75a427fda6997c2a56014e95}\label{fatfs_8h_a23b38dea75a427fda6997c2a56014e95} 
+\index{fatfs.h@{fatfs.h}!SDFatFS@{SDFatFS}}
+\index{SDFatFS@{SDFatFS}!fatfs.h@{fatfs.h}}
+\doxysubsubsection{\texorpdfstring{SDFatFS}{SDFatFS}}
+{\footnotesize\ttfamily FATFS SDFat\+FS\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{fatfs_8h_ac80bcdc112ce2f3eb3aea1e1e78f97d4}\label{fatfs_8h_ac80bcdc112ce2f3eb3aea1e1e78f97d4} 
+\index{fatfs.h@{fatfs.h}!SDFile@{SDFile}}
+\index{SDFile@{SDFile}!fatfs.h@{fatfs.h}}
+\doxysubsubsection{\texorpdfstring{SDFile}{SDFile}}
+{\footnotesize\ttfamily FIL SDFile\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{fatfs_8h_afe5c7eca20c5b43d6d1a3bda215941bb}\label{fatfs_8h_afe5c7eca20c5b43d6d1a3bda215941bb} 
+\index{fatfs.h@{fatfs.h}!SDPath@{SDPath}}
+\index{SDPath@{SDPath}!fatfs.h@{fatfs.h}}
+\doxysubsubsection{\texorpdfstring{SDPath}{SDPath}}
+{\footnotesize\ttfamily char SDPath\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

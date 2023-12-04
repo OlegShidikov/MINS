@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__desc_8h_source" xml:lang="ru">
+<title>usbd_desc.h</title>
+<indexterm><primary>USB_DEVICE/App/usbd_desc.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+20 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+21 <emphasis role="preprocessor">#ifndef&#32;__USBD_DESC__C__</emphasis>
+22 <emphasis role="preprocessor">#define&#32;__USBD_DESC__C__</emphasis>
+23 
+24 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+25 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+26 <emphasis role="preprocessor">#endif</emphasis>
+27 
+28 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+29 <emphasis role="preprocessor">#include&#32;&quot;usbd_def.h&quot;</emphasis>
+30 
+31 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;INCLUDE&#32;*/</emphasis>
+32 
+33 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;INCLUDE&#32;*/</emphasis>
+34 
+48 <emphasis role="preprocessor">#define&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEVICE_ID1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(UID_BASE)</emphasis>
+49 <emphasis role="preprocessor">#define&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEVICE_ID2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(UID_BASE&#32;+&#32;0x4)</emphasis>
+50 <emphasis role="preprocessor">#define&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DEVICE_ID3&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(UID_BASE&#32;+&#32;0x8)</emphasis>
+51 
+52 <emphasis role="preprocessor">#define&#32;&#32;USB_SIZ_STRING_SERIAL&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x1A</emphasis>
+53 
+54 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_CONSTANTS&#32;*/</emphasis>
+55 
+56 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_CONSTANTS&#32;*/</emphasis>
+57 
+67 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_DEFINES&#32;*/</emphasis>
+68 
+69 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_DEFINES&#32;*/</emphasis>
+70 
+80 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_TYPES&#32;*/</emphasis>
+81 
+82 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_TYPES&#32;*/</emphasis>
+83 
+93 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_MACRO&#32;*/</emphasis>
+94 
+95 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_MACRO&#32;*/</emphasis>
+96 
+107 <emphasis role="keyword">extern</emphasis>&#32;USBD_DescriptorsTypeDef&#32;<link linkend="_group___u_s_b_d___d_e_s_c___exported___variables_1ga89f0dd7f68532841d99af34b1be3cd0c">HS_Desc</link>;
+108 
+109 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_VARIABLES&#32;*/</emphasis>
+110 
+111 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_VARIABLES&#32;*/</emphasis>
+112 
+122 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_FUNCTIONS&#32;*/</emphasis>
+123 
+124 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_FUNCTIONS&#32;*/</emphasis>
+125 
+138 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+139 }
+140 <emphasis role="preprocessor">#endif</emphasis>
+141 
+142 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__USBD_DESC__C__&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+143 
+</programlisting></section>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8210aaf06c9aff3de5f4d357e8d1f3d3" xml:lang="ru">
+<title>Содержание директории Debug/Middlewares/FreeRTOS</title>
+<indexterm><primary>Содержание директории Debug/Middlewares/FreeRTOS</primary></indexterm>
+Директория графа зависимостей FreeRTOS:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8210aaf06c9aff3de5f4d357e8d1f3d3_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_cmsis__os2_8d">cmsis_os2.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_croutine_8d">croutine.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_event__groups_8d">event_groups.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_heap__4_8d">heap_4.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_list_8d">list.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_port_8d">port.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_queue_8d">queue.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stream__buffer_8d">stream_buffer.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_tasks_8d">tasks.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_timers_8d">timers.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

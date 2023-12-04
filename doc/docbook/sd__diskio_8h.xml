@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sd__diskio_8h" xml:lang="ru">
+<title>Файл FATFS/Target/sd_diskio.h</title>
+<indexterm><primary>FATFS/Target/sd_diskio.h</primary></indexterm>
+<para>
+
+<para>Header for <link linkend="_sd__diskio_8c">sd_diskio.c</link> module. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;bsp_driver_sd.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для sd_diskio.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sd__diskio_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sd__diskio_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>const Diskio_drvTypeDef <link linkend="_sd__diskio_8h_1a1a12762eb7b74c246045197fa41f1296">SD_Driver</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Header for <link linkend="_sd__diskio_8c">sd_diskio.c</link> module. </para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_sd__diskio_8h_1a1a12762eb7b74c246045197fa41f1296"/><section>
+    <title>SD_Driver</title>
+<indexterm><primary>SD_Driver</primary><secondary>sd_diskio.h</secondary></indexterm>
+<indexterm><primary>sd_diskio.h</primary><secondary>SD_Driver</secondary></indexterm>
+<para><computeroutput>const Diskio_drvTypeDef SD_Driver<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

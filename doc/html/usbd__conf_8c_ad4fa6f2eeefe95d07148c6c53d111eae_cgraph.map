@@ -1,0 +1,5 @@
+<map id="USBD_LL_ClearStallEP" name="USBD_LL_ClearStallEP">
+<area shape="rect" id="Node000001" title="Clears a Stall condition on an endpoint of the Low Level Driver." alt="" coords="5,5,165,32"/>
+<area shape="rect" id="Node000002" href="$usbd__conf_8c.html#a71e72e29fe464c7f3be4edf36806355e" title="Returns the USB status depending on the HAL status:" alt="" coords="213,5,377,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,16,197,16,197,21,165,21"/>
+</map>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_a052b1712bc4973eb6cf6db24fbe0122" xml:lang="ru">
+<title>Содержание директории Debug/Middlewares</title>
+<indexterm><primary>Содержание директории Debug/Middlewares</primary></indexterm>
+Директория графа зависимостей Middlewares:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_a052b1712bc4973eb6cf6db24fbe0122_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_5883902db5c376282f63de5fbbf1fa4c">FatFs</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_8210aaf06c9aff3de5f4d357e8d1f3d3">FreeRTOS</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_bba66f6c3e6a45b2b283dda598b96698">USB_Device_Library</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

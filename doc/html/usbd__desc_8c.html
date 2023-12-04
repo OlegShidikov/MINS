@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MINS: Файл USB_DEVICE/App/usbd_desc.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MINS<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_b484bb5bfad2a7c15a6c5b169ba0e52c.html">USB_DEVICE</a></li><li class="navelem"><a class="el" href="dir_b9591a4df859e1c8b6022a1118223511.html">App</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл usbd_desc.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>: This file implements the USB device descriptors.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;usbd_core.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="usbd__desc_8h_source.html">usbd_desc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="usbd__conf_8h_source.html">usbd_conf.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для usbd_desc.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="usbd__desc_8c__incl.png" border="0" usemap="#a_u_s_b___d_e_v_i_c_e_2_app_2usbd__desc_8c" alt=""/></div>
+<map name="a_u_s_b___d_e_v_i_c_e_2_app_2usbd__desc_8c" id="a_u_s_b___d_e_v_i_c_e_2_app_2usbd__desc_8c">
+<area shape="rect" title=": This file implements the USB device descriptors." alt="" coords="65,5,273,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,98,107"/>
+<area shape="poly" title=" " alt="" coords="150,35,86,74,83,69,147,30"/>
+<area shape="rect" href="usbd__desc_8h.html" title=" " alt="" coords="121,80,217,107"/>
+<area shape="poly" title=" " alt="" coords="172,33,172,64,166,64,166,33"/>
+<area shape="rect" href="usbd__conf_8h.html" title=": Header for usbd_conf.c file." alt="" coords="317,80,408,107"/>
+<area shape="poly" title=" " alt="" coords="203,30,315,72,313,77,202,35"/>
+<area shape="rect" title=" " alt="" coords="51,155,135,181"/>
+<area shape="poly" title=" " alt="" coords="157,109,119,146,115,142,154,105"/>
+<area shape="rect" title=" " alt="" coords="159,155,219,181"/>
+<area shape="poly" title=" " alt="" coords="333,110,234,151,232,146,331,105"/>
+<area shape="rect" title=" " alt="" coords="243,155,306,181"/>
+<area shape="poly" title=" " alt="" coords="349,109,303,147,299,143,345,105"/>
+<area shape="rect" title=" " alt="" coords="330,155,394,181"/>
+<area shape="poly" title=" " alt="" coords="365,107,365,139,360,139,360,107"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="419,155,479,181"/>
+<area shape="poly" title=" " alt="" coords="379,105,424,143,421,147,376,109"/>
+<area shape="rect" title=" " alt="" coords="424,229,540,256"/>
+<area shape="poly" title=" " alt="" coords="409,100,455,119,477,134,494,153,500,168,501,185,496,215,491,214,496,184,495,170,489,156,473,138,453,123,407,105"/>
+<area shape="rect" title=" " alt="" coords="555,155,647,181"/>
+<area shape="poly" title=" " alt="" coords="405,105,545,147,544,152,403,110"/>
+<area shape="poly" title=" " alt="" coords="457,181,473,214,468,216,452,183"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:gac5251397ce2246b546b472cd802e6d62" id="r_gac5251397ce2246b546b472cd802e6d62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#gac5251397ce2246b546b472cd802e6d62">USBD_VID</a>&#160;&#160;&#160;1155</td></tr>
+<tr class="separator:gac5251397ce2246b546b472cd802e6d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga070dd542d4d914e86fdf103fa5fdd72f" id="r_ga070dd542d4d914e86fdf103fa5fdd72f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#ga070dd542d4d914e86fdf103fa5fdd72f">USBD_LANGID_STRING</a>&#160;&#160;&#160;1033</td></tr>
+<tr class="separator:ga070dd542d4d914e86fdf103fa5fdd72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee0c9fd7e8265b90126028919cd863a6" id="r_gaee0c9fd7e8265b90126028919cd863a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#gaee0c9fd7e8265b90126028919cd863a6">USBD_MANUFACTURER_STRING</a>&#160;&#160;&#160;&quot;STMicroelectronics&quot;</td></tr>
+<tr class="separator:gaee0c9fd7e8265b90126028919cd863a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c6d9f613aca0d87a9cf87ebfd442c17" id="r_ga5c6d9f613aca0d87a9cf87ebfd442c17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#ga5c6d9f613aca0d87a9cf87ebfd442c17">USBD_PID_HS</a>&#160;&#160;&#160;22314</td></tr>
+<tr class="separator:ga5c6d9f613aca0d87a9cf87ebfd442c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0e156b6d95f3bf696a45adf2dd12217" id="r_gae0e156b6d95f3bf696a45adf2dd12217"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#gae0e156b6d95f3bf696a45adf2dd12217">USBD_PRODUCT_STRING_HS</a>&#160;&#160;&#160;&quot;STM32 Mass Storage&quot;</td></tr>
+<tr class="separator:gae0e156b6d95f3bf696a45adf2dd12217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28c3a051d20aeb440ade204b0318c645" id="r_ga28c3a051d20aeb440ade204b0318c645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#ga28c3a051d20aeb440ade204b0318c645">USBD_CONFIGURATION_STRING_HS</a>&#160;&#160;&#160;&quot;MSC Config&quot;</td></tr>
+<tr class="separator:ga28c3a051d20aeb440ade204b0318c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06ca89c36da0abb192662b8e4967712c" id="r_ga06ca89c36da0abb192662b8e4967712c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#ga06ca89c36da0abb192662b8e4967712c">USBD_INTERFACE_STRING_HS</a>&#160;&#160;&#160;&quot;MSC Interface&quot;</td></tr>
+<tr class="separator:ga06ca89c36da0abb192662b8e4967712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d6767367e9b15bae8d264a78102aba8" id="r_ga3d6767367e9b15bae8d264a78102aba8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___defines.html#ga3d6767367e9b15bae8d264a78102aba8">USB_SIZ_BOS_DESC</a>&#160;&#160;&#160;0x0C</td></tr>
+<tr class="separator:ga3d6767367e9b15bae8d264a78102aba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gaef234919e37b4261ded7cf0a6b6f9adb" id="r_gaef234919e37b4261ded7cf0a6b6f9adb"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#gaef234919e37b4261ded7cf0a6b6f9adb">USBD_HS_DeviceDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:gaef234919e37b4261ded7cf0a6b6f9adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the device descriptor.  <br /></td></tr>
+<tr class="separator:gaef234919e37b4261ded7cf0a6b6f9adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f97488a1b688c2e36828091adb1714b" id="r_ga1f97488a1b688c2e36828091adb1714b"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#ga1f97488a1b688c2e36828091adb1714b">USBD_HS_LangIDStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:ga1f97488a1b688c2e36828091adb1714b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the LangID string descriptor.  <br /></td></tr>
+<tr class="separator:ga1f97488a1b688c2e36828091adb1714b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6fc1499569c6e5129cc16789ad10094" id="r_gaa6fc1499569c6e5129cc16789ad10094"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#gaa6fc1499569c6e5129cc16789ad10094">USBD_HS_ManufacturerStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:gaa6fc1499569c6e5129cc16789ad10094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the manufacturer string descriptor.  <br /></td></tr>
+<tr class="separator:gaa6fc1499569c6e5129cc16789ad10094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61c64a916bb03b9bf0d0715839bb2718" id="r_ga61c64a916bb03b9bf0d0715839bb2718"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#ga61c64a916bb03b9bf0d0715839bb2718">USBD_HS_ProductStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:ga61c64a916bb03b9bf0d0715839bb2718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the product string descriptor.  <br /></td></tr>
+<tr class="separator:ga61c64a916bb03b9bf0d0715839bb2718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga804ea4a4ff7a927047c831e60658c13c" id="r_ga804ea4a4ff7a927047c831e60658c13c"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#ga804ea4a4ff7a927047c831e60658c13c">USBD_HS_SerialStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:ga804ea4a4ff7a927047c831e60658c13c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the serial number string descriptor.  <br /></td></tr>
+<tr class="separator:ga804ea4a4ff7a927047c831e60658c13c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1d641e2167f37fe9dca9cf7e9c400e7" id="r_gaf1d641e2167f37fe9dca9cf7e9c400e7"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#gaf1d641e2167f37fe9dca9cf7e9c400e7">USBD_HS_ConfigStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:gaf1d641e2167f37fe9dca9cf7e9c400e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the configuration string descriptor.  <br /></td></tr>
+<tr class="separator:gaf1d641e2167f37fe9dca9cf7e9c400e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77299bb83b65537496ac8d3f94219b27" id="r_ga77299bb83b65537496ac8d3f94219b27"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___function_prototypes.html#ga77299bb83b65537496ac8d3f94219b27">USBD_HS_InterfaceStrDescriptor</a> (USBD_SpeedTypeDef speed, uint16_t *length)</td></tr>
+<tr class="memdesc:ga77299bb83b65537496ac8d3f94219b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the interface string descriptor.  <br /></td></tr>
+<tr class="separator:ga77299bb83b65537496ac8d3f94219b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ga89f0dd7f68532841d99af34b1be3cd0c" id="r_ga89f0dd7f68532841d99af34b1be3cd0c"><td class="memItemLeft" align="right" valign="top">USBD_DescriptorsTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___variables.html#ga89f0dd7f68532841d99af34b1be3cd0c">HS_Desc</a></td></tr>
+<tr class="separator:ga89f0dd7f68532841d99af34b1be3cd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga542bfea0b6dcf06e06a505bdc49c7e04" id="r_ga542bfea0b6dcf06e06a505bdc49c7e04"><td class="memItemLeft" align="right" valign="top">__ALIGN_BEGIN uint8_t USBD_HS_DeviceDesc[USB_LEN_DEV_DESC]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___u_s_b_d___d_e_s_c___private___variables.html#ga542bfea0b6dcf06e06a505bdc49c7e04">__ALIGN_END</a></td></tr>
+<tr class="separator:ga542bfea0b6dcf06e06a505bdc49c7e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>: This file implements the USB device descriptors. </p>
+<p>: Header for <a class="el" href="usbd__conf_8c.html" title=": This file implements the board support package for the USB device library">usbd_conf.c</a> file.</p>
+<dl class="section version"><dt>Версия</dt><dd>: v1.0_Cube </dd></dl>
+<dl class="section attention"><dt>Внимание</dt><dd></dd></dl>
+<p>Copyright (c) 2023 STMicroelectronics. All rights reserved.</p>
+<p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,68 @@
+\doxysection{bsp\+\_\+driver\+\_\+sd.\+h}
+\hypertarget{bsp__driver__sd_8h_source}{}\label{bsp__driver__sd_8h_source}\index{FATFS/Target/bsp\_driver\_sd.h@{FATFS/Target/bsp\_driver\_sd.h}}
+\mbox{\hyperlink{bsp__driver__sd_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ \_\_STM32F7\_SD\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ \_\_STM32F7\_SD\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00026\ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}stm32f7xx\_hal.h"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ BSP\_SD\_CardInfo\ HAL\_SD\_CardInfoTypeDef}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ \ \ MSD\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x00)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ \ \ MSD\_ERROR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x01)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ \ \ MSD\_ERROR\_SD\_NOT\_PRESENT\ \ \ \ \ \ ((uint8\_t)0x02)}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ \ \ SD\_TRANSFER\_OK\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x00)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \ \ SD\_TRANSFER\_BUSY\ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x01)}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ SD\_PRESENT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x01)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ SD\_NOT\_PRESENT\ \ \ \ \ \ \ \ \ \ \ ((uint8\_t)0x00)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ SD\_DATATIMEOUT\ \ \ \ \ \ \ \ \ \ \ ((uint32\_t)100000000)}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifdef\ OLD\_API}}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ kept\ to\ avoid\ issue\ when\ migrating\ old\ projects.\ */}}
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 0\ */}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{/*\ USER\ CODE\ END\ 0\ */}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ BSP\_H\_CODE\ */}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{/*\ Exported\ functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00065\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881}{BSP\_SD\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00066\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_a84fa96a230dacebf9c960e17f277e4ad}{BSP\_SD\_ITConfig}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00067\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_a1228bfe77312aeb7383d65aaff4fab57}{BSP\_SD\_ReadBlocks}}(uint32\_t\ *pData,\ uint32\_t\ ReadAddr,\ uint32\_t\ NumOfBlocks,\ uint32\_t\ Timeout);}
+\DoxyCodeLine{00068\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_ad8f41626181da956e81e713682de3fd5}{BSP\_SD\_WriteBlocks}}(uint32\_t\ *pData,\ uint32\_t\ WriteAddr,\ uint32\_t\ NumOfBlocks,\ uint32\_t\ Timeout);}
+\DoxyCodeLine{00069\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_ae5e192c8975d8c5d43549ff4c1e2f8a6}{BSP\_SD\_ReadBlocks\_DMA}}(uint32\_t\ *pData,\ uint32\_t\ ReadAddr,\ uint32\_t\ NumOfBlocks);}
+\DoxyCodeLine{00070\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_a2f57e8a4a23c9ea770b9f9da5eab8e8f}{BSP\_SD\_WriteBlocks\_DMA}}(uint32\_t\ *pData,\ uint32\_t\ WriteAddr,\ uint32\_t\ NumOfBlocks);}
+\DoxyCodeLine{00071\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_affac80d97e56403e94031344d356ea67}{BSP\_SD\_Erase}}(uint32\_t\ StartAddr,\ uint32\_t\ EndAddr);}
+\DoxyCodeLine{00072\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_ab53d88c4f6fe22d4dedae5aae9f77f22}{BSP\_SD\_GetCardState}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{bsp__driver__sd_8h_a0594e1814863b9d5093807a998a1daf6}{BSP\_SD\_GetCardInfo}}(\mbox{\hyperlink{bsp__driver__sd_8h_aa27bc16108f37dbef348fe7e2644da4d}{BSP\_SD\_CardInfo}}\ *CardInfo);}
+\DoxyCodeLine{00074\ uint8\_t\ \mbox{\hyperlink{bsp__driver__sd_8h_abe90f483ae462df3f35f64c63d4fe932}{BSP\_SD\_IsDetected}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{/*\ These\ functions\ can\ be\ modified\ in\ case\ the\ current\ settings\ (e.g.\ DMA\ stream)}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ need\ to\ be\ changed\ for\ specific\ application\ needs\ */}}
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{bsp__driver__sd_8h_a0a395393d1522c9844c525f0dc61fe3e}{BSP\_SD\_AbortCallback}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{bsp__driver__sd_8h_afc4f1ecdf361e0c0808803167f31d61b}{BSP\_SD\_WriteCpltCallback}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \ \ \ \mbox{\hyperlink{bsp__driver__sd_8h_a8d66ac35cee6a454f7e584f0051bc9f8}{BSP\_SD\_ReadCpltCallback}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00081\ \textcolor{comment}{/*\ USER\ CODE\ END\ BSP\_H\_CODE\ */}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00085\ \}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_STM32F7\_SD\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

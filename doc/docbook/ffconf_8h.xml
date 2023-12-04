@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ffconf_8h" xml:lang="ru">
+<title>Файл FATFS/Target/ffconf.h</title>
+<indexterm><primary>FATFS/Target/ffconf.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;main.h&quot;<?linebreak?>#include &quot;stm32f7xx_hal.h&quot;<?linebreak?>#include &quot;bsp_driver_sd.h&quot;<?linebreak?>#include &quot;cmsis_os.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для ffconf.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="ffconf_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a45082af332369ed49492446a2d4d4c5a">_FFCONF</link>&#160;&#160;&#160;68300	/* Revision ID */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1afb8d35370cfe0c23832ac2d82e854ec6">_FS_READONLY</link>&#160;&#160;&#160;0      /* 0:Read/Write or 1:Read only */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1abefed32e4f049538ff7d7101cd8e3643">_FS_MINIMIZE</link>&#160;&#160;&#160;0      /* 0 to 3 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1aaab0313f867bb008b64236239f5c2660">_USE_STRFUNC</link>&#160;&#160;&#160;2      /* 0:Disable or 1-2:Enable */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1abf97f960987a4a2be3b876cc45612b06">_USE_FIND</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a62cdce547af40f0c1599698ee151bbd7">_USE_MKFS</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a85f4bdb33729ebdaaf9edeec948ac0e7">_USE_FASTSEEK</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a89e14a6d520a11044b87a947e83a5acb">_USE_EXPAND</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1adff028cbd80032c637fe1bb4e9b6fdfd">_USE_CHMOD</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a281a4fc4668e40fc896fc865f52f9421">_USE_LABEL</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ae49b948c9a92ff7082b88bd36f63d988">_USE_FORWARD</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1aaf9b5cee569d93f1ebe43ea70916569f">_CODE_PAGE</link>&#160;&#160;&#160;850</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ae471cce284bf1888f9e991f5a811fc11">_USE_LFN</link>&#160;&#160;&#160;0    /* 0 to 3 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a14e73a5c703a586c614b3e40b849f82c">_MAX_LFN</link>&#160;&#160;&#160;255  /* Maximum LFN length to handle (12 to 255) */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a8dd7e7f166bb146970b394d53cf01d80">_LFN_UNICODE</link>&#160;&#160;&#160;0 /* 0:ANSI/OEM or 1:Unicode */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a36a53af63e05351562e34f082eec3f33">_STRF_ENCODE</link>&#160;&#160;&#160;3</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a52faf11025401372f71e9d81905b7af4">_FS_RPATH</link>&#160;&#160;&#160;0 /* 0 to 2 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a366da9a40c8ceb3103a6b72ca02b9969">_VOLUMES</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ae89b13dba7638cb22b5587fcb335ffe3">_STR_VOLUME_ID</link>&#160;&#160;&#160;0	/* 0:Use only 0-9 for drive ID, 1:Use strings for drive ID */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a75c97afb8b06935364e42e3ec3fdc6c4">_VOLUME_STRS</link>&#160;&#160;&#160;&quot;RAM&quot;,&quot;NAND&quot;,&quot;CF&quot;,&quot;SD1&quot;,&quot;SD2&quot;,&quot;USB1&quot;,&quot;USB2&quot;,&quot;USB3&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1adc02609ba893fe8706a2f8af0e3a3bb5">_MULTI_PARTITION</link>&#160;&#160;&#160;0 /* 0:Single partition, 1:Multiple partition */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ad03aa6d0e294709ae15898ee2c14dc3a">_MIN_SS</link>&#160;&#160;&#160;512  /* 512, 1024, 2048 or 4096 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ac271b697378912f17132cb9c7d0de024">_MAX_SS</link>&#160;&#160;&#160;512  /* 512, 1024, 2048 or 4096 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a1f93ee7e57bb9d1221f34bfe80e18a61">_USE_TRIM</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1aaa0caa2085332d2febf0e392559ad138">_FS_NOFSINFO</link>&#160;&#160;&#160;0 /* 0,1,2 or 3 */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1aa21b30e70610594d3af3a28832b584f6">_FS_TINY</link>&#160;&#160;&#160;0      /* 0:Normal or 1:Tiny */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a104309dc91be2af9375923ed7b03490e">_FS_EXFAT</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a851cace7cfb7afdb4e892230cc075bbd">_FS_NORTC</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a47a493ecf767b65199e1425795f1d61d">_NORTC_MON</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1aa3cf28aa915cb9081fa1aa5b44858dd6">_NORTC_MDAY</link>&#160;&#160;&#160;4</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1add853644b85a7633bb782dfddb51bda5">_NORTC_YEAR</link>&#160;&#160;&#160;2015</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a01410fcb45c2d2d2c5692c56d4f0a481">_FS_LOCK</link>&#160;&#160;&#160;2     /* 0:Disable or &gt;=1:Enable */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a4e07d7fcae4241b73eb5b70fab5f676d">_FS_REENTRANT</link>&#160;&#160;&#160;1  /* 0:Disable or 1:Enable */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a526e3cac667f53cc9a48507873348e60">_FS_TIMEOUT</link>&#160;&#160;&#160;1000 /* Timeout period in unit of time ticks */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a9a3f0670343e51652dd12b18fa90a9eb">_SYNC_t</link>&#160;&#160;&#160;osSemaphoreId_t</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1a1eee011a3d69ab8a3d199b985fe2ad36">ff_malloc</link>&#160;&#160;&#160;pvPortMalloc</para>
+</listitem>
+            <listitem><para>#define <link linkend="_ffconf_8h_1ac7b5118894bfc43cc0d19f7290a7be0c">ff_free</link>&#160;&#160;&#160;vPortFree</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Макросы</title>
+<anchor xml:id="_ffconf_8h_1aaf9b5cee569d93f1ebe43ea70916569f"/><section>
+    <title>_CODE_PAGE</title>
+<indexterm><primary>_CODE_PAGE</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_CODE_PAGE</secondary></indexterm>
+<para><computeroutput>#define _CODE_PAGE&#160;&#160;&#160;850</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a45082af332369ed49492446a2d4d4c5a"/><section>
+    <title>_FFCONF</title>
+<indexterm><primary>_FFCONF</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FFCONF</secondary></indexterm>
+<para><computeroutput>#define _FFCONF&#160;&#160;&#160;68300	/* Revision ID */</computeroutput></para>
+<para>FatFs - Generic FAT file system module R0.12c (C)ChaN, 2017</para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<anchor xml:id="_ffconf_8h_1a104309dc91be2af9375923ed7b03490e"/><section>
+    <title>_FS_EXFAT</title>
+<indexterm><primary>_FS_EXFAT</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_EXFAT</secondary></indexterm>
+<para><computeroutput>#define _FS_EXFAT&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a01410fcb45c2d2d2c5692c56d4f0a481"/><section>
+    <title>_FS_LOCK</title>
+<indexterm><primary>_FS_LOCK</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_LOCK</secondary></indexterm>
+<para><computeroutput>#define _FS_LOCK&#160;&#160;&#160;2     /* 0:Disable or &gt;=1:Enable */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1abefed32e4f049538ff7d7101cd8e3643"/><section>
+    <title>_FS_MINIMIZE</title>
+<indexterm><primary>_FS_MINIMIZE</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_MINIMIZE</secondary></indexterm>
+<para><computeroutput>#define _FS_MINIMIZE&#160;&#160;&#160;0      /* 0 to 3 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1aaa0caa2085332d2febf0e392559ad138"/><section>
+    <title>_FS_NOFSINFO</title>
+<indexterm><primary>_FS_NOFSINFO</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_NOFSINFO</secondary></indexterm>
+<para><computeroutput>#define _FS_NOFSINFO&#160;&#160;&#160;0 /* 0,1,2 or 3 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a851cace7cfb7afdb4e892230cc075bbd"/><section>
+    <title>_FS_NORTC</title>
+<indexterm><primary>_FS_NORTC</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_NORTC</secondary></indexterm>
+<para><computeroutput>#define _FS_NORTC&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1afb8d35370cfe0c23832ac2d82e854ec6"/><section>
+    <title>_FS_READONLY</title>
+<indexterm><primary>_FS_READONLY</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_READONLY</secondary></indexterm>
+<para><computeroutput>#define _FS_READONLY&#160;&#160;&#160;0      /* 0:Read/Write or 1:Read only */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a4e07d7fcae4241b73eb5b70fab5f676d"/><section>
+    <title>_FS_REENTRANT</title>
+<indexterm><primary>_FS_REENTRANT</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_REENTRANT</secondary></indexterm>
+<para><computeroutput>#define _FS_REENTRANT&#160;&#160;&#160;1  /* 0:Disable or 1:Enable */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a52faf11025401372f71e9d81905b7af4"/><section>
+    <title>_FS_RPATH</title>
+<indexterm><primary>_FS_RPATH</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_RPATH</secondary></indexterm>
+<para><computeroutput>#define _FS_RPATH&#160;&#160;&#160;0 /* 0 to 2 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a526e3cac667f53cc9a48507873348e60"/><section>
+    <title>_FS_TIMEOUT</title>
+<indexterm><primary>_FS_TIMEOUT</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_TIMEOUT</secondary></indexterm>
+<para><computeroutput>#define _FS_TIMEOUT&#160;&#160;&#160;1000 /* Timeout period in unit of time ticks */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1aa21b30e70610594d3af3a28832b584f6"/><section>
+    <title>_FS_TINY</title>
+<indexterm><primary>_FS_TINY</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_FS_TINY</secondary></indexterm>
+<para><computeroutput>#define _FS_TINY&#160;&#160;&#160;0      /* 0:Normal or 1:Tiny */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a8dd7e7f166bb146970b394d53cf01d80"/><section>
+    <title>_LFN_UNICODE</title>
+<indexterm><primary>_LFN_UNICODE</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_LFN_UNICODE</secondary></indexterm>
+<para><computeroutput>#define _LFN_UNICODE&#160;&#160;&#160;0 /* 0:ANSI/OEM or 1:Unicode */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a14e73a5c703a586c614b3e40b849f82c"/><section>
+    <title>_MAX_LFN</title>
+<indexterm><primary>_MAX_LFN</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_MAX_LFN</secondary></indexterm>
+<para><computeroutput>#define _MAX_LFN&#160;&#160;&#160;255  /* Maximum LFN length to handle (12 to 255) */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ac271b697378912f17132cb9c7d0de024"/><section>
+    <title>_MAX_SS</title>
+<indexterm><primary>_MAX_SS</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_MAX_SS</secondary></indexterm>
+<para><computeroutput>#define _MAX_SS&#160;&#160;&#160;512  /* 512, 1024, 2048 or 4096 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ad03aa6d0e294709ae15898ee2c14dc3a"/><section>
+    <title>_MIN_SS</title>
+<indexterm><primary>_MIN_SS</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_MIN_SS</secondary></indexterm>
+<para><computeroutput>#define _MIN_SS&#160;&#160;&#160;512  /* 512, 1024, 2048 or 4096 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1adc02609ba893fe8706a2f8af0e3a3bb5"/><section>
+    <title>_MULTI_PARTITION</title>
+<indexterm><primary>_MULTI_PARTITION</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_MULTI_PARTITION</secondary></indexterm>
+<para><computeroutput>#define _MULTI_PARTITION&#160;&#160;&#160;0 /* 0:Single partition, 1:Multiple partition */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1aa3cf28aa915cb9081fa1aa5b44858dd6"/><section>
+    <title>_NORTC_MDAY</title>
+<indexterm><primary>_NORTC_MDAY</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_NORTC_MDAY</secondary></indexterm>
+<para><computeroutput>#define _NORTC_MDAY&#160;&#160;&#160;4</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a47a493ecf767b65199e1425795f1d61d"/><section>
+    <title>_NORTC_MON</title>
+<indexterm><primary>_NORTC_MON</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_NORTC_MON</secondary></indexterm>
+<para><computeroutput>#define _NORTC_MON&#160;&#160;&#160;6</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1add853644b85a7633bb782dfddb51bda5"/><section>
+    <title>_NORTC_YEAR</title>
+<indexterm><primary>_NORTC_YEAR</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_NORTC_YEAR</secondary></indexterm>
+<para><computeroutput>#define _NORTC_YEAR&#160;&#160;&#160;2015</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ae89b13dba7638cb22b5587fcb335ffe3"/><section>
+    <title>_STR_VOLUME_ID</title>
+<indexterm><primary>_STR_VOLUME_ID</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_STR_VOLUME_ID</secondary></indexterm>
+<para><computeroutput>#define _STR_VOLUME_ID&#160;&#160;&#160;0	/* 0:Use only 0-9 for drive ID, 1:Use strings for drive ID */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a36a53af63e05351562e34f082eec3f33"/><section>
+    <title>_STRF_ENCODE</title>
+<indexterm><primary>_STRF_ENCODE</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_STRF_ENCODE</secondary></indexterm>
+<para><computeroutput>#define _STRF_ENCODE&#160;&#160;&#160;3</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a9a3f0670343e51652dd12b18fa90a9eb"/><section>
+    <title>_SYNC_t</title>
+<indexterm><primary>_SYNC_t</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_SYNC_t</secondary></indexterm>
+<para><computeroutput>#define _SYNC_t&#160;&#160;&#160;osSemaphoreId_t</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1adff028cbd80032c637fe1bb4e9b6fdfd"/><section>
+    <title>_USE_CHMOD</title>
+<indexterm><primary>_USE_CHMOD</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_CHMOD</secondary></indexterm>
+<para><computeroutput>#define _USE_CHMOD&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a89e14a6d520a11044b87a947e83a5acb"/><section>
+    <title>_USE_EXPAND</title>
+<indexterm><primary>_USE_EXPAND</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_EXPAND</secondary></indexterm>
+<para><computeroutput>#define _USE_EXPAND&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a85f4bdb33729ebdaaf9edeec948ac0e7"/><section>
+    <title>_USE_FASTSEEK</title>
+<indexterm><primary>_USE_FASTSEEK</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_FASTSEEK</secondary></indexterm>
+<para><computeroutput>#define _USE_FASTSEEK&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1abf97f960987a4a2be3b876cc45612b06"/><section>
+    <title>_USE_FIND</title>
+<indexterm><primary>_USE_FIND</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_FIND</secondary></indexterm>
+<para><computeroutput>#define _USE_FIND&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ae49b948c9a92ff7082b88bd36f63d988"/><section>
+    <title>_USE_FORWARD</title>
+<indexterm><primary>_USE_FORWARD</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_FORWARD</secondary></indexterm>
+<para><computeroutput>#define _USE_FORWARD&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a281a4fc4668e40fc896fc865f52f9421"/><section>
+    <title>_USE_LABEL</title>
+<indexterm><primary>_USE_LABEL</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_LABEL</secondary></indexterm>
+<para><computeroutput>#define _USE_LABEL&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ae471cce284bf1888f9e991f5a811fc11"/><section>
+    <title>_USE_LFN</title>
+<indexterm><primary>_USE_LFN</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_LFN</secondary></indexterm>
+<para><computeroutput>#define _USE_LFN&#160;&#160;&#160;0    /* 0 to 3 */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a62cdce547af40f0c1599698ee151bbd7"/><section>
+    <title>_USE_MKFS</title>
+<indexterm><primary>_USE_MKFS</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_MKFS</secondary></indexterm>
+<para><computeroutput>#define _USE_MKFS&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1aaab0313f867bb008b64236239f5c2660"/><section>
+    <title>_USE_STRFUNC</title>
+<indexterm><primary>_USE_STRFUNC</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_STRFUNC</secondary></indexterm>
+<para><computeroutput>#define _USE_STRFUNC&#160;&#160;&#160;2      /* 0:Disable or 1-2:Enable */</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a1f93ee7e57bb9d1221f34bfe80e18a61"/><section>
+    <title>_USE_TRIM</title>
+<indexterm><primary>_USE_TRIM</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_USE_TRIM</secondary></indexterm>
+<para><computeroutput>#define _USE_TRIM&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a75c97afb8b06935364e42e3ec3fdc6c4"/><section>
+    <title>_VOLUME_STRS</title>
+<indexterm><primary>_VOLUME_STRS</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_VOLUME_STRS</secondary></indexterm>
+<para><computeroutput>#define _VOLUME_STRS&#160;&#160;&#160;&quot;RAM&quot;,&quot;NAND&quot;,&quot;CF&quot;,&quot;SD1&quot;,&quot;SD2&quot;,&quot;USB1&quot;,&quot;USB2&quot;,&quot;USB3&quot;</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a366da9a40c8ceb3103a6b72ca02b9969"/><section>
+    <title>_VOLUMES</title>
+<indexterm><primary>_VOLUMES</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>_VOLUMES</secondary></indexterm>
+<para><computeroutput>#define _VOLUMES&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1ac7b5118894bfc43cc0d19f7290a7be0c"/><section>
+    <title>ff_free</title>
+<indexterm><primary>ff_free</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>ff_free</secondary></indexterm>
+<para><computeroutput>#define ff_free&#160;&#160;&#160;vPortFree</computeroutput></para></section>
+<anchor xml:id="_ffconf_8h_1a1eee011a3d69ab8a3d199b985fe2ad36"/><section>
+    <title>ff_malloc</title>
+<indexterm><primary>ff_malloc</primary><secondary>ffconf.h</secondary></indexterm>
+<indexterm><primary>ffconf.h</primary><secondary>ff_malloc</secondary></indexterm>
+<para><computeroutput>#define ff_malloc&#160;&#160;&#160;pvPortMalloc</computeroutput></para></section>
+</section>
+</section>

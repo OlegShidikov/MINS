@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_658d105081159f79e18930a91ed947e4" xml:lang="ru">
+<title>Содержание директории Debug/Drivers/STM32F7xx_HAL_Driver</title>
+<indexterm><primary>Содержание директории Debug/Drivers/STM32F7xx_HAL_Driver</primary></indexterm>
+Директория графа зависимостей STM32F7xx_HAL_Driver:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_658d105081159f79e18930a91ed947e4_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal_8d">stm32f7xx_hal.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__cortex_8d">stm32f7xx_hal_cortex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__dma_8d">stm32f7xx_hal_dma.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__dma__ex_8d">stm32f7xx_hal_dma_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__exti_8d">stm32f7xx_hal_exti.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__flash_8d">stm32f7xx_hal_flash.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__flash__ex_8d">stm32f7xx_hal_flash_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__gpio_8d">stm32f7xx_hal_gpio.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__i2c_8d">stm32f7xx_hal_i2c.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__i2c__ex_8d">stm32f7xx_hal_i2c_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__pcd_8d">stm32f7xx_hal_pcd.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__pcd__ex_8d">stm32f7xx_hal_pcd_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__pwr_8d">stm32f7xx_hal_pwr.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__pwr__ex_8d">stm32f7xx_hal_pwr_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__rcc_8d">stm32f7xx_hal_rcc.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__rcc__ex_8d">stm32f7xx_hal_rcc_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__rtc_8d">stm32f7xx_hal_rtc.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__rtc__ex_8d">stm32f7xx_hal_rtc_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__sd_8d">stm32f7xx_hal_sd.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__tim_8d">stm32f7xx_hal_tim.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__tim__ex_8d">stm32f7xx_hal_tim_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__uart_8d">stm32f7xx_hal_uart.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__hal__uart__ex_8d">stm32f7xx_hal_uart_ex.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__ll__sdmmc_8d">stm32f7xx_ll_sdmmc.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_stm32f7xx__ll__usb_8d">stm32f7xx_ll_usb.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

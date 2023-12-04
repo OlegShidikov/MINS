@@ -1,0 +1,489 @@
+\doxysection{Файл FATFS/\+Target/bsp\+\_\+driver\+\_\+sd.c}
+\hypertarget{bsp__driver__sd_8c}{}\label{bsp__driver__sd_8c}\index{FATFS/Target/bsp\_driver\_sd.c@{FATFS/Target/bsp\_driver\_sd.c}}
+
+
+This file includes a generic u\+SD card driver. To be completed by the user according to the board used for the project.  
+
+
+{\ttfamily \#include "{}bsp\+\_\+driver\+\_\+sd.\+h"{}}\newline
+Граф включаемых заголовочных файлов для bsp\+\_\+driver\+\_\+sd.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{bsp__driver__sd_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726}{BSP\+\_\+\+SD\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the SD card device. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_aa1acca35f0ecac51c2afdf8458050f8b}{BSP\+\_\+\+SD\+\_\+\+ITConfig}} (void)
+\begin{DoxyCompactList}\small\item\em Configures Interrupt mode for SD detection pin. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_afe23f41939f1b8aa1f609fcf3e71be84}{BSP\+\_\+\+SD\+\_\+\+Read\+Blocks}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint32\+\_\+t Read\+Addr, uint32\+\_\+t Num\+Of\+Blocks, uint32\+\_\+t Timeout)
+\begin{DoxyCompactList}\small\item\em Reads block(s) from a specified address in an SD card, in polling mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_a6d88090464978ec87aa1cbca9f810495}{BSP\+\_\+\+SD\+\_\+\+Write\+Blocks}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint32\+\_\+t Write\+Addr, uint32\+\_\+t Num\+Of\+Blocks, uint32\+\_\+t Timeout)
+\begin{DoxyCompactList}\small\item\em Writes block(s) to a specified address in an SD card, in polling mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_aa907652a44281179bcb9bc575e3e8709}{BSP\+\_\+\+SD\+\_\+\+Read\+Blocks\+\_\+\+DMA}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint32\+\_\+t Read\+Addr, uint32\+\_\+t Num\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Reads block(s) from a specified address in an SD card, in DMA mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_af3e90e60fd1aa25bdbd57c4e7bd62558}{BSP\+\_\+\+SD\+\_\+\+Write\+Blocks\+\_\+\+DMA}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Data, uint32\+\_\+t Write\+Addr, uint32\+\_\+t Num\+Of\+Blocks)
+\begin{DoxyCompactList}\small\item\em Writes block(s) to a specified address in an SD card, in DMA mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_aeaa35023e9428a9c31e693bcdadeb3d6}{BSP\+\_\+\+SD\+\_\+\+Erase}} (uint32\+\_\+t Start\+Addr, uint32\+\_\+t End\+Addr)
+\begin{DoxyCompactList}\small\item\em Erases the specified memory area of the given SD card. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_ad7cfcf73b9f505d0675ec1c2516dbd4c}{BSP\+\_\+\+SD\+\_\+\+Get\+Card\+State}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the current SD card data status. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{bsp__driver__sd_8c_a17b5e6325eebcd997d540f304d7a35b1}{BSP\+\_\+\+SD\+\_\+\+Get\+Card\+Info}} (HAL\+\_\+\+SD\+\_\+\+Card\+Info\+Type\+Def \texorpdfstring{$\ast$}{*}Card\+Info)
+\begin{DoxyCompactList}\small\item\em Get SD information about specific SD card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__driver__sd_8c_a52a463063ce8c6f1e8910f30dd4e8376}{HAL\+\_\+\+SD\+\_\+\+Abort\+Callback}} (SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hsd)
+\begin{DoxyCompactList}\small\item\em SD Abort callbacks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__driver__sd_8c_a7f42b31026c697fea97c132e9aed15e2}{HAL\+\_\+\+SD\+\_\+\+Tx\+Cplt\+Callback}} (SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hsd)
+\begin{DoxyCompactList}\small\item\em Tx Transfer completed callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp__driver__sd_8c_a1720dc3a0e88b26e557ae63fad3a382d}{HAL\+\_\+\+SD\+\_\+\+Rx\+Cplt\+Callback}} (SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hsd)
+\begin{DoxyCompactList}\small\item\em Rx Transfer completed callback. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{bsp__driver__sd_8c_a93d832f6829fdec979a7df3944084512}{BSP\+\_\+\+SD\+\_\+\+Abort\+Callback}} (void)
+\begin{DoxyCompactList}\small\item\em BSP SD Abort callback. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{bsp__driver__sd_8c_a2e6559fa7b5164071baafa3b3f668e3f}{BSP\+\_\+\+SD\+\_\+\+Write\+Cplt\+Callback}} (void)
+\begin{DoxyCompactList}\small\item\em BSP Tx Transfer completed callback. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak void \mbox{\hyperlink{bsp__driver__sd_8c_aeb3eb4ab76f0acd225bddf68199e6f3c}{BSP\+\_\+\+SD\+\_\+\+Read\+Cplt\+Callback}} (void)
+\begin{DoxyCompactList}\small\item\em BSP Rx Transfer completed callback. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+weak uint8\+\_\+t \mbox{\hyperlink{bsp__driver__sd_8c_a80c0a2c6722e29b76aa3e3d8a57ee27a}{BSP\+\_\+\+SD\+\_\+\+Is\+Detected}} (void)
+\begin{DoxyCompactList}\small\item\em Detects if SD card is correctly plugged in the memory slot or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+SD\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{bsp__driver__sd_8c_ad0b867cf724e111d6329c1eb91f3b30b}{hsd1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+This file includes a generic u\+SD card driver. To be completed by the user according to the board used for the project. 
+
+for F7 (based on stm32756g\+\_\+eval\+\_\+sd.\+c) \begin{DoxyNote}{Заметки}
+Some functions generated as weak\+: they can be overridden by
+\begin{DoxyItemize}
+\item code in user files
+\item or BSP code from the FW pack files if such files are added to the generated project (by the user).
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyAttention}{Внимание}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Функции}
+\Hypertarget{bsp__driver__sd_8c_a93d832f6829fdec979a7df3944084512}\label{bsp__driver__sd_8c_a93d832f6829fdec979a7df3944084512} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_AbortCallback@{BSP\_SD\_AbortCallback}}
+\index{BSP\_SD\_AbortCallback@{BSP\_SD\_AbortCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_AbortCallback()}{BSP\_SD\_AbortCallback()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SD\+\_\+\+Abort\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+BSP SD Abort callback. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Заметки}
+empty (up to the user to fill it in or to remove it if useless) 
+\end{DoxyNote}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a93d832f6829fdec979a7df3944084512_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_aeaa35023e9428a9c31e693bcdadeb3d6}\label{bsp__driver__sd_8c_aeaa35023e9428a9c31e693bcdadeb3d6} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_Erase@{BSP\_SD\_Erase}}
+\index{BSP\_SD\_Erase@{BSP\_SD\_Erase}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_Erase()}{BSP\_SD\_Erase()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Erase (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Start\+Addr,  }\item[{uint32\+\_\+t}]{End\+Addr }\end{DoxyParamCaption})}
+
+
+
+Erases the specified memory area of the given SD card. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Start\+Addr} & Start byte address \\
+\hline
+{\em End\+Addr} & End byte address \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_a17b5e6325eebcd997d540f304d7a35b1}\label{bsp__driver__sd_8c_a17b5e6325eebcd997d540f304d7a35b1} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_GetCardInfo@{BSP\_SD\_GetCardInfo}}
+\index{BSP\_SD\_GetCardInfo@{BSP\_SD\_GetCardInfo}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_GetCardInfo()}{BSP\_SD\_GetCardInfo()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SD\+\_\+\+Get\+Card\+Info (\begin{DoxyParamCaption}\item[{HAL\+\_\+\+SD\+\_\+\+Card\+Info\+Type\+Def \texorpdfstring{$\ast$}{*}}]{Card\+Info }\end{DoxyParamCaption})}
+
+
+
+Get SD information about specific SD card. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Card\+Info} & Pointer to HAL\+\_\+\+SD\+\_\+\+Card\+Info\+Typedef structure \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_ad7cfcf73b9f505d0675ec1c2516dbd4c}\label{bsp__driver__sd_8c_ad7cfcf73b9f505d0675ec1c2516dbd4c} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_GetCardState@{BSP\_SD\_GetCardState}}
+\index{BSP\_SD\_GetCardState@{BSP\_SD\_GetCardState}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_GetCardState()}{BSP\_SD\_GetCardState()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Get\+Card\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current SD card data status. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em Data} & transfer state. This value can be one of the following values\+: \begin{DoxyItemize}
+\item SD\+\_\+\+TRANSFER\+\_\+\+OK\+: No data transfer is acting \item SD\+\_\+\+TRANSFER\+\_\+\+BUSY\+: Data transfer is acting \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{bsp__driver__sd_8c_ad7cfcf73b9f505d0675ec1c2516dbd4c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726}\label{bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_Init@{BSP\_SD\_Init}}
+\index{BSP\_SD\_Init@{BSP\_SD\_Init}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_Init()}{BSP\_SD\_Init()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the SD card device. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_a80c0a2c6722e29b76aa3e3d8a57ee27a}\label{bsp__driver__sd_8c_a80c0a2c6722e29b76aa3e3d8a57ee27a} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_IsDetected@{BSP\_SD\_IsDetected}}
+\index{BSP\_SD\_IsDetected@{BSP\_SD\_IsDetected}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_IsDetected()}{BSP\_SD\_IsDetected()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Is\+Detected (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Detects if SD card is correctly plugged in the memory slot or not. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em Returns} & if SD is detected or not \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a80c0a2c6722e29b76aa3e3d8a57ee27a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_aa1acca35f0ecac51c2afdf8458050f8b}\label{bsp__driver__sd_8c_aa1acca35f0ecac51c2afdf8458050f8b} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_ITConfig@{BSP\_SD\_ITConfig}}
+\index{BSP\_SD\_ITConfig@{BSP\_SD\_ITConfig}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_ITConfig()}{BSP\_SD\_ITConfig()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+ITConfig (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures Interrupt mode for SD detection pin. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em Returns} & 0 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_afe23f41939f1b8aa1f609fcf3e71be84}\label{bsp__driver__sd_8c_afe23f41939f1b8aa1f609fcf3e71be84} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_ReadBlocks@{BSP\_SD\_ReadBlocks}}
+\index{BSP\_SD\_ReadBlocks@{BSP\_SD\_ReadBlocks}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_ReadBlocks()}{BSP\_SD\_ReadBlocks()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Read\+Blocks (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint32\+\_\+t}]{Read\+Addr,  }\item[{uint32\+\_\+t}]{Num\+Of\+Blocks,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+
+
+Reads block(s) from a specified address in an SD card, in polling mode. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p\+Data} & Pointer to the buffer that will contain the data to transmit \\
+\hline
+{\em Read\+Addr} & Address from where data is to be read \\
+\hline
+{\em Num\+Of\+Blocks} & Number of SD blocks to read \\
+\hline
+{\em Timeout} & Timeout for read operation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_aa907652a44281179bcb9bc575e3e8709}\label{bsp__driver__sd_8c_aa907652a44281179bcb9bc575e3e8709} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_ReadBlocks\_DMA@{BSP\_SD\_ReadBlocks\_DMA}}
+\index{BSP\_SD\_ReadBlocks\_DMA@{BSP\_SD\_ReadBlocks\_DMA}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_ReadBlocks\_DMA()}{BSP\_SD\_ReadBlocks\_DMA()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Read\+Blocks\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint32\+\_\+t}]{Read\+Addr,  }\item[{uint32\+\_\+t}]{Num\+Of\+Blocks }\end{DoxyParamCaption})}
+
+
+
+Reads block(s) from a specified address in an SD card, in DMA mode. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p\+Data} & Pointer to the buffer that will contain the data to transmit \\
+\hline
+{\em Read\+Addr} & Address from where data is to be read \\
+\hline
+{\em Num\+Of\+Blocks} & Number of SD blocks to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{bsp__driver__sd_8c_aa907652a44281179bcb9bc575e3e8709_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_aeb3eb4ab76f0acd225bddf68199e6f3c}\label{bsp__driver__sd_8c_aeb3eb4ab76f0acd225bddf68199e6f3c} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_ReadCpltCallback@{BSP\_SD\_ReadCpltCallback}}
+\index{BSP\_SD\_ReadCpltCallback@{BSP\_SD\_ReadCpltCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_ReadCpltCallback()}{BSP\_SD\_ReadCpltCallback()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SD\+\_\+\+Read\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+BSP Rx Transfer completed callback. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Заметки}
+empty (up to the user to fill it in or to remove it if useless) 
+\end{DoxyNote}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_aeb3eb4ab76f0acd225bddf68199e6f3c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_a6d88090464978ec87aa1cbca9f810495}\label{bsp__driver__sd_8c_a6d88090464978ec87aa1cbca9f810495} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_WriteBlocks@{BSP\_SD\_WriteBlocks}}
+\index{BSP\_SD\_WriteBlocks@{BSP\_SD\_WriteBlocks}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_WriteBlocks()}{BSP\_SD\_WriteBlocks()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Write\+Blocks (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint32\+\_\+t}]{Write\+Addr,  }\item[{uint32\+\_\+t}]{Num\+Of\+Blocks,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+
+
+Writes block(s) to a specified address in an SD card, in polling mode. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p\+Data} & Pointer to the buffer that will contain the data to transmit \\
+\hline
+{\em Write\+Addr} & Address from where data is to be written \\
+\hline
+{\em Num\+Of\+Blocks} & Number of SD blocks to write \\
+\hline
+{\em Timeout} & Timeout for write operation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_af3e90e60fd1aa25bdbd57c4e7bd62558}\label{bsp__driver__sd_8c_af3e90e60fd1aa25bdbd57c4e7bd62558} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_WriteBlocks\_DMA@{BSP\_SD\_WriteBlocks\_DMA}}
+\index{BSP\_SD\_WriteBlocks\_DMA@{BSP\_SD\_WriteBlocks\_DMA}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_WriteBlocks\_DMA()}{BSP\_SD\_WriteBlocks\_DMA()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak uint8\+\_\+t BSP\+\_\+\+SD\+\_\+\+Write\+Blocks\+\_\+\+DMA (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Data,  }\item[{uint32\+\_\+t}]{Write\+Addr,  }\item[{uint32\+\_\+t}]{Num\+Of\+Blocks }\end{DoxyParamCaption})}
+
+
+
+Writes block(s) to a specified address in an SD card, in DMA mode. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em p\+Data} & Pointer to the buffer that will contain the data to transmit \\
+\hline
+{\em Write\+Addr} & Address from where data is to be written \\
+\hline
+{\em Num\+Of\+Blocks} & Number of SD blocks to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em SD} & status \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{bsp__driver__sd_8c_a2e6559fa7b5164071baafa3b3f668e3f}\label{bsp__driver__sd_8c_a2e6559fa7b5164071baafa3b3f668e3f} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!BSP\_SD\_WriteCpltCallback@{BSP\_SD\_WriteCpltCallback}}
+\index{BSP\_SD\_WriteCpltCallback@{BSP\_SD\_WriteCpltCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{BSP\_SD\_WriteCpltCallback()}{BSP\_SD\_WriteCpltCallback()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void BSP\+\_\+\+SD\+\_\+\+Write\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+BSP Tx Transfer completed callback. 
+
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{Заметки}
+empty (up to the user to fill it in or to remove it if useless) 
+\end{DoxyNote}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a2e6559fa7b5164071baafa3b3f668e3f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_a52a463063ce8c6f1e8910f30dd4e8376}\label{bsp__driver__sd_8c_a52a463063ce8c6f1e8910f30dd4e8376} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!HAL\_SD\_AbortCallback@{HAL\_SD\_AbortCallback}}
+\index{HAL\_SD\_AbortCallback@{HAL\_SD\_AbortCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SD\_AbortCallback()}{HAL\_SD\_AbortCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SD\+\_\+\+Abort\+Callback (\begin{DoxyParamCaption}\item[{SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hsd }\end{DoxyParamCaption})}
+
+
+
+SD Abort callbacks. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em hsd} & SD handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a52a463063ce8c6f1e8910f30dd4e8376_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_a1720dc3a0e88b26e557ae63fad3a382d}\label{bsp__driver__sd_8c_a1720dc3a0e88b26e557ae63fad3a382d} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!HAL\_SD\_RxCpltCallback@{HAL\_SD\_RxCpltCallback}}
+\index{HAL\_SD\_RxCpltCallback@{HAL\_SD\_RxCpltCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SD\_RxCpltCallback()}{HAL\_SD\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SD\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hsd }\end{DoxyParamCaption})}
+
+
+
+Rx Transfer completed callback. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em hsd} & SD handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a1720dc3a0e88b26e557ae63fad3a382d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{bsp__driver__sd_8c_a7f42b31026c697fea97c132e9aed15e2}\label{bsp__driver__sd_8c_a7f42b31026c697fea97c132e9aed15e2} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!HAL\_SD\_TxCpltCallback@{HAL\_SD\_TxCpltCallback}}
+\index{HAL\_SD\_TxCpltCallback@{HAL\_SD\_TxCpltCallback}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SD\_TxCpltCallback()}{HAL\_SD\_TxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SD\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{SD\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hsd }\end{DoxyParamCaption})}
+
+
+
+Tx Transfer completed callback. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em hsd} & SD handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Возвращаемые значения}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp__driver__sd_8c_a7f42b31026c697fea97c132e9aed15e2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Переменные}
+\Hypertarget{bsp__driver__sd_8c_ad0b867cf724e111d6329c1eb91f3b30b}\label{bsp__driver__sd_8c_ad0b867cf724e111d6329c1eb91f3b30b} 
+\index{bsp\_driver\_sd.c@{bsp\_driver\_sd.c}!hsd1@{hsd1}}
+\index{hsd1@{hsd1}!bsp\_driver\_sd.c@{bsp\_driver\_sd.c}}
+\doxysubsubsection{\texorpdfstring{hsd1}{hsd1}}
+{\footnotesize\ttfamily SD\+\_\+\+Handle\+Type\+Def hsd1\hspace{0.3cm}{\ttfamily [extern]}}
+

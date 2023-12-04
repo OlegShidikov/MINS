@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp__driver__sd_8h_source" xml:lang="ru">
+<title>bsp_driver_sd.h</title>
+<indexterm><primary>FATFS/Target/bsp_driver_sd.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+20 
+21 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+22 <emphasis role="preprocessor">#ifndef&#32;__STM32F7_SD_H</emphasis>
+23 <emphasis role="preprocessor">#define&#32;__STM32F7_SD_H</emphasis>
+24 
+25 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+26 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+27 <emphasis role="preprocessor">#endif</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx_hal.h&quot;</emphasis>
+31 
+32 <emphasis role="comment">/*&#32;Exported&#32;types&#32;--------------------------------------------------------*/</emphasis>
+36 <emphasis role="preprocessor">#define&#32;BSP_SD_CardInfo&#32;HAL_SD_CardInfoTypeDef</emphasis>
+37 
+38 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+42 <emphasis role="preprocessor">#define&#32;&#32;&#32;MSD_OK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)</emphasis>
+43 <emphasis role="preprocessor">#define&#32;&#32;&#32;MSD_ERROR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+44 <emphasis role="preprocessor">#define&#32;&#32;&#32;MSD_ERROR_SD_NOT_PRESENT&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x02)</emphasis>
+45 
+49 <emphasis role="preprocessor">#define&#32;&#32;&#32;SD_TRANSFER_OK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)</emphasis>
+50 <emphasis role="preprocessor">#define&#32;&#32;&#32;SD_TRANSFER_BUSY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+51 
+52 <emphasis role="preprocessor">#define&#32;SD_PRESENT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x01)</emphasis>
+53 <emphasis role="preprocessor">#define&#32;SD_NOT_PRESENT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint8_t)0x00)</emphasis>
+54 <emphasis role="preprocessor">#define&#32;SD_DATATIMEOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint32_t)100000000)</emphasis>
+55 
+56 <emphasis role="preprocessor">#ifdef&#32;OLD_API</emphasis>
+57 <emphasis role="comment">/*&#32;kept&#32;to&#32;avoid&#32;issue&#32;when&#32;migrating&#32;old&#32;projects.&#32;*/</emphasis>
+58 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;0&#32;*/</emphasis>
+59 
+60 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;0&#32;*/</emphasis>
+61 <emphasis role="preprocessor">#else</emphasis>
+62 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;BSP_H_CODE&#32;*/</emphasis>
+63 
+64 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;--------------------------------------------------------*/</emphasis>
+65 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1a3d12270ffa22c857ec7a0fd9893bf881">BSP_SD_Init</link>(<emphasis role="keywordtype">void</emphasis>);
+66 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1a84fa96a230dacebf9c960e17f277e4ad">BSP_SD_ITConfig</link>(<emphasis role="keywordtype">void</emphasis>);
+67 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1a1228bfe77312aeb7383d65aaff4fab57">BSP_SD_ReadBlocks</link>(uint32_t&#32;*pData,&#32;uint32_t&#32;ReadAddr,&#32;uint32_t&#32;NumOfBlocks,&#32;uint32_t&#32;Timeout);
+68 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1ad8f41626181da956e81e713682de3fd5">BSP_SD_WriteBlocks</link>(uint32_t&#32;*pData,&#32;uint32_t&#32;WriteAddr,&#32;uint32_t&#32;NumOfBlocks,&#32;uint32_t&#32;Timeout);
+69 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1ae5e192c8975d8c5d43549ff4c1e2f8a6">BSP_SD_ReadBlocks_DMA</link>(uint32_t&#32;*pData,&#32;uint32_t&#32;ReadAddr,&#32;uint32_t&#32;NumOfBlocks);
+70 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1a2f57e8a4a23c9ea770b9f9da5eab8e8f">BSP_SD_WriteBlocks_DMA</link>(uint32_t&#32;*pData,&#32;uint32_t&#32;WriteAddr,&#32;uint32_t&#32;NumOfBlocks);
+71 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1affac80d97e56403e94031344d356ea67">BSP_SD_Erase</link>(uint32_t&#32;StartAddr,&#32;uint32_t&#32;EndAddr);
+72 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1ab53d88c4f6fe22d4dedae5aae9f77f22">BSP_SD_GetCardState</link>(<emphasis role="keywordtype">void</emphasis>);
+73 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="_bsp__driver__sd_8h_1a0594e1814863b9d5093807a998a1daf6">BSP_SD_GetCardInfo</link>(<link linkend="_bsp__driver__sd_8h_1aa27bc16108f37dbef348fe7e2644da4d">BSP_SD_CardInfo</link>&#32;*CardInfo);
+74 uint8_t&#32;<link linkend="_bsp__driver__sd_8h_1abe90f483ae462df3f35f64c63d4fe932">BSP_SD_IsDetected</link>(<emphasis role="keywordtype">void</emphasis>);
+75 
+76 <emphasis role="comment">/*&#32;These&#32;functions&#32;can&#32;be&#32;modified&#32;in&#32;case&#32;the&#32;current&#32;settings&#32;(e.g.&#32;DMA&#32;stream)</emphasis>
+77 <emphasis role="comment">&#32;&#32;&#32;need&#32;to&#32;be&#32;changed&#32;for&#32;specific&#32;application&#32;needs&#32;*/</emphasis>
+78 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="_bsp__driver__sd_8h_1a0a395393d1522c9844c525f0dc61fe3e">BSP_SD_AbortCallback</link>(<emphasis role="keywordtype">void</emphasis>);
+79 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="_bsp__driver__sd_8h_1afc4f1ecdf361e0c0808803167f31d61b">BSP_SD_WriteCpltCallback</link>(<emphasis role="keywordtype">void</emphasis>);
+80 <emphasis role="keywordtype">void</emphasis>&#32;&#32;&#32;&#32;<link linkend="_bsp__driver__sd_8h_1a8d66ac35cee6a454f7e584f0051bc9f8">BSP_SD_ReadCpltCallback</link>(<emphasis role="keywordtype">void</emphasis>);
+81 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;BSP_H_CODE&#32;*/</emphasis>
+82 <emphasis role="preprocessor">#endif</emphasis>
+83 
+84 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+85 }
+86 <emphasis role="preprocessor">#endif</emphasis>
+87 
+88 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F7_SD_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

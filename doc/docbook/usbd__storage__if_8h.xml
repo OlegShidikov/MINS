@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__storage__if_8h" xml:lang="ru">
+<title>Файл USB_DEVICE/App/usbd_storage_if.h</title>
+<indexterm><primary>USB_DEVICE/App/usbd_storage_if.h</primary></indexterm>
+<para>
+
+<para>: Header for <link linkend="_usbd__storage__if_8c">usbd_storage_if.c</link> file. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;usbd_msc.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для usbd_storage_if.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__storage__if_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__storage__if_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>USBD_StorageTypeDef <link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___variables_1ga6e9e9e24e717b09df4341124e05b6aad">USBD_Storage_Interface_fops_HS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: Header for <link linkend="_usbd__storage__if_8c">usbd_storage_if.c</link> file. </para>
+
+<para><formalpara><title>Версия</title>
+
+<para>: v1.0_Cube </para>
+</formalpara>
+<caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+</section>

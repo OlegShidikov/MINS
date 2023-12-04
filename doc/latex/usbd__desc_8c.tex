@@ -1,0 +1,76 @@
+\doxysection{Файл USB\+\_\+\+DEVICE/\+App/usbd\+\_\+desc.c}
+\hypertarget{usbd__desc_8c}{}\label{usbd__desc_8c}\index{USB\_DEVICE/App/usbd\_desc.c@{USB\_DEVICE/App/usbd\_desc.c}}
+
+
+\+: This file implements the USB device descriptors.  
+
+
+{\ttfamily \#include "{}usbd\+\_\+core.\+h"{}}\newline
+{\ttfamily \#include "{}usbd\+\_\+desc.\+h"{}}\newline
+{\ttfamily \#include "{}usbd\+\_\+conf.\+h"{}}\newline
+Граф включаемых заголовочных файлов для usbd\+\_\+desc.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usbd__desc_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_gac5251397ce2246b546b472cd802e6d62}{USBD\+\_\+\+VID}}~1155
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga070dd542d4d914e86fdf103fa5fdd72f}{USBD\+\_\+\+LANGID\+\_\+\+STRING}}~1033
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_gaee0c9fd7e8265b90126028919cd863a6}{USBD\+\_\+\+MANUFACTURER\+\_\+\+STRING}}~"{}STMicroelectronics"{}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga5c6d9f613aca0d87a9cf87ebfd442c17}{USBD\+\_\+\+PID\+\_\+\+HS}}~22314
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_gae0e156b6d95f3bf696a45adf2dd12217}{USBD\+\_\+\+PRODUCT\+\_\+\+STRING\+\_\+\+HS}}~"{}STM32 Mass Storage"{}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga28c3a051d20aeb440ade204b0318c645}{USBD\+\_\+\+CONFIGURATION\+\_\+\+STRING\+\_\+\+HS}}~"{}MSC Config"{}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga06ca89c36da0abb192662b8e4967712c}{USBD\+\_\+\+INTERFACE\+\_\+\+STRING\+\_\+\+HS}}~"{}MSC Interface"{}
+\item 
+\#define \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___defines_ga3d6767367e9b15bae8d264a78102aba8}{USB\+\_\+\+SIZ\+\_\+\+BOS\+\_\+\+DESC}}~0x0C
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaef234919e37b4261ded7cf0a6b6f9adb}{USBD\+\_\+\+HS\+\_\+\+Device\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the device descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga1f97488a1b688c2e36828091adb1714b}{USBD\+\_\+\+HS\+\_\+\+Lang\+IDStr\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the Lang\+ID string descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaa6fc1499569c6e5129cc16789ad10094}{USBD\+\_\+\+HS\+\_\+\+Manufacturer\+Str\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the manufacturer string descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga61c64a916bb03b9bf0d0715839bb2718}{USBD\+\_\+\+HS\+\_\+\+Product\+Str\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the product string descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga804ea4a4ff7a927047c831e60658c13c}{USBD\+\_\+\+HS\+\_\+\+Serial\+Str\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the serial number string descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_gaf1d641e2167f37fe9dca9cf7e9c400e7}{USBD\+\_\+\+HS\+\_\+\+Config\+Str\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the configuration string descriptor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___function_prototypes_ga77299bb83b65537496ac8d3f94219b27}{USBD\+\_\+\+HS\+\_\+\+Interface\+Str\+Descriptor}} (USBD\+\_\+\+Speed\+Type\+Def speed, uint16\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\begin{DoxyCompactList}\small\item\em Return the interface string descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+USBD\+\_\+\+Descriptors\+Type\+Def \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_ga89f0dd7f68532841d99af34b1be3cd0c}{HS\+\_\+\+Desc}}
+\item 
+\+\_\+\+\_\+\+ALIGN\+\_\+\+BEGIN uint8\+\_\+t USBD\+\_\+\+HS\+\_\+\+Device\+Desc\mbox{[}USB\+\_\+\+LEN\+\_\+\+DEV\+\_\+\+DESC\mbox{]} \mbox{\hyperlink{group___u_s_b_d___d_e_s_c___private___variables_ga542bfea0b6dcf06e06a505bdc49c7e04}{\+\_\+\+\_\+\+ALIGN\+\_\+\+END}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\+: This file implements the USB device descriptors. 
+
+\+: Header for \doxylink{usbd__conf_8c}{usbd\+\_\+conf.\+c} file.
+
+\begin{DoxyVersion}{Версия}
+\+: v1.\+0\+\_\+\+Cube 
+\end{DoxyVersion}
+\begin{DoxyAttention}{Внимание}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

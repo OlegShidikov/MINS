@@ -1,0 +1,5 @@
+<map id="USBD_LL_OpenEP" name="USBD_LL_OpenEP">
+<area shape="rect" id="Node000001" title="Opens an endpoint of the low level driver." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="Node000002" href="$usbd__conf_8c.html#a71e72e29fe464c7f3be4edf36806355e" title="Returns the USB status depending on the HAL status:" alt="" coords="188,5,352,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,16,172,16,172,21,140,21"/>
+</map>

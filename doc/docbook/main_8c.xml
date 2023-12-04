@@ -1,0 +1,704 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c" xml:lang="ru">
+<title>Файл Core/Src/main.c</title>
+<indexterm><primary>Core/Src/main.c</primary></indexterm>
+<para>
+
+<para>: Main program body </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;main.h&quot;<?linebreak?>#include &quot;cmsis_os.h&quot;<?linebreak?>#include &quot;fatfs.h&quot;<?linebreak?>#include &quot;usb_device.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для main.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_main_8c_1a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</link> (void)</para>
+
+<para>System Clock Configuration. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a4aec512f5ea58a32add39c04e89dc7ce">startLoggingTask</link> (void *argument)</para>
+
+<para>Function implementing the loggingTask thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a957161ee39c150382e39fd3ec9d03e1e">startCalculationTask</link> (void *argument)</para>
+
+<para>Function implementing the calculationTask thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1af8644c1b001f7d8c6e4495b10629ecb9">startBridgeTask</link> (void *argument)</para>
+
+<para>Function implementing the bridgeTask thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a084f3112a502531b9994c4f4a669768a">startGyroModuleTask</link> (void *argument)</para>
+
+<para>Function implementing the gyroModuleTask thread. </para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe">main</link> (void)</para>
+
+<para>The application entry point. </para>
+</listitem>
+            <listitem><para>void <link linkend="_main_8c_1a1730ffe1e560465665eb47d9264826f9">Error_Handler</link> (void)</para>
+
+<para>This function is executed in case of error occurrence. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>I2C_HandleTypeDef <link linkend="_main_8c_1af7b2c26e44dadaaa798a5c3d82914ba7">hi2c1</link></para>
+</listitem>
+            <listitem><para>I2C_HandleTypeDef <link linkend="_main_8c_1a818789480a74b70bbcaf6d73e8e763ed">hi2c4</link></para>
+</listitem>
+            <listitem><para>RTC_HandleTypeDef <link linkend="_main_8c_1aa0c7fca836406ade332e1e3f1039d8ab">hrtc</link></para>
+</listitem>
+            <listitem><para>SD_HandleTypeDef <link linkend="_main_8c_1ad0b867cf724e111d6329c1eb91f3b30b">hsd1</link></para>
+</listitem>
+            <listitem><para>TIM_HandleTypeDef <link linkend="_main_8c_1a25fc663547539bc49fecc0011bd76ab5">htim1</link></para>
+</listitem>
+            <listitem><para>TIM_HandleTypeDef <link linkend="_main_8c_1a31f6f787777409af5ed0d131b52b7988">htim9</link></para>
+</listitem>
+            <listitem><para>TIM_HandleTypeDef <link linkend="_main_8c_1aab9f881b6ce706635a5be2e500f5c6cc">htim12</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1ae273feb3e0dc44e38892650faa58fced">huart4</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1a5a00c3ec9efd91cc4d43997e347a9e1d">huart7</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1a5c07cbc82baf01ac2608c07b86332a67">huart8</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1a2cf715bef37f7e8ef385a30974a5f0d5">huart1</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1aa9479c261d65eecedd3d9582f7f0f89c">huart2</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1ab7c63c1b0f65db92b6a4ea19edf957e1">huart3</link></para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef <link linkend="_main_8c_1a38905dda1d2fbff006c69db48eddba9d">huart6</link></para>
+</listitem>
+            <listitem><para>osThreadId_t <link linkend="_main_8c_1adba482216705f0b6f710bf03238ae09e">loggingTaskHandle</link></para>
+</listitem>
+            <listitem><para>const osThreadAttr_t <link linkend="_main_8c_1af2108f85a3e34366701da5806d17773e">loggingTask_attributes</link></para>
+</listitem>
+            <listitem><para>osThreadId_t <link linkend="_main_8c_1ab3ed9a7dfcf1ece98b8a01c5f7652b9d">calculationTaskHandle</link></para>
+</listitem>
+            <listitem><para>const osThreadAttr_t <link linkend="_main_8c_1a6f2ffbf22b8c350b5d43db008b6d778a">calculationTask_attributes</link></para>
+</listitem>
+            <listitem><para>osThreadId_t <link linkend="_main_8c_1ac3a64ece4c3f0786f8bb22ef582566a8">bridgeTaskHandle</link></para>
+</listitem>
+            <listitem><para>const osThreadAttr_t <link linkend="_main_8c_1a6cb2a8e4278b4fc4f32b8ac9219616b0">bridgeTask_attributes</link></para>
+</listitem>
+            <listitem><para>osThreadId_t <link linkend="_main_8c_1a2adbc23545292c938807370deb68639e">gyroModuleTaskHandle</link></para>
+</listitem>
+            <listitem><para>const osThreadAttr_t <link linkend="_main_8c_1aaa89319826f9f9b1be05ca84632be309">gyroModuleTask_attributes</link></para>
+</listitem>
+            <listitem><para>osMessageQueueId_t <link linkend="_main_8c_1ab7bdf080634b0ace6c5173282cf1c8f7">loggingQueueHandle</link></para>
+</listitem>
+            <listitem><para>const osMessageQueueAttr_t <link linkend="_main_8c_1a7451894273818f14882f35dbd770c950">loggingQueue_attributes</link></para>
+</listitem>
+            <listitem><para>osMessageQueueId_t <link linkend="_main_8c_1a3f22ff9ce07e72c7cf160e2fe416b1af">calculationQueueHandle</link></para>
+</listitem>
+            <listitem><para>const osMessageQueueAttr_t <link linkend="_main_8c_1a5fdbb5a4e167b2f07ffad3085f59b22b">calculationQueue_attributes</link></para>
+</listitem>
+            <listitem><para>osMessageQueueId_t <link linkend="_main_8c_1ada047f338330cc148ea634481e4c9dac">bridgeQueueHandle</link></para>
+</listitem>
+            <listitem><para>const osMessageQueueAttr_t <link linkend="_main_8c_1a4c878e855a191cf311420900b747267a">bridgeQueue_attributes</link></para>
+</listitem>
+            <listitem><para>osMessageQueueId_t <link linkend="_main_8c_1a18b8971a4b2b5ffda08d5d326726a98e">gyroModuleQueueHandle</link></para>
+</listitem>
+            <listitem><para>const osMessageQueueAttr_t <link linkend="_main_8c_1a2aa761491443e7dad4e178b8af82ef83">gyroModuleQueue_attributes</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>: Main program body </para>
+
+<para><caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_main_8c_1a1730ffe1e560465665eb47d9264826f9"/><section>
+    <title>Error_Handler()</title>
+<indexterm><primary>Error_Handler</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>Error_Handler</secondary></indexterm>
+<para><computeroutput>void Error_Handler (void )</computeroutput></para><para>
+
+<para>This function is executed in case of error occurrence. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a1730ffe1e560465665eb47d9264826f9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a840291bc02cba5474a4cb46a9b9566fe"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (void )</computeroutput></para><para>
+
+<para>The application entry point. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1af8644c1b001f7d8c6e4495b10629ecb9"/><section>
+    <title>startBridgeTask()</title>
+<indexterm><primary>startBridgeTask</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>startBridgeTask</secondary></indexterm>
+<para><computeroutput>void startBridgeTask (void * argument)</computeroutput></para><para>
+
+<para>Function implementing the bridgeTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a957161ee39c150382e39fd3ec9d03e1e"/><section>
+    <title>startCalculationTask()</title>
+<indexterm><primary>startCalculationTask</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>startCalculationTask</secondary></indexterm>
+<para><computeroutput>void startCalculationTask (void * argument)</computeroutput></para><para>
+
+<para>Function implementing the calculationTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a084f3112a502531b9994c4f4a669768a"/><section>
+    <title>startGyroModuleTask()</title>
+<indexterm><primary>startGyroModuleTask</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>startGyroModuleTask</secondary></indexterm>
+<para><computeroutput>void startGyroModuleTask (void * argument)</computeroutput></para><para>
+
+<para>Function implementing the gyroModuleTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a084f3112a502531b9994c4f4a669768a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a4aec512f5ea58a32add39c04e89dc7ce"/><section>
+    <title>startLoggingTask()</title>
+<indexterm><primary>startLoggingTask</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>startLoggingTask</secondary></indexterm>
+<para><computeroutput>void startLoggingTask (void * argument)</computeroutput></para><para>
+
+<para>Function implementing the loggingTask thread. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argument</entry><entry>
+<para>Not used </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_main_8c_1a70af21c671abfcc773614a9a4f63d920"/><section>
+    <title>SystemClock_Config()</title>
+<indexterm><primary>SystemClock_Config</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>SystemClock_Config</secondary></indexterm>
+<para><computeroutput>void SystemClock_Config (void )</computeroutput></para><para>
+
+<para>System Clock Configuration. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>Configure the main internal regulator output voltage</para>
+
+<para>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</para>
+
+<para>Activate the Over-Drive mode</para>
+
+<para>Initializes the CPU, AHB and APB buses clocks</para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a70af21c671abfcc773614a9a4f63d920_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="main_8c_a70af21c671abfcc773614a9a4f63d920_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_main_8c_1a4c878e855a191cf311420900b747267a"/><section>
+    <title>bridgeQueue_attributes</title>
+<indexterm><primary>bridgeQueue_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>bridgeQueue_attributes</secondary></indexterm>
+<para><computeroutput>const osMessageQueueAttr_t bridgeQueue_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;bridgeQueue&quot;</emphasis>
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1ada047f338330cc148ea634481e4c9dac"/><section>
+    <title>bridgeQueueHandle</title>
+<indexterm><primary>bridgeQueueHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>bridgeQueueHandle</secondary></indexterm>
+<para><computeroutput>osMessageQueueId_t bridgeQueueHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a6cb2a8e4278b4fc4f32b8ac9219616b0"/><section>
+    <title>bridgeTask_attributes</title>
+<indexterm><primary>bridgeTask_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>bridgeTask_attributes</secondary></indexterm>
+<para><computeroutput>const osThreadAttr_t bridgeTask_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;bridgeTask&quot;</emphasis>,
+&#32;&#32;.stack_size&#32;=&#32;128&#32;*&#32;4,
+&#32;&#32;.priority&#32;=&#32;(osPriority_t)&#32;osPriorityLow,
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1ac3a64ece4c3f0786f8bb22ef582566a8"/><section>
+    <title>bridgeTaskHandle</title>
+<indexterm><primary>bridgeTaskHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>bridgeTaskHandle</secondary></indexterm>
+<para><computeroutput>osThreadId_t bridgeTaskHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a5fdbb5a4e167b2f07ffad3085f59b22b"/><section>
+    <title>calculationQueue_attributes</title>
+<indexterm><primary>calculationQueue_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>calculationQueue_attributes</secondary></indexterm>
+<para><computeroutput>const osMessageQueueAttr_t calculationQueue_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;calculationQueue&quot;</emphasis>
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1a3f22ff9ce07e72c7cf160e2fe416b1af"/><section>
+    <title>calculationQueueHandle</title>
+<indexterm><primary>calculationQueueHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>calculationQueueHandle</secondary></indexterm>
+<para><computeroutput>osMessageQueueId_t calculationQueueHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a6f2ffbf22b8c350b5d43db008b6d778a"/><section>
+    <title>calculationTask_attributes</title>
+<indexterm><primary>calculationTask_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>calculationTask_attributes</secondary></indexterm>
+<para><computeroutput>const osThreadAttr_t calculationTask_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;calculationTask&quot;</emphasis>,
+&#32;&#32;.stack_size&#32;=&#32;128&#32;*&#32;4,
+&#32;&#32;.priority&#32;=&#32;(osPriority_t)&#32;osPriorityAboveNormal,
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1ab3ed9a7dfcf1ece98b8a01c5f7652b9d"/><section>
+    <title>calculationTaskHandle</title>
+<indexterm><primary>calculationTaskHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>calculationTaskHandle</secondary></indexterm>
+<para><computeroutput>osThreadId_t calculationTaskHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a2aa761491443e7dad4e178b8af82ef83"/><section>
+    <title>gyroModuleQueue_attributes</title>
+<indexterm><primary>gyroModuleQueue_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>gyroModuleQueue_attributes</secondary></indexterm>
+<para><computeroutput>const osMessageQueueAttr_t gyroModuleQueue_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;gyroModuleQueue&quot;</emphasis>
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1a18b8971a4b2b5ffda08d5d326726a98e"/><section>
+    <title>gyroModuleQueueHandle</title>
+<indexterm><primary>gyroModuleQueueHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>gyroModuleQueueHandle</secondary></indexterm>
+<para><computeroutput>osMessageQueueId_t gyroModuleQueueHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1aaa89319826f9f9b1be05ca84632be309"/><section>
+    <title>gyroModuleTask_attributes</title>
+<indexterm><primary>gyroModuleTask_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>gyroModuleTask_attributes</secondary></indexterm>
+<para><computeroutput>const osThreadAttr_t gyroModuleTask_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;gyroModuleTask&quot;</emphasis>,
+&#32;&#32;.stack_size&#32;=&#32;128&#32;*&#32;4,
+&#32;&#32;.priority&#32;=&#32;(osPriority_t)&#32;osPriorityLow,
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1a2adbc23545292c938807370deb68639e"/><section>
+    <title>gyroModuleTaskHandle</title>
+<indexterm><primary>gyroModuleTaskHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>gyroModuleTaskHandle</secondary></indexterm>
+<para><computeroutput>osThreadId_t gyroModuleTaskHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1af7b2c26e44dadaaa798a5c3d82914ba7"/><section>
+    <title>hi2c1</title>
+<indexterm><primary>hi2c1</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>hi2c1</secondary></indexterm>
+<para><computeroutput>I2C_HandleTypeDef hi2c1</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a818789480a74b70bbcaf6d73e8e763ed"/><section>
+    <title>hi2c4</title>
+<indexterm><primary>hi2c4</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>hi2c4</secondary></indexterm>
+<para><computeroutput>I2C_HandleTypeDef hi2c4</computeroutput></para></section>
+<anchor xml:id="_main_8c_1aa0c7fca836406ade332e1e3f1039d8ab"/><section>
+    <title>hrtc</title>
+<indexterm><primary>hrtc</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>hrtc</secondary></indexterm>
+<para><computeroutput>RTC_HandleTypeDef hrtc</computeroutput></para></section>
+<anchor xml:id="_main_8c_1ad0b867cf724e111d6329c1eb91f3b30b"/><section>
+    <title>hsd1</title>
+<indexterm><primary>hsd1</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>hsd1</secondary></indexterm>
+<para><computeroutput>SD_HandleTypeDef hsd1</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a25fc663547539bc49fecc0011bd76ab5"/><section>
+    <title>htim1</title>
+<indexterm><primary>htim1</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>htim1</secondary></indexterm>
+<para><computeroutput>TIM_HandleTypeDef htim1</computeroutput></para></section>
+<anchor xml:id="_main_8c_1aab9f881b6ce706635a5be2e500f5c6cc"/><section>
+    <title>htim12</title>
+<indexterm><primary>htim12</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>htim12</secondary></indexterm>
+<para><computeroutput>TIM_HandleTypeDef htim12</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a31f6f787777409af5ed0d131b52b7988"/><section>
+    <title>htim9</title>
+<indexterm><primary>htim9</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>htim9</secondary></indexterm>
+<para><computeroutput>TIM_HandleTypeDef htim9</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a2cf715bef37f7e8ef385a30974a5f0d5"/><section>
+    <title>huart1</title>
+<indexterm><primary>huart1</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart1</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart1</computeroutput></para></section>
+<anchor xml:id="_main_8c_1aa9479c261d65eecedd3d9582f7f0f89c"/><section>
+    <title>huart2</title>
+<indexterm><primary>huart2</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart2</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart2</computeroutput></para></section>
+<anchor xml:id="_main_8c_1ab7c63c1b0f65db92b6a4ea19edf957e1"/><section>
+    <title>huart3</title>
+<indexterm><primary>huart3</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart3</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart3</computeroutput></para></section>
+<anchor xml:id="_main_8c_1ae273feb3e0dc44e38892650faa58fced"/><section>
+    <title>huart4</title>
+<indexterm><primary>huart4</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart4</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart4</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a38905dda1d2fbff006c69db48eddba9d"/><section>
+    <title>huart6</title>
+<indexterm><primary>huart6</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart6</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart6</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a5a00c3ec9efd91cc4d43997e347a9e1d"/><section>
+    <title>huart7</title>
+<indexterm><primary>huart7</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart7</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart7</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a5c07cbc82baf01ac2608c07b86332a67"/><section>
+    <title>huart8</title>
+<indexterm><primary>huart8</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>huart8</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef huart8</computeroutput></para></section>
+<anchor xml:id="_main_8c_1a7451894273818f14882f35dbd770c950"/><section>
+    <title>loggingQueue_attributes</title>
+<indexterm><primary>loggingQueue_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>loggingQueue_attributes</secondary></indexterm>
+<para><computeroutput>const osMessageQueueAttr_t loggingQueue_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;loggingQueue&quot;</emphasis>
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1ab7bdf080634b0ace6c5173282cf1c8f7"/><section>
+    <title>loggingQueueHandle</title>
+<indexterm><primary>loggingQueueHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>loggingQueueHandle</secondary></indexterm>
+<para><computeroutput>osMessageQueueId_t loggingQueueHandle</computeroutput></para></section>
+<anchor xml:id="_main_8c_1af2108f85a3e34366701da5806d17773e"/><section>
+    <title>loggingTask_attributes</title>
+<indexterm><primary>loggingTask_attributes</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>loggingTask_attributes</secondary></indexterm>
+<para><computeroutput>const osThreadAttr_t loggingTask_attributes</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;.name&#32;=&#32;<emphasis role="stringliteral">&quot;loggingTask&quot;</emphasis>,
+&#32;&#32;.stack_size&#32;=&#32;128&#32;*&#32;4,
+&#32;&#32;.priority&#32;=&#32;(osPriority_t)&#32;osPriorityNormal,
+}
+</programlisting></section>
+<anchor xml:id="_main_8c_1adba482216705f0b6f710bf03238ae09e"/><section>
+    <title>loggingTaskHandle</title>
+<indexterm><primary>loggingTaskHandle</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>loggingTaskHandle</secondary></indexterm>
+<para><computeroutput>osThreadId_t loggingTaskHandle</computeroutput></para></section>
+</section>
+</section>

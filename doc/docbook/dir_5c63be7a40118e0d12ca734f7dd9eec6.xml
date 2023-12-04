@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5c63be7a40118e0d12ca734f7dd9eec6" xml:lang="ru">
+<title>Содержание директории Debug/USB_DEVICE/App</title>
+<indexterm><primary>Содержание директории Debug/USB_DEVICE/App</primary></indexterm>
+Директория графа зависимостей App:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_5c63be7a40118e0d12ca734f7dd9eec6_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_usb__device_8d">usb_device.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__desc_8d">usbd_desc.d</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_usbd__storage__if_8d">usbd_storage_if.d</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

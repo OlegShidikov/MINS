@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___s_t_o_r_a_g_e___private___variables" xml:lang="ru">
+<title>USBD_STORAGE_Private_Variables</title>
+<indexterm><primary>USBD_STORAGE_Private_Variables</primary></indexterm>
+<para>
+
+<para>Private variables. </para>
+ 
+</para>
+Граф связей класса USBD_STORAGE_Private_Variables:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___s_t_o_r_a_g_e___private___variables.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>const int8_t <link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___private___variables_1ga07ad430c2a071af8c793c65ff55e60a0">STORAGE_Inquirydata_HS</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Private variables. </para>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_group___u_s_b_d___s_t_o_r_a_g_e___private___variables_1ga07ad430c2a071af8c793c65ff55e60a0"/><section>
+    <title>STORAGE_Inquirydata_HS</title>
+<indexterm><primary>STORAGE_Inquirydata_HS</primary><secondary>USBD_STORAGE_Private_Variables</secondary></indexterm>
+<indexterm><primary>USBD_STORAGE_Private_Variables</primary><secondary>STORAGE_Inquirydata_HS</secondary></indexterm>
+<para><computeroutput>const int8_t STORAGE_Inquirydata_HS[]</computeroutput></para><emphasis role="strong">Инициализатор</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+
+&#32;&#32;
+&#32;&#32;0x00,
+&#32;&#32;0x80,
+&#32;&#32;0x02,
+&#32;&#32;0x02,
+&#32;&#32;(STANDARD_INQUIRY_DATA_LEN&#32;-&#32;5),
+&#32;&#32;0x00,
+&#32;&#32;0x00,
+&#32;&#32;0x00,
+&#32;&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;
+&#32;&#32;<emphasis role="charliteral">&apos;P&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;r&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;o&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;d&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;u&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;c&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;t&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;
+&#32;&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,
+&#32;&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;.&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>&#32;,<emphasis role="charliteral">&apos;1&apos;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+}
+</programlisting>
+<para>USB Mass storage Standard Inquiry Data. </para>
+</section>
+</section>
+</section>

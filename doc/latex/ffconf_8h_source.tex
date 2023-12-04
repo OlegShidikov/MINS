@@ -1,0 +1,260 @@
+\doxysection{ffconf.\+h}
+\hypertarget{ffconf_8h_source}{}\label{ffconf_8h_source}\index{FATFS/Target/ffconf.h@{FATFS/Target/ffconf.h}}
+\mbox{\hyperlink{ffconf_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ \_FFCONF}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ \_FFCONF\ 68300\ \ \ }\textcolor{comment}{/*\ Revision\ ID\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\//}}
+\DoxyCodeLine{00023\ \textcolor{comment}{/\ Additional\ user\ header\ to\ be\ used}}
+\DoxyCodeLine{00024\ \textcolor{comment}{/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}stm32f7xx\_hal.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bsp__driver__sd_8h}{bsp\_driver\_sd.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}\ \textcolor{comment}{/*\ \_FS\_REENTRANT\ set\ to\ 1\ and\ CMSIS\ API\ chosen\ */}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\//}}
+\DoxyCodeLine{00032\ \textcolor{comment}{/\ Function\ Configurations}}
+\DoxyCodeLine{00033\ \textcolor{comment}{/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ \_FS\_READONLY\ \ \ \ \ \ \ \ \ 0\ \ \ \ \ \ }\textcolor{comment}{/*\ 0:Read/Write\ or\ 1:Read\ only\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ This\ option\ switches\ read-\/only\ configuration.\ (0:Read/Write\ or\ 1:Read-\/only)}}
+\DoxyCodeLine{00037\ \textcolor{comment}{/\ \ Read-\/only\ configuration\ removes\ writing\ API\ functions,\ f\_write(),\ f\_sync(),}}
+\DoxyCodeLine{00038\ \textcolor{comment}{/\ \ f\_unlink(),\ f\_mkdir(),\ f\_chmod(),\ f\_rename(),\ f\_truncate(),\ f\_getfree()}}
+\DoxyCodeLine{00039\ \textcolor{comment}{/\ \ and\ optional\ writing\ functions\ as\ well.\ */}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ \_FS\_MINIMIZE\ \ \ \ \ \ \ \ \ 0\ \ \ \ \ \ }\textcolor{comment}{/*\ 0\ to\ 3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00042\ \textcolor{comment}{/*\ This\ option\ defines\ minimization\ level\ to\ remove\ some\ basic\ API\ functions.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{/}}
+\DoxyCodeLine{00044\ \textcolor{comment}{/\ \ \ 0:\ All\ basic\ functions\ are\ enabled.}}
+\DoxyCodeLine{00045\ \textcolor{comment}{/\ \ \ 1:\ f\_stat(),\ f\_getfree(),\ f\_unlink(),\ f\_mkdir(),\ f\_truncate()\ and\ f\_rename()}}
+\DoxyCodeLine{00046\ \textcolor{comment}{/\ \ \ \ \ \ are\ removed.}}
+\DoxyCodeLine{00047\ \textcolor{comment}{/\ \ \ 2:\ f\_opendir(),\ f\_readdir()\ and\ f\_closedir()\ are\ removed\ in\ addition\ to\ 1.}}
+\DoxyCodeLine{00048\ \textcolor{comment}{/\ \ \ 3:\ f\_lseek()\ function\ is\ removed\ in\ addition\ to\ 2.\ */}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ \_USE\_STRFUNC\ \ \ \ \ \ \ \ \ 2\ \ \ \ \ \ }\textcolor{comment}{/*\ 0:Disable\ or\ 1-\/2:Enable\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ This\ option\ switches\ string\ functions,\ f\_gets(),\ f\_putc(),\ f\_puts()\ and}}
+\DoxyCodeLine{00052\ \textcolor{comment}{/\ \ f\_printf().}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/}}
+\DoxyCodeLine{00054\ \textcolor{comment}{/\ \ 0:\ Disable\ string\ functions.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{/\ \ 1:\ Enable\ without\ LF-\/CRLF\ conversion.}}
+\DoxyCodeLine{00056\ \textcolor{comment}{/\ \ 2:\ Enable\ with\ LF-\/CRLF\ conversion.\ */}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ \_USE\_FIND\ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ This\ option\ switches\ filtered\ directory\ read\ functions,\ f\_findfirst()\ and}}
+\DoxyCodeLine{00060\ \textcolor{comment}{/\ \ f\_findnext().\ (0:Disable,\ 1:Enable\ 2:Enable\ with\ matching\ altname[]\ too)\ */}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ \_USE\_MKFS\ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ This\ option\ switches\ f\_mkfs()\ function.\ (0:Disable\ or\ 1:Enable)\ */}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ \_USE\_FASTSEEK\ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00066\ \textcolor{comment}{/*\ This\ option\ switches\ fast\ seek\ feature.\ (0:Disable\ or\ 1:Enable)\ */}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ \_USE\_EXPAND\ \ \ \ \ 0}}
+\DoxyCodeLine{00069\ \textcolor{comment}{/*\ This\ option\ switches\ f\_expand\ function.\ (0:Disable\ or\ 1:Enable)\ */}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ \_USE\_CHMOD\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00072\ \textcolor{comment}{/*\ This\ option\ switches\ attribute\ manipulation\ functions,\ f\_chmod()\ and\ f\_utime().}}
+\DoxyCodeLine{00073\ \textcolor{comment}{/\ \ (0:Disable\ or\ 1:Enable)\ Also\ \_FS\_READONLY\ needs\ to\ be\ 0\ to\ enable\ this\ option.\ */}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ \_USE\_LABEL\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00076\ \textcolor{comment}{/*\ This\ option\ switches\ volume\ label\ functions,\ f\_getlabel()\ and\ f\_setlabel().}}
+\DoxyCodeLine{00077\ \textcolor{comment}{/\ \ (0:Disable\ or\ 1:Enable)\ */}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ \_USE\_FORWARD\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00080\ \textcolor{comment}{/*\ This\ option\ switches\ f\_forward()\ function.\ (0:Disable\ or\ 1:Enable)\ */}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\//}}
+\DoxyCodeLine{00083\ \textcolor{comment}{/\ Locale\ and\ Namespace\ Configurations}}
+\DoxyCodeLine{00084\ \textcolor{comment}{/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ \_CODE\_PAGE\ \ \ \ \ \ \ \ \ 850}}
+\DoxyCodeLine{00087\ \textcolor{comment}{/*\ This\ option\ specifies\ the\ OEM\ code\ page\ to\ be\ used\ on\ the\ target\ system.}}
+\DoxyCodeLine{00088\ \textcolor{comment}{/\ \ Incorrect\ setting\ of\ the\ code\ page\ can\ cause\ a\ file\ open\ failure.}}
+\DoxyCodeLine{00089\ \textcolor{comment}{/}}
+\DoxyCodeLine{00090\ \textcolor{comment}{/\ \ \ 1\ \ \ -\/\ ASCII\ (No\ extended\ character.\ Non-\/LFN\ cfg.\ only)}}
+\DoxyCodeLine{00091\ \textcolor{comment}{/\ \ \ 437\ -\/\ U.S.}}
+\DoxyCodeLine{00092\ \textcolor{comment}{/\ \ \ 720\ -\/\ Arabic}}
+\DoxyCodeLine{00093\ \textcolor{comment}{/\ \ \ 737\ -\/\ Greek}}
+\DoxyCodeLine{00094\ \textcolor{comment}{/\ \ \ 771\ -\/\ KBL}}
+\DoxyCodeLine{00095\ \textcolor{comment}{/\ \ \ 775\ -\/\ Baltic}}
+\DoxyCodeLine{00096\ \textcolor{comment}{/\ \ \ 850\ -\/\ Latin\ 1}}
+\DoxyCodeLine{00097\ \textcolor{comment}{/\ \ \ 852\ -\/\ Latin\ 2}}
+\DoxyCodeLine{00098\ \textcolor{comment}{/\ \ \ 855\ -\/\ Cyrillic}}
+\DoxyCodeLine{00099\ \textcolor{comment}{/\ \ \ 857\ -\/\ Turkish}}
+\DoxyCodeLine{00100\ \textcolor{comment}{/\ \ \ 860\ -\/\ Portuguese}}
+\DoxyCodeLine{00101\ \textcolor{comment}{/\ \ \ 861\ -\/\ Icelandic}}
+\DoxyCodeLine{00102\ \textcolor{comment}{/\ \ \ 862\ -\/\ Hebrew}}
+\DoxyCodeLine{00103\ \textcolor{comment}{/\ \ \ 863\ -\/\ Canadian\ French}}
+\DoxyCodeLine{00104\ \textcolor{comment}{/\ \ \ 864\ -\/\ Arabic}}
+\DoxyCodeLine{00105\ \textcolor{comment}{/\ \ \ 865\ -\/\ Nordic}}
+\DoxyCodeLine{00106\ \textcolor{comment}{/\ \ \ 866\ -\/\ Russian}}
+\DoxyCodeLine{00107\ \textcolor{comment}{/\ \ \ 869\ -\/\ Greek\ 2}}
+\DoxyCodeLine{00108\ \textcolor{comment}{/\ \ \ 932\ -\/\ Japanese\ (DBCS)}}
+\DoxyCodeLine{00109\ \textcolor{comment}{/\ \ \ 936\ -\/\ Simplified\ Chinese\ (DBCS)}}
+\DoxyCodeLine{00110\ \textcolor{comment}{/\ \ \ 949\ -\/\ Korean\ (DBCS)}}
+\DoxyCodeLine{00111\ \textcolor{comment}{/\ \ \ 950\ -\/\ Traditional\ Chinese\ (DBCS)}}
+\DoxyCodeLine{00112\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ \_USE\_LFN\ \ \ \ \ 0\ \ \ \ }\textcolor{comment}{/*\ 0\ to\ 3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ \_MAX\_LFN\ \ \ \ \ 255\ \ }\textcolor{comment}{/*\ Maximum\ LFN\ length\ to\ handle\ (12\ to\ 255)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00116\ \textcolor{comment}{/*\ The\ \_USE\_LFN\ switches\ the\ support\ of\ long\ file\ name\ (LFN).}}
+\DoxyCodeLine{00117\ \textcolor{comment}{/}}
+\DoxyCodeLine{00118\ \textcolor{comment}{/\ \ \ 0:\ Disable\ support\ of\ LFN.\ \_MAX\_LFN\ has\ no\ effect.}}
+\DoxyCodeLine{00119\ \textcolor{comment}{/\ \ \ 1:\ Enable\ LFN\ with\ static\ working\ buffer\ on\ the\ BSS.\ Always\ NOT\ thread-\/safe.}}
+\DoxyCodeLine{00120\ \textcolor{comment}{/\ \ \ 2:\ Enable\ LFN\ with\ dynamic\ working\ buffer\ on\ the\ STACK.}}
+\DoxyCodeLine{00121\ \textcolor{comment}{/\ \ \ 3:\ Enable\ LFN\ with\ dynamic\ working\ buffer\ on\ the\ HEAP.}}
+\DoxyCodeLine{00122\ \textcolor{comment}{/}}
+\DoxyCodeLine{00123\ \textcolor{comment}{/\ \ To\ enable\ the\ LFN,\ Unicode\ handling\ functions\ (option/unicode.c)\ must\ be\ added}}
+\DoxyCodeLine{00124\ \textcolor{comment}{/\ \ to\ the\ project.\ The\ working\ buffer\ occupies\ (\_MAX\_LFN\ +\ 1)\ *\ 2\ bytes\ and}}
+\DoxyCodeLine{00125\ \textcolor{comment}{/\ \ additional\ 608\ bytes\ at\ exFAT\ enabled.\ \_MAX\_LFN\ can\ be\ in\ range\ from\ 12\ to\ 255.}}
+\DoxyCodeLine{00126\ \textcolor{comment}{/\ \ It\ should\ be\ set\ 255\ to\ support\ full\ featured\ LFN\ operations.}}
+\DoxyCodeLine{00127\ \textcolor{comment}{/\ \ When\ use\ stack\ for\ the\ working\ buffer,\ take\ care\ on\ stack\ overflow.\ When\ use\ heap}}
+\DoxyCodeLine{00128\ \textcolor{comment}{/\ \ memory\ for\ the\ working\ buffer,\ memory\ management\ functions,\ ff\_memalloc()\ and}}
+\DoxyCodeLine{00129\ \textcolor{comment}{/\ \ ff\_memfree(),\ must\ be\ added\ to\ the\ project.\ */}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ \_LFN\_UNICODE\ \ \ \ 0\ }\textcolor{comment}{/*\ 0:ANSI/OEM\ or\ 1:Unicode\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00132\ \textcolor{comment}{/*\ This\ option\ switches\ character\ encoding\ on\ the\ API.\ (0:ANSI/OEM\ or\ 1:UTF-\/16)}}
+\DoxyCodeLine{00133\ \textcolor{comment}{/\ \ To\ use\ Unicode\ string\ for\ the\ path\ name,\ enable\ LFN\ and\ set\ \_LFN\_UNICODE\ =\ 1.}}
+\DoxyCodeLine{00134\ \textcolor{comment}{/\ \ This\ option\ also\ affects\ behavior\ of\ string\ I/O\ functions.\ */}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ \_STRF\_ENCODE\ \ \ \ 3}}
+\DoxyCodeLine{00137\ \textcolor{comment}{/*\ When\ \_LFN\_UNICODE\ ==\ 1,\ this\ option\ selects\ the\ character\ encoding\ ON\ THE\ FILE\ to}}
+\DoxyCodeLine{00138\ \textcolor{comment}{/\ \ be\ read/written\ via\ string\ I/O\ functions,\ f\_gets(),\ f\_putc(),\ f\_puts\ and\ f\_printf().}}
+\DoxyCodeLine{00139\ \textcolor{comment}{/}}
+\DoxyCodeLine{00140\ \textcolor{comment}{/\ \ 0:\ ANSI/OEM}}
+\DoxyCodeLine{00141\ \textcolor{comment}{/\ \ 1:\ UTF-\/16LE}}
+\DoxyCodeLine{00142\ \textcolor{comment}{/\ \ 2:\ UTF-\/16BE}}
+\DoxyCodeLine{00143\ \textcolor{comment}{/\ \ 3:\ UTF-\/8}}
+\DoxyCodeLine{00144\ \textcolor{comment}{/}}
+\DoxyCodeLine{00145\ \textcolor{comment}{/\ \ This\ option\ has\ no\ effect\ when\ \_LFN\_UNICODE\ ==\ 0.\ */}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ \_FS\_RPATH\ \ \ \ \ \ \ 0\ }\textcolor{comment}{/*\ 0\ to\ 2\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00148\ \textcolor{comment}{/*\ This\ option\ configures\ support\ of\ relative\ path.}}
+\DoxyCodeLine{00149\ \textcolor{comment}{/}}
+\DoxyCodeLine{00150\ \textcolor{comment}{/\ \ \ 0:\ Disable\ relative\ path\ and\ remove\ related\ functions.}}
+\DoxyCodeLine{00151\ \textcolor{comment}{/\ \ \ 1:\ Enable\ relative\ path.\ f\_chdir()\ and\ f\_chdrive()\ are\ available.}}
+\DoxyCodeLine{00152\ \textcolor{comment}{/\ \ \ 2:\ f\_getcwd()\ function\ is\ available\ in\ addition\ to\ 1.}}
+\DoxyCodeLine{00153\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\//}}
+\DoxyCodeLine{00156\ \textcolor{comment}{/\ Drive/Volume\ Configurations}}
+\DoxyCodeLine{00157\ \textcolor{comment}{/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ \_VOLUMES\ \ \ \ 1}}
+\DoxyCodeLine{00160\ \textcolor{comment}{/*\ Number\ of\ volumes\ (logical\ drives)\ to\ be\ used.\ */}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Volumes\ */}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ \_STR\_VOLUME\_ID\ \ \ \ \ \ \ \ \ \ 0\ \ \ }\textcolor{comment}{/*\ 0:Use\ only\ 0-\/9\ for\ drive\ ID,\ 1:Use\ strings\ for\ drive\ ID\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ \_VOLUME\_STRS\ \ \ \ \ \ \ \ \ \ \ \ "{}RAM"{},"{}NAND"{},"{}CF"{},"{}SD1"{},"{}SD2"{},"{}USB1"{},"{}USB2"{},"{}USB3"{}}}
+\DoxyCodeLine{00165\ \textcolor{comment}{/*\ \_STR\_VOLUME\_ID\ switches\ string\ support\ of\ volume\ ID.}}
+\DoxyCodeLine{00166\ \textcolor{comment}{/\ \ When\ \_STR\_VOLUME\_ID\ is\ set\ to\ 1,\ also\ pre-\/defined\ strings\ can\ be\ used\ as\ drive}}
+\DoxyCodeLine{00167\ \textcolor{comment}{/\ \ number\ in\ the\ path\ name.\ \_VOLUME\_STRS\ defines\ the\ drive\ ID\ strings\ for\ each}}
+\DoxyCodeLine{00168\ \textcolor{comment}{/\ \ logical\ drives.\ Number\ of\ items\ must\ be\ equal\ to\ \_VOLUMES.\ Valid\ characters\ for}}
+\DoxyCodeLine{00169\ \textcolor{comment}{/\ \ the\ drive\ ID\ strings\ are:\ A-\/Z\ and\ 0-\/9.\ */}}
+\DoxyCodeLine{00170\ \textcolor{comment}{/*\ USER\ CODE\ END\ Volumes\ */}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ \_MULTI\_PARTITION\ \ \ \ \ 0\ }\textcolor{comment}{/*\ 0:Single\ partition,\ 1:Multiple\ partition\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00173\ \textcolor{comment}{/*\ This\ option\ switches\ support\ of\ multi-\/partition\ on\ a\ physical\ drive.}}
+\DoxyCodeLine{00174\ \textcolor{comment}{/\ \ By\ default\ (0),\ each\ logical\ drive\ number\ is\ bound\ to\ the\ same\ physical\ drive}}
+\DoxyCodeLine{00175\ \textcolor{comment}{/\ \ number\ and\ only\ an\ FAT\ volume\ found\ on\ the\ physical\ drive\ will\ be\ mounted.}}
+\DoxyCodeLine{00176\ \textcolor{comment}{/\ \ When\ multi-\/partition\ is\ enabled\ (1),\ each\ logical\ drive\ number\ can\ be\ bound\ to}}
+\DoxyCodeLine{00177\ \textcolor{comment}{/\ \ arbitrary\ physical\ drive\ and\ partition\ listed\ in\ the\ VolToPart[].\ Also\ f\_fdisk()}}
+\DoxyCodeLine{00178\ \textcolor{comment}{/\ \ function\ will\ be\ available.\ */}}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ \_MIN\_SS\ \ \ \ 512\ \ }\textcolor{comment}{/*\ 512,\ 1024,\ 2048\ or\ 4096\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ \_MAX\_SS\ \ \ \ 512\ \ }\textcolor{comment}{/*\ 512,\ 1024,\ 2048\ or\ 4096\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00181\ \textcolor{comment}{/*\ These\ options\ configure\ the\ range\ of\ sector\ size\ to\ be\ supported.\ (512,\ 1024,}}
+\DoxyCodeLine{00182\ \textcolor{comment}{/\ \ 2048\ or\ 4096)\ Always\ set\ both\ 512\ for\ most\ systems,\ all\ type\ of\ memory\ cards\ and}}
+\DoxyCodeLine{00183\ \textcolor{comment}{/\ \ harddisk.\ But\ a\ larger\ value\ may\ be\ required\ for\ on-\/board\ flash\ memory\ and\ some}}
+\DoxyCodeLine{00184\ \textcolor{comment}{/\ \ type\ of\ optical\ media.\ When\ \_MAX\_SS\ is\ larger\ than\ \_MIN\_SS,\ FatFs\ is\ configured}}
+\DoxyCodeLine{00185\ \textcolor{comment}{/\ \ to\ variable\ sector\ size\ and\ GET\_SECTOR\_SIZE\ command\ must\ be\ implemented\ to\ the}}
+\DoxyCodeLine{00186\ \textcolor{comment}{/\ \ disk\_ioctl()\ function.\ */}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ \_USE\_TRIM\ \ \ \ \ \ 0}}
+\DoxyCodeLine{00189\ \textcolor{comment}{/*\ This\ option\ switches\ support\ of\ ATA-\/TRIM.\ (0:Disable\ or\ 1:Enable)}}
+\DoxyCodeLine{00190\ \textcolor{comment}{/\ \ To\ enable\ Trim\ function,\ also\ CTRL\_TRIM\ command\ should\ be\ implemented\ to\ the}}
+\DoxyCodeLine{00191\ \textcolor{comment}{/\ \ disk\_ioctl()\ function.\ */}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ \_FS\_NOFSINFO\ \ \ \ 0\ }\textcolor{comment}{/*\ 0,1,2\ or\ 3\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00194\ \textcolor{comment}{/*\ If\ you\ need\ to\ know\ correct\ free\ space\ on\ the\ FAT32\ volume,\ set\ bit\ 0\ of\ this}}
+\DoxyCodeLine{00195\ \textcolor{comment}{/\ \ option,\ and\ f\_getfree()\ function\ at\ first\ time\ after\ volume\ mount\ will\ force}}
+\DoxyCodeLine{00196\ \textcolor{comment}{/\ \ a\ full\ FAT\ scan.\ Bit\ 1\ controls\ the\ use\ of\ last\ allocated\ cluster\ number.}}
+\DoxyCodeLine{00197\ \textcolor{comment}{/}}
+\DoxyCodeLine{00198\ \textcolor{comment}{/\ \ bit0=0:\ Use\ free\ cluster\ count\ in\ the\ FSINFO\ if\ available.}}
+\DoxyCodeLine{00199\ \textcolor{comment}{/\ \ bit0=1:\ Do\ not\ trust\ free\ cluster\ count\ in\ the\ FSINFO.}}
+\DoxyCodeLine{00200\ \textcolor{comment}{/\ \ bit1=0:\ Use\ last\ allocated\ cluster\ number\ in\ the\ FSINFO\ if\ available.}}
+\DoxyCodeLine{00201\ \textcolor{comment}{/\ \ bit1=1:\ Do\ not\ trust\ last\ allocated\ cluster\ number\ in\ the\ FSINFO.}}
+\DoxyCodeLine{00202\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\//}}
+\DoxyCodeLine{00205\ \textcolor{comment}{/\ System\ Configurations}}
+\DoxyCodeLine{00206\ \textcolor{comment}{/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\#define\ \_FS\_TINY\ \ \ \ 0\ \ \ \ \ \ }\textcolor{comment}{/*\ 0:Normal\ or\ 1:Tiny\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00209\ \textcolor{comment}{/*\ This\ option\ switches\ tiny\ buffer\ configuration.\ (0:Normal\ or\ 1:Tiny)}}
+\DoxyCodeLine{00210\ \textcolor{comment}{/\ \ At\ the\ tiny\ configuration,\ size\ of\ file\ object\ (FIL)\ is\ reduced\ \_MAX\_SS\ bytes.}}
+\DoxyCodeLine{00211\ \textcolor{comment}{/\ \ Instead\ of\ private\ sector\ buffer\ eliminated\ from\ the\ file\ object,\ common\ sector}}
+\DoxyCodeLine{00212\ \textcolor{comment}{/\ \ buffer\ in\ the\ file\ system\ object\ (FATFS)\ is\ used\ for\ the\ file\ data\ transfer.\ */}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#define\ \_FS\_EXFAT\ \ \ 0}}
+\DoxyCodeLine{00215\ \textcolor{comment}{/*\ This\ option\ switches\ support\ of\ exFAT\ file\ system.\ (0:Disable\ or\ 1:Enable)}}
+\DoxyCodeLine{00216\ \textcolor{comment}{/\ \ When\ enable\ exFAT,\ also\ LFN\ needs\ to\ be\ enabled.\ (\_USE\_LFN\ >=\ 1)}}
+\DoxyCodeLine{00217\ \textcolor{comment}{/\ \ Note\ that\ enabling\ exFAT\ discards\ C89\ compatibility.\ */}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\#define\ \_FS\_NORTC\ \ \ 0}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ \_NORTC\_MON\ \ 6}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ \_NORTC\_MDAY\ 4}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ \_NORTC\_YEAR\ 2015}}
+\DoxyCodeLine{00223\ \textcolor{comment}{/*\ The\ option\ \_FS\_NORTC\ switches\ timestamp\ functiton.\ If\ the\ system\ does\ not\ have}}
+\DoxyCodeLine{00224\ \textcolor{comment}{/\ \ any\ RTC\ function\ or\ valid\ timestamp\ is\ not\ needed,\ set\ \_FS\_NORTC\ =\ 1\ to\ disable}}
+\DoxyCodeLine{00225\ \textcolor{comment}{/\ \ the\ timestamp\ function.\ All\ objects\ modified\ by\ FatFs\ will\ have\ a\ fixed\ timestamp}}
+\DoxyCodeLine{00226\ \textcolor{comment}{/\ \ defined\ by\ \_NORTC\_MON,\ \_NORTC\_MDAY\ and\ \_NORTC\_YEAR\ in\ local\ time.}}
+\DoxyCodeLine{00227\ \textcolor{comment}{/\ \ To\ enable\ timestamp\ function\ (\_FS\_NORTC\ =\ 0),\ get\_fattime()\ function\ need\ to\ be}}
+\DoxyCodeLine{00228\ \textcolor{comment}{/\ \ added\ to\ the\ project\ to\ get\ current\ time\ form\ real-\/time\ clock.\ \_NORTC\_MON,}}
+\DoxyCodeLine{00229\ \textcolor{comment}{/\ \ \_NORTC\_MDAY\ and\ \_NORTC\_YEAR\ have\ no\ effect.}}
+\DoxyCodeLine{00230\ \textcolor{comment}{/\ \ These\ options\ have\ no\ effect\ at\ read-\/only\ configuration\ (\_FS\_READONLY\ =\ 1).\ */}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ \_FS\_LOCK\ \ \ \ 2\ \ \ \ \ }\textcolor{comment}{/*\ 0:Disable\ or\ >=1:Enable\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00233\ \textcolor{comment}{/*\ The\ option\ \_FS\_LOCK\ switches\ file\ lock\ function\ to\ control\ duplicated\ file\ open}}
+\DoxyCodeLine{00234\ \textcolor{comment}{/\ \ and\ illegal\ operation\ to\ open\ objects.\ This\ option\ must\ be\ 0\ when\ \_FS\_READONLY}}
+\DoxyCodeLine{00235\ \textcolor{comment}{/\ \ is\ 1.}}
+\DoxyCodeLine{00236\ \textcolor{comment}{/}}
+\DoxyCodeLine{00237\ \textcolor{comment}{/\ \ 0:\ \ Disable\ file\ lock\ function.\ To\ avoid\ volume\ corruption,\ application\ program}}
+\DoxyCodeLine{00238\ \textcolor{comment}{/\ \ \ \ \ \ should\ avoid\ illegal\ open,\ remove\ and\ rename\ to\ the\ open\ objects.}}
+\DoxyCodeLine{00239\ \textcolor{comment}{/\ \ >0:\ Enable\ file\ lock\ function.\ The\ value\ defines\ how\ many\ files/sub-\/directories}}
+\DoxyCodeLine{00240\ \textcolor{comment}{/\ \ \ \ \ \ can\ be\ opened\ simultaneously\ under\ file\ lock\ control.\ Note\ that\ the\ file}}
+\DoxyCodeLine{00241\ \textcolor{comment}{/\ \ \ \ \ \ lock\ control\ is\ independent\ of\ re-\/entrancy.\ */}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#define\ \_FS\_REENTRANT\ \ \ \ 1\ \ }\textcolor{comment}{/*\ 0:Disable\ or\ 1:Enable\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#define\ \_FS\_TIMEOUT\ \ \ \ \ \ 1000\ }\textcolor{comment}{/*\ Timeout\ period\ in\ unit\ of\ time\ ticks\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ \_SYNC\_t\ \ \ \ \ \ \ \ \ \ osSemaphoreId\_t}}
+\DoxyCodeLine{00246\ \textcolor{comment}{/*\ The\ option\ \_FS\_REENTRANT\ switches\ the\ re-\/entrancy\ (thread\ safe)\ of\ the\ FatFs}}
+\DoxyCodeLine{00247\ \textcolor{comment}{/\ \ module\ itself.\ Note\ that\ regardless\ of\ this\ option,\ file\ access\ to\ different}}
+\DoxyCodeLine{00248\ \textcolor{comment}{/\ \ volume\ is\ always\ re-\/entrant\ and\ volume\ control\ functions,\ f\_mount(),\ f\_mkfs()}}
+\DoxyCodeLine{00249\ \textcolor{comment}{/\ \ and\ f\_fdisk()\ function,\ are\ always\ not\ re-\/entrant.\ Only\ file/directory\ access}}
+\DoxyCodeLine{00250\ \textcolor{comment}{/\ \ to\ the\ same\ volume\ is\ under\ control\ of\ this\ function.}}
+\DoxyCodeLine{00251\ \textcolor{comment}{/}}
+\DoxyCodeLine{00252\ \textcolor{comment}{/\ \ \ 0:\ Disable\ re-\/entrancy.\ \_FS\_TIMEOUT\ and\ \_SYNC\_t\ have\ no\ effect.}}
+\DoxyCodeLine{00253\ \textcolor{comment}{/\ \ \ 1:\ Enable\ re-\/entrancy.\ Also\ user\ provided\ synchronization\ handlers,}}
+\DoxyCodeLine{00254\ \textcolor{comment}{/\ \ \ \ \ \ ff\_req\_grant(),\ ff\_rel\_grant(),\ ff\_del\_syncobj()\ and\ ff\_cre\_syncobj()}}
+\DoxyCodeLine{00255\ \textcolor{comment}{/\ \ \ \ \ \ function,\ must\ be\ added\ to\ the\ project.\ Samples\ are\ available\ in}}
+\DoxyCodeLine{00256\ \textcolor{comment}{/\ \ \ \ \ \ option/syscall.c.}}
+\DoxyCodeLine{00257\ \textcolor{comment}{/}}
+\DoxyCodeLine{00258\ \textcolor{comment}{/\ \ The\ \_FS\_TIMEOUT\ defines\ timeout\ period\ in\ unit\ of\ time\ tick.}}
+\DoxyCodeLine{00259\ \textcolor{comment}{/\ \ The\ \_SYNC\_t\ defines\ O/S\ dependent\ sync\ object\ type.\ e.g.\ HANDLE,\ ID,\ OS\_EVENT*,}}
+\DoxyCodeLine{00260\ \textcolor{comment}{/\ \ SemaphoreHandle\_t\ and\ etc..\ A\ header\ file\ for\ O/S\ definitions\ needs\ to\ be}}
+\DoxyCodeLine{00261\ \textcolor{comment}{/\ \ included\ somewhere\ in\ the\ scope\ of\ ff.h.\ */}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{comment}{/*\ define\ the\ ff\_malloc\ ff\_free\ macros\ as\ FreeRTOS\ pvPortMalloc\ and\ vPortFree\ macros\ */}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\#if\ !defined(ff\_malloc)\ \&\&\ !defined(ff\_free)}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#define\ ff\_malloc\ \ pvPortMalloc}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\#define\ ff\_free\ \ vPortFree}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_FFCONF\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

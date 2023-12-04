@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___private___defines" xml:lang="ru">
+<title>USBD_DESC_Private_Defines</title>
+<indexterm><primary>USBD_DESC_Private_Defines</primary></indexterm>
+<para>
+
+<para>Private defines. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Private_Defines:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___private___defines.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62">USBD_VID</link>&#160;&#160;&#160;1155</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga070dd542d4d914e86fdf103fa5fdd72f">USBD_LANGID_STRING</link>&#160;&#160;&#160;1033</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1gaee0c9fd7e8265b90126028919cd863a6">USBD_MANUFACTURER_STRING</link>&#160;&#160;&#160;&quot;STMicroelectronics&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga5c6d9f613aca0d87a9cf87ebfd442c17">USBD_PID_HS</link>&#160;&#160;&#160;22314</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1gae0e156b6d95f3bf696a45adf2dd12217">USBD_PRODUCT_STRING_HS</link>&#160;&#160;&#160;&quot;STM32 Mass Storage&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga28c3a051d20aeb440ade204b0318c645">USBD_CONFIGURATION_STRING_HS</link>&#160;&#160;&#160;&quot;MSC Config&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga06ca89c36da0abb192662b8e4967712c">USBD_INTERFACE_STRING_HS</link>&#160;&#160;&#160;&quot;MSC Interface&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___private___defines_1ga3d6767367e9b15bae8d264a78102aba8">USB_SIZ_BOS_DESC</link>&#160;&#160;&#160;0x0C</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Private defines. </para>
+</section>
+<section>
+<title>Макросы</title>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga3d6767367e9b15bae8d264a78102aba8"/><section>
+    <title>USB_SIZ_BOS_DESC</title>
+<indexterm><primary>USB_SIZ_BOS_DESC</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USB_SIZ_BOS_DESC</secondary></indexterm>
+<para><computeroutput>#define USB_SIZ_BOS_DESC&#160;&#160;&#160;0x0C</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga28c3a051d20aeb440ade204b0318c645"/><section>
+    <title>USBD_CONFIGURATION_STRING_HS</title>
+<indexterm><primary>USBD_CONFIGURATION_STRING_HS</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_CONFIGURATION_STRING_HS</secondary></indexterm>
+<para><computeroutput>#define USBD_CONFIGURATION_STRING_HS&#160;&#160;&#160;&quot;MSC Config&quot;</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga06ca89c36da0abb192662b8e4967712c"/><section>
+    <title>USBD_INTERFACE_STRING_HS</title>
+<indexterm><primary>USBD_INTERFACE_STRING_HS</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_INTERFACE_STRING_HS</secondary></indexterm>
+<para><computeroutput>#define USBD_INTERFACE_STRING_HS&#160;&#160;&#160;&quot;MSC Interface&quot;</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga070dd542d4d914e86fdf103fa5fdd72f"/><section>
+    <title>USBD_LANGID_STRING</title>
+<indexterm><primary>USBD_LANGID_STRING</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_LANGID_STRING</secondary></indexterm>
+<para><computeroutput>#define USBD_LANGID_STRING&#160;&#160;&#160;1033</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gaee0c9fd7e8265b90126028919cd863a6"/><section>
+    <title>USBD_MANUFACTURER_STRING</title>
+<indexterm><primary>USBD_MANUFACTURER_STRING</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_MANUFACTURER_STRING</secondary></indexterm>
+<para><computeroutput>#define USBD_MANUFACTURER_STRING&#160;&#160;&#160;&quot;STMicroelectronics&quot;</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1ga5c6d9f613aca0d87a9cf87ebfd442c17"/><section>
+    <title>USBD_PID_HS</title>
+<indexterm><primary>USBD_PID_HS</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_PID_HS</secondary></indexterm>
+<para><computeroutput>#define USBD_PID_HS&#160;&#160;&#160;22314</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gae0e156b6d95f3bf696a45adf2dd12217"/><section>
+    <title>USBD_PRODUCT_STRING_HS</title>
+<indexterm><primary>USBD_PRODUCT_STRING_HS</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_PRODUCT_STRING_HS</secondary></indexterm>
+<para><computeroutput>#define USBD_PRODUCT_STRING_HS&#160;&#160;&#160;&quot;STM32 Mass Storage&quot;</computeroutput></para></section>
+<anchor xml:id="_group___u_s_b_d___d_e_s_c___private___defines_1gac5251397ce2246b546b472cd802e6d62"/><section>
+    <title>USBD_VID</title>
+<indexterm><primary>USBD_VID</primary><secondary>USBD_DESC_Private_Defines</secondary></indexterm>
+<indexterm><primary>USBD_DESC_Private_Defines</primary><secondary>USBD_VID</secondary></indexterm>
+<para><computeroutput>#define USBD_VID&#160;&#160;&#160;1155</computeroutput></para></section>
+</section>
+</section>

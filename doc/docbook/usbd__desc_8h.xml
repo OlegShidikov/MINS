@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__desc_8h" xml:lang="ru">
+<title>Файл USB_DEVICE/App/usbd_desc.h</title>
+<indexterm><primary>USB_DEVICE/App/usbd_desc.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;usbd_def.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для usbd_desc.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__desc_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="usbd__desc_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1gacba0623797117dcaf178232d734c9c24">DEVICE_ID1</link>&#160;&#160;&#160;(UID_BASE)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1gacb8818cd7029deb2affd8a8a482bc86a">DEVICE_ID2</link>&#160;&#160;&#160;(UID_BASE + 0x4)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1ga2b63a0afba377e3cf5a76f78abb2a970">DEVICE_ID3</link>&#160;&#160;&#160;(UID_BASE + 0x8)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___u_s_b_d___d_e_s_c___exported___constants_1ga76287dc6e5f3cf4566406bd9b2eb7a2f">USB_SIZ_STRING_SERIAL</link>&#160;&#160;&#160;0x1A</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>USBD_DescriptorsTypeDef <link linkend="_group___u_s_b_d___d_e_s_c___exported___variables_1ga89f0dd7f68532841d99af34b1be3cd0c">HS_Desc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

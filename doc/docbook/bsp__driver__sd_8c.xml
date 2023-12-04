@@ -1,0 +1,1019 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp__driver__sd_8c" xml:lang="ru">
+<title>Файл FATFS/Target/bsp_driver_sd.c</title>
+<indexterm><primary>FATFS/Target/bsp_driver_sd.c</primary></indexterm>
+<para>
+
+<para>This file includes a generic uSD card driver. To be completed by the user according to the board used for the project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;bsp_driver_sd.h&quot;<?linebreak?></programlisting>Граф включаемых заголовочных файлов для bsp_driver_sd.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1afe208758d02f97e12c2eecbf604c1726">BSP_SD_Init</link> (void)</para>
+
+<para>Initializes the SD card device. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1aa1acca35f0ecac51c2afdf8458050f8b">BSP_SD_ITConfig</link> (void)</para>
+
+<para>Configures Interrupt mode for SD detection pin. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1afe23f41939f1b8aa1f609fcf3e71be84">BSP_SD_ReadBlocks</link> (uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks, uint32_t Timeout)</para>
+
+<para>Reads block(s) from a specified address in an SD card, in polling mode. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1a6d88090464978ec87aa1cbca9f810495">BSP_SD_WriteBlocks</link> (uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks, uint32_t Timeout)</para>
+
+<para>Writes block(s) to a specified address in an SD card, in polling mode. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1aa907652a44281179bcb9bc575e3e8709">BSP_SD_ReadBlocks_DMA</link> (uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks)</para>
+
+<para>Reads block(s) from a specified address in an SD card, in DMA mode. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1af3e90e60fd1aa25bdbd57c4e7bd62558">BSP_SD_WriteBlocks_DMA</link> (uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks)</para>
+
+<para>Writes block(s) to a specified address in an SD card, in DMA mode. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1aeaa35023e9428a9c31e693bcdadeb3d6">BSP_SD_Erase</link> (uint32_t StartAddr, uint32_t EndAddr)</para>
+
+<para>Erases the specified memory area of the given SD card. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1ad7cfcf73b9f505d0675ec1c2516dbd4c">BSP_SD_GetCardState</link> (void)</para>
+
+<para>Gets the current SD card data status. </para>
+</listitem>
+            <listitem><para>__weak void <link linkend="_bsp__driver__sd_8c_1a17b5e6325eebcd997d540f304d7a35b1">BSP_SD_GetCardInfo</link> (HAL_SD_CardInfoTypeDef *CardInfo)</para>
+
+<para>Get SD information about specific SD card. </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp__driver__sd_8c_1a52a463063ce8c6f1e8910f30dd4e8376">HAL_SD_AbortCallback</link> (SD_HandleTypeDef *hsd)</para>
+
+<para>SD Abort callbacks. </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp__driver__sd_8c_1a7f42b31026c697fea97c132e9aed15e2">HAL_SD_TxCpltCallback</link> (SD_HandleTypeDef *hsd)</para>
+
+<para>Tx Transfer completed callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp__driver__sd_8c_1a1720dc3a0e88b26e557ae63fad3a382d">HAL_SD_RxCpltCallback</link> (SD_HandleTypeDef *hsd)</para>
+
+<para>Rx Transfer completed callback. </para>
+</listitem>
+            <listitem><para>__weak void <link linkend="_bsp__driver__sd_8c_1a93d832f6829fdec979a7df3944084512">BSP_SD_AbortCallback</link> (void)</para>
+
+<para>BSP SD Abort callback. </para>
+</listitem>
+            <listitem><para>__weak void <link linkend="_bsp__driver__sd_8c_1a2e6559fa7b5164071baafa3b3f668e3f">BSP_SD_WriteCpltCallback</link> (void)</para>
+
+<para>BSP Tx Transfer completed callback. </para>
+</listitem>
+            <listitem><para>__weak void <link linkend="_bsp__driver__sd_8c_1aeb3eb4ab76f0acd225bddf68199e6f3c">BSP_SD_ReadCpltCallback</link> (void)</para>
+
+<para>BSP Rx Transfer completed callback. </para>
+</listitem>
+            <listitem><para>__weak uint8_t <link linkend="_bsp__driver__sd_8c_1a80c0a2c6722e29b76aa3e3d8a57ee27a">BSP_SD_IsDetected</link> (void)</para>
+
+<para>Detects if SD card is correctly plugged in the memory slot or not. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Переменные    </title>
+        <itemizedlist>
+            <listitem><para>SD_HandleTypeDef <link linkend="_bsp__driver__sd_8c_1ad0b867cf724e111d6329c1eb91f3b30b">hsd1</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>This file includes a generic uSD card driver. To be completed by the user according to the board used for the project. </para>
+
+<para>for F7 (based on stm32756g_eval_sd.c) <note><title>Заметки</title>
+
+<para>Some functions generated as weak: they can be overridden by<itemizedlist>
+<listitem>
+<para>code in user files</para>
+</listitem><listitem>
+<para>or BSP code from the FW pack files if such files are added to the generated project (by the user).</para>
+</listitem></itemizedlist>
+</para>
+</note>
+<caution><title>Внимание</title>
+
+<para></para>
+</caution>
+Copyright (c) 2023 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_bsp__driver__sd_8c_1a93d832f6829fdec979a7df3944084512"/><section>
+    <title>BSP_SD_AbortCallback()</title>
+<indexterm><primary>BSP_SD_AbortCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_AbortCallback</secondary></indexterm>
+<para><computeroutput>__weak void BSP_SD_AbortCallback (void )</computeroutput></para><para>
+
+<para>BSP SD Abort callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Заметки</title>
+
+<para>empty (up to the user to fill it in or to remove it if useless) </para>
+</note>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a93d832f6829fdec979a7df3944084512_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1aeaa35023e9428a9c31e693bcdadeb3d6"/><section>
+    <title>BSP_SD_Erase()</title>
+<indexterm><primary>BSP_SD_Erase</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_Erase</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_Erase (uint32_t StartAddr, uint32_t EndAddr)</computeroutput></para><para>
+
+<para>Erases the specified memory area of the given SD card. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>StartAddr</entry><entry>
+<para>Start byte address </para>
+</entry>
+                            </row>
+                            <row>
+<entry>EndAddr</entry><entry>
+<para>End byte address </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a17b5e6325eebcd997d540f304d7a35b1"/><section>
+    <title>BSP_SD_GetCardInfo()</title>
+<indexterm><primary>BSP_SD_GetCardInfo</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_GetCardInfo</secondary></indexterm>
+<para><computeroutput>__weak void BSP_SD_GetCardInfo (HAL_SD_CardInfoTypeDef * CardInfo)</computeroutput></para><para>
+
+<para>Get SD information about specific SD card. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>CardInfo</entry><entry>
+<para>Pointer to HAL_SD_CardInfoTypedef structure </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1ad7cfcf73b9f505d0675ec1c2516dbd4c"/><section>
+    <title>BSP_SD_GetCardState()</title>
+<indexterm><primary>BSP_SD_GetCardState</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_GetCardState</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_GetCardState (void )</computeroutput></para><para>
+
+<para>Gets the current SD card data status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Data</entry><entry>
+<para>transfer state. This value can be one of the following values: <itemizedlist>
+<listitem>
+<para>SD_TRANSFER_OK: No data transfer is acting </para>
+</listitem>
+<listitem>
+<para>SD_TRANSFER_BUSY: Data transfer is acting </para>
+</listitem>
+</itemizedlist>
+</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_ad7cfcf73b9f505d0675ec1c2516dbd4c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1afe208758d02f97e12c2eecbf604c1726"/><section>
+    <title>BSP_SD_Init()</title>
+<indexterm><primary>BSP_SD_Init</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_Init</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_Init (void )</computeroutput></para><para>
+
+<para>Initializes the SD card device. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_afe208758d02f97e12c2eecbf604c1726_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a80c0a2c6722e29b76aa3e3d8a57ee27a"/><section>
+    <title>BSP_SD_IsDetected()</title>
+<indexterm><primary>BSP_SD_IsDetected</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_IsDetected</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_IsDetected (void )</computeroutput></para><para>
+
+<para>Detects if SD card is correctly plugged in the memory slot or not. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Returns</entry><entry>
+<para>if SD is detected or not </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a80c0a2c6722e29b76aa3e3d8a57ee27a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1aa1acca35f0ecac51c2afdf8458050f8b"/><section>
+    <title>BSP_SD_ITConfig()</title>
+<indexterm><primary>BSP_SD_ITConfig</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_ITConfig</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_ITConfig (void )</computeroutput></para><para>
+
+<para>Configures Interrupt mode for SD detection pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Returns</entry><entry>
+<para>0 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1afe23f41939f1b8aa1f609fcf3e71be84"/><section>
+    <title>BSP_SD_ReadBlocks()</title>
+<indexterm><primary>BSP_SD_ReadBlocks</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_ReadBlocks</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_ReadBlocks (uint32_t * pData, uint32_t ReadAddr, uint32_t NumOfBlocks, uint32_t Timeout)</computeroutput></para><para>
+
+<para>Reads block(s) from a specified address in an SD card, in polling mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pData</entry><entry>
+<para>Pointer to the buffer that will contain the data to transmit </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ReadAddr</entry><entry>
+<para>Address from where data is to be read </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumOfBlocks</entry><entry>
+<para>Number of SD blocks to read </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Timeout</entry><entry>
+<para>Timeout for read operation </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1aa907652a44281179bcb9bc575e3e8709"/><section>
+    <title>BSP_SD_ReadBlocks_DMA()</title>
+<indexterm><primary>BSP_SD_ReadBlocks_DMA</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_ReadBlocks_DMA</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_ReadBlocks_DMA (uint32_t * pData, uint32_t ReadAddr, uint32_t NumOfBlocks)</computeroutput></para><para>
+
+<para>Reads block(s) from a specified address in an SD card, in DMA mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pData</entry><entry>
+<para>Pointer to the buffer that will contain the data to transmit </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ReadAddr</entry><entry>
+<para>Address from where data is to be read </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumOfBlocks</entry><entry>
+<para>Number of SD blocks to read </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_aa907652a44281179bcb9bc575e3e8709_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1aeb3eb4ab76f0acd225bddf68199e6f3c"/><section>
+    <title>BSP_SD_ReadCpltCallback()</title>
+<indexterm><primary>BSP_SD_ReadCpltCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_ReadCpltCallback</secondary></indexterm>
+<para><computeroutput>__weak void BSP_SD_ReadCpltCallback (void )</computeroutput></para><para>
+
+<para>BSP Rx Transfer completed callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Заметки</title>
+
+<para>empty (up to the user to fill it in or to remove it if useless) </para>
+</note>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_aeb3eb4ab76f0acd225bddf68199e6f3c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a6d88090464978ec87aa1cbca9f810495"/><section>
+    <title>BSP_SD_WriteBlocks()</title>
+<indexterm><primary>BSP_SD_WriteBlocks</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_WriteBlocks</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_WriteBlocks (uint32_t * pData, uint32_t WriteAddr, uint32_t NumOfBlocks, uint32_t Timeout)</computeroutput></para><para>
+
+<para>Writes block(s) to a specified address in an SD card, in polling mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pData</entry><entry>
+<para>Pointer to the buffer that will contain the data to transmit </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WriteAddr</entry><entry>
+<para>Address from where data is to be written </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumOfBlocks</entry><entry>
+<para>Number of SD blocks to write </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Timeout</entry><entry>
+<para>Timeout for write operation </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1af3e90e60fd1aa25bdbd57c4e7bd62558"/><section>
+    <title>BSP_SD_WriteBlocks_DMA()</title>
+<indexterm><primary>BSP_SD_WriteBlocks_DMA</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_WriteBlocks_DMA</secondary></indexterm>
+<para><computeroutput>__weak uint8_t BSP_SD_WriteBlocks_DMA (uint32_t * pData, uint32_t WriteAddr, uint32_t NumOfBlocks)</computeroutput></para><para>
+
+<para>Writes block(s) to a specified address in an SD card, in DMA mode. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pData</entry><entry>
+<para>Pointer to the buffer that will contain the data to transmit </para>
+</entry>
+                            </row>
+                            <row>
+<entry>WriteAddr</entry><entry>
+<para>Address from where data is to be written </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumOfBlocks</entry><entry>
+<para>Number of SD blocks to write </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>SD</entry><entry>
+<para>status </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a2e6559fa7b5164071baafa3b3f668e3f"/><section>
+    <title>BSP_SD_WriteCpltCallback()</title>
+<indexterm><primary>BSP_SD_WriteCpltCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>BSP_SD_WriteCpltCallback</secondary></indexterm>
+<para><computeroutput>__weak void BSP_SD_WriteCpltCallback (void )</computeroutput></para><para>
+
+<para>BSP Tx Transfer completed callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Заметки</title>
+
+<para>empty (up to the user to fill it in or to remove it if useless) </para>
+</note>
+</para>
+Граф вызова функции:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a2e6559fa7b5164071baafa3b3f668e3f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a52a463063ce8c6f1e8910f30dd4e8376"/><section>
+    <title>HAL_SD_AbortCallback()</title>
+<indexterm><primary>HAL_SD_AbortCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>HAL_SD_AbortCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_AbortCallback (SD_HandleTypeDef * hsd)</computeroutput></para><para>
+
+<para>SD Abort callbacks. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hsd</entry><entry>
+<para>SD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a52a463063ce8c6f1e8910f30dd4e8376_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a1720dc3a0e88b26e557ae63fad3a382d"/><section>
+    <title>HAL_SD_RxCpltCallback()</title>
+<indexterm><primary>HAL_SD_RxCpltCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>HAL_SD_RxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_RxCpltCallback (SD_HandleTypeDef * hsd)</computeroutput></para><para>
+
+<para>Rx Transfer completed callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hsd</entry><entry>
+<para>SD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a1720dc3a0e88b26e557ae63fad3a382d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp__driver__sd_8c_1a7f42b31026c697fea97c132e9aed15e2"/><section>
+    <title>HAL_SD_TxCpltCallback()</title>
+<indexterm><primary>HAL_SD_TxCpltCallback</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>HAL_SD_TxCpltCallback</secondary></indexterm>
+<para><computeroutput>void HAL_SD_TxCpltCallback (SD_HandleTypeDef * hsd)</computeroutput></para><para>
+
+<para>Tx Transfer completed callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hsd</entry><entry>
+<para>SD handle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Возвращаемые значения</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Граф вызовов:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp__driver__sd_8c_a7f42b31026c697fea97c132e9aed15e2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Переменные</title>
+<anchor xml:id="_bsp__driver__sd_8c_1ad0b867cf724e111d6329c1eb91f3b30b"/><section>
+    <title>hsd1</title>
+<indexterm><primary>hsd1</primary><secondary>bsp_driver_sd.c</secondary></indexterm>
+<indexterm><primary>bsp_driver_sd.c</primary><secondary>hsd1</secondary></indexterm>
+<para><computeroutput>SD_HandleTypeDef hsd1<computeroutput>[extern]</computeroutput></computeroutput></para></section>
+</section>
+</section>

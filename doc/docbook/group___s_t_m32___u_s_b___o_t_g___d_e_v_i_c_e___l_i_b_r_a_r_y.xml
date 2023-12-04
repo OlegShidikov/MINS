@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_t_m32___u_s_b___o_t_g___d_e_v_i_c_e___l_i_b_r_a_r_y" xml:lang="ru">
+<title>STM32_USB_OTG_DEVICE_LIBRARY</title>
+<indexterm><primary>STM32_USB_OTG_DEVICE_LIBRARY</primary></indexterm>
+<para>
+
+<para>Usb device. </para>
+ 
+</para>
+Граф связей класса STM32_USB_OTG_DEVICE_LIBRARY:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___s_t_m32___u_s_b___o_t_g___d_e_v_i_c_e___l_i_b_r_a_r_y.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___u_s_b_d___d_e_s_c">USBD_DESC</link></para>
+
+<para>Usb device descriptors module. </para>
+</listitem>
+            <listitem><para><link linkend="_group___u_s_b_d___s_t_o_r_a_g_e">USBD_STORAGE</link></para>
+
+<para>Usb mass storage device module. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Usb device. </para>
+
+<para>For Usb device.</para>
+</section>
+    <xi:include href="group___u_s_b_d___d_e_s_c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___u_s_b_d___s_t_o_r_a_g_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>

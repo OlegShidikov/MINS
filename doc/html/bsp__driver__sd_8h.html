@@ -1,0 +1,945 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MINS: Файл FATFS/Target/bsp_driver_sd.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MINS<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ca60b63f767f5225bc4631228c3dc823.html">FATFS</a></li><li class="navelem"><a class="el" href="dir_456a9e298739d9e400611b6af5d9aad0.html">Target</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл bsp_driver_sd.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains the common defines and functions prototypes for the <a class="el" href="bsp__driver__sd_8c.html" title="This file includes a generic uSD card driver. To be completed by the user according to the board used...">bsp_driver_sd.c</a> driver.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;stm32f7xx_hal.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для bsp_driver_sd.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h__incl.png" border="0" usemap="#a_f_a_t_f_s_2_target_2bsp__driver__sd_8h" alt=""/></div>
+<map name="a_f_a_t_f_s_2_target_2bsp__driver__sd_8h" id="a_f_a_t_f_s_2_target_2bsp__driver__sd_8h">
+<area shape="rect" title="This file contains the common defines and functions prototypes for the bsp_driver_sd...." alt="" coords="5,5,202,32"/>
+<area shape="rect" title=" " alt="" coords="45,80,162,107"/>
+<area shape="poly" title=" " alt="" coords="106,33,106,64,101,64,101,33"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h__dep__incl.png" border="0" usemap="#a_f_a_t_f_s_2_target_2bsp__driver__sd_8hdep" alt=""/></div>
+<map name="a_f_a_t_f_s_2_target_2bsp__driver__sd_8hdep" id="a_f_a_t_f_s_2_target_2bsp__driver__sd_8hdep">
+<area shape="rect" title="This file contains the common defines and functions prototypes for the bsp_driver_sd...." alt="" coords="201,5,398,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html" title="This file includes a generic uSD card driver. To be completed by the user according to the board used..." alt="" coords="5,80,202,107"/>
+<area shape="poly" title=" " alt="" coords="252,40,139,82,137,77,250,35"/>
+<area shape="rect" href="ffconf_8h.html" title=" " alt="" coords="226,80,373,107"/>
+<area shape="poly" title=" " alt="" coords="302,48,302,80,297,80,297,48"/>
+<area shape="rect" href="sd__diskio_8h.html" title="Header for sd_diskio.c module." alt="" coords="397,80,570,107"/>
+<area shape="poly" title=" " alt="" coords="347,36,452,77,450,82,345,41"/>
+<area shape="rect" href="fatfs_8h.html" title="Header for fatfs applications." alt="" coords="331,155,460,181"/>
+<area shape="poly" title=" " alt="" coords="458,119,412,156,409,152,455,115"/>
+<area shape="rect" href="sd__diskio_8c.html" title="SD Disk I/O driver." alt="" coords="484,155,656,181"/>
+<area shape="poly" title=" " alt="" coords="512,115,557,152,554,156,508,119"/>
+<area shape="rect" href="main_8c.html" title=": Main program body" alt="" coords="266,229,381,256"/>
+<area shape="poly" title=" " alt="" coords="374,194,338,231,334,227,370,191"/>
+<area shape="rect" href="fatfs_8c.html" title="Code for fatfs applications." alt="" coords="405,229,533,256"/>
+<area shape="poly" title=" " alt="" coords="421,191,458,227,454,231,417,194"/>
+</map>
+</div>
+</div>
+<p><a href="bsp__driver__sd_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aa27bc16108f37dbef348fe7e2644da4d" id="r_aa27bc16108f37dbef348fe7e2644da4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#aa27bc16108f37dbef348fe7e2644da4d">BSP_SD_CardInfo</a>&#160;&#160;&#160;HAL_SD_CardInfoTypeDef</td></tr>
+<tr class="memdesc:aa27bc16108f37dbef348fe7e2644da4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD Card information structure.  <br /></td></tr>
+<tr class="separator:aa27bc16108f37dbef348fe7e2644da4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0486e06b5a59ffb7579cf6cb29037bc8" id="r_a0486e06b5a59ffb7579cf6cb29037bc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a0486e06b5a59ffb7579cf6cb29037bc8">MSD_OK</a>&#160;&#160;&#160;((uint8_t)0x00)</td></tr>
+<tr class="memdesc:a0486e06b5a59ffb7579cf6cb29037bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD status structure definition.  <br /></td></tr>
+<tr class="separator:a0486e06b5a59ffb7579cf6cb29037bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fc6f6551d2bfd4524379e0c2526516" id="r_aa3fc6f6551d2bfd4524379e0c2526516"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#aa3fc6f6551d2bfd4524379e0c2526516">MSD_ERROR</a>&#160;&#160;&#160;((uint8_t)0x01)</td></tr>
+<tr class="separator:aa3fc6f6551d2bfd4524379e0c2526516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af544b72de2dd084023a2106d78df7d96" id="r_af544b72de2dd084023a2106d78df7d96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#af544b72de2dd084023a2106d78df7d96">MSD_ERROR_SD_NOT_PRESENT</a>&#160;&#160;&#160;((uint8_t)0x02)</td></tr>
+<tr class="separator:af544b72de2dd084023a2106d78df7d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d3734fc73a394772363a2e88cf3aac" id="r_ac5d3734fc73a394772363a2e88cf3aac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#ac5d3734fc73a394772363a2e88cf3aac">SD_TRANSFER_OK</a>&#160;&#160;&#160;((uint8_t)0x00)</td></tr>
+<tr class="memdesc:ac5d3734fc73a394772363a2e88cf3aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">SD transfer state definition.  <br /></td></tr>
+<tr class="separator:ac5d3734fc73a394772363a2e88cf3aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c21d1c360457d0c9f035d325cc4adaf" id="r_a6c21d1c360457d0c9f035d325cc4adaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a6c21d1c360457d0c9f035d325cc4adaf">SD_TRANSFER_BUSY</a>&#160;&#160;&#160;((uint8_t)0x01)</td></tr>
+<tr class="separator:a6c21d1c360457d0c9f035d325cc4adaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44beec2a536fb750d2401d7bb7c227b6" id="r_a44beec2a536fb750d2401d7bb7c227b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a44beec2a536fb750d2401d7bb7c227b6">SD_PRESENT</a>&#160;&#160;&#160;((uint8_t)0x01)</td></tr>
+<tr class="separator:a44beec2a536fb750d2401d7bb7c227b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342b72a630b1c5c90e2fd95c93dd686b" id="r_a342b72a630b1c5c90e2fd95c93dd686b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a342b72a630b1c5c90e2fd95c93dd686b">SD_NOT_PRESENT</a>&#160;&#160;&#160;((uint8_t)0x00)</td></tr>
+<tr class="separator:a342b72a630b1c5c90e2fd95c93dd686b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca34cf6f4e38835347bc2dc29f9469e" id="r_a9ca34cf6f4e38835347bc2dc29f9469e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a9ca34cf6f4e38835347bc2dc29f9469e">SD_DATATIMEOUT</a>&#160;&#160;&#160;((uint32_t)100000000)</td></tr>
+<tr class="separator:a9ca34cf6f4e38835347bc2dc29f9469e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3d12270ffa22c857ec7a0fd9893bf881" id="r_a3d12270ffa22c857ec7a0fd9893bf881"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a3d12270ffa22c857ec7a0fd9893bf881">BSP_SD_Init</a> (void)</td></tr>
+<tr class="memdesc:a3d12270ffa22c857ec7a0fd9893bf881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SD card device.  <br /></td></tr>
+<tr class="separator:a3d12270ffa22c857ec7a0fd9893bf881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fa96a230dacebf9c960e17f277e4ad" id="r_a84fa96a230dacebf9c960e17f277e4ad"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a84fa96a230dacebf9c960e17f277e4ad">BSP_SD_ITConfig</a> (void)</td></tr>
+<tr class="memdesc:a84fa96a230dacebf9c960e17f277e4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures Interrupt mode for SD detection pin.  <br /></td></tr>
+<tr class="separator:a84fa96a230dacebf9c960e17f277e4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1228bfe77312aeb7383d65aaff4fab57" id="r_a1228bfe77312aeb7383d65aaff4fab57"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a1228bfe77312aeb7383d65aaff4fab57">BSP_SD_ReadBlocks</a> (uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks, uint32_t Timeout)</td></tr>
+<tr class="memdesc:a1228bfe77312aeb7383d65aaff4fab57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads block(s) from a specified address in an SD card, in polling mode.  <br /></td></tr>
+<tr class="separator:a1228bfe77312aeb7383d65aaff4fab57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f41626181da956e81e713682de3fd5" id="r_ad8f41626181da956e81e713682de3fd5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#ad8f41626181da956e81e713682de3fd5">BSP_SD_WriteBlocks</a> (uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks, uint32_t Timeout)</td></tr>
+<tr class="memdesc:ad8f41626181da956e81e713682de3fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes block(s) to a specified address in an SD card, in polling mode.  <br /></td></tr>
+<tr class="separator:ad8f41626181da956e81e713682de3fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e192c8975d8c5d43549ff4c1e2f8a6" id="r_ae5e192c8975d8c5d43549ff4c1e2f8a6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#ae5e192c8975d8c5d43549ff4c1e2f8a6">BSP_SD_ReadBlocks_DMA</a> (uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks)</td></tr>
+<tr class="memdesc:ae5e192c8975d8c5d43549ff4c1e2f8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads block(s) from a specified address in an SD card, in DMA mode.  <br /></td></tr>
+<tr class="separator:ae5e192c8975d8c5d43549ff4c1e2f8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f57e8a4a23c9ea770b9f9da5eab8e8f" id="r_a2f57e8a4a23c9ea770b9f9da5eab8e8f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a2f57e8a4a23c9ea770b9f9da5eab8e8f">BSP_SD_WriteBlocks_DMA</a> (uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks)</td></tr>
+<tr class="memdesc:a2f57e8a4a23c9ea770b9f9da5eab8e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes block(s) to a specified address in an SD card, in DMA mode.  <br /></td></tr>
+<tr class="separator:a2f57e8a4a23c9ea770b9f9da5eab8e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affac80d97e56403e94031344d356ea67" id="r_affac80d97e56403e94031344d356ea67"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#affac80d97e56403e94031344d356ea67">BSP_SD_Erase</a> (uint32_t StartAddr, uint32_t EndAddr)</td></tr>
+<tr class="memdesc:affac80d97e56403e94031344d356ea67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases the specified memory area of the given SD card.  <br /></td></tr>
+<tr class="separator:affac80d97e56403e94031344d356ea67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab53d88c4f6fe22d4dedae5aae9f77f22" id="r_ab53d88c4f6fe22d4dedae5aae9f77f22"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#ab53d88c4f6fe22d4dedae5aae9f77f22">BSP_SD_GetCardState</a> (void)</td></tr>
+<tr class="memdesc:ab53d88c4f6fe22d4dedae5aae9f77f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current SD card data status.  <br /></td></tr>
+<tr class="separator:ab53d88c4f6fe22d4dedae5aae9f77f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0594e1814863b9d5093807a998a1daf6" id="r_a0594e1814863b9d5093807a998a1daf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a0594e1814863b9d5093807a998a1daf6">BSP_SD_GetCardInfo</a> (<a class="el" href="bsp__driver__sd_8h.html#aa27bc16108f37dbef348fe7e2644da4d">BSP_SD_CardInfo</a> *CardInfo)</td></tr>
+<tr class="separator:a0594e1814863b9d5093807a998a1daf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe90f483ae462df3f35f64c63d4fe932" id="r_abe90f483ae462df3f35f64c63d4fe932"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#abe90f483ae462df3f35f64c63d4fe932">BSP_SD_IsDetected</a> (void)</td></tr>
+<tr class="memdesc:abe90f483ae462df3f35f64c63d4fe932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects if SD card is correctly plugged in the memory slot or not.  <br /></td></tr>
+<tr class="separator:abe90f483ae462df3f35f64c63d4fe932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a395393d1522c9844c525f0dc61fe3e" id="r_a0a395393d1522c9844c525f0dc61fe3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a0a395393d1522c9844c525f0dc61fe3e">BSP_SD_AbortCallback</a> (void)</td></tr>
+<tr class="memdesc:a0a395393d1522c9844c525f0dc61fe3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BSP SD Abort callback.  <br /></td></tr>
+<tr class="separator:a0a395393d1522c9844c525f0dc61fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4f1ecdf361e0c0808803167f31d61b" id="r_afc4f1ecdf361e0c0808803167f31d61b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#afc4f1ecdf361e0c0808803167f31d61b">BSP_SD_WriteCpltCallback</a> (void)</td></tr>
+<tr class="memdesc:afc4f1ecdf361e0c0808803167f31d61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">BSP Tx Transfer completed callback.  <br /></td></tr>
+<tr class="separator:afc4f1ecdf361e0c0808803167f31d61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d66ac35cee6a454f7e584f0051bc9f8" id="r_a8d66ac35cee6a454f7e584f0051bc9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp__driver__sd_8h.html#a8d66ac35cee6a454f7e584f0051bc9f8">BSP_SD_ReadCpltCallback</a> (void)</td></tr>
+<tr class="memdesc:a8d66ac35cee6a454f7e584f0051bc9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">BSP Rx Transfer completed callback.  <br /></td></tr>
+<tr class="separator:a8d66ac35cee6a454f7e584f0051bc9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>This file contains the common defines and functions prototypes for the <a class="el" href="bsp__driver__sd_8c.html" title="This file includes a generic uSD card driver. To be completed by the user according to the board used...">bsp_driver_sd.c</a> driver. </p>
+<p>(based on stm32756g_eval_sd.h) </p>
+<dl class="section attention"><dt>Внимание</dt><dd></dd></dl>
+<p>Copyright (c) 2023 STMicroelectronics. All rights reserved.</p>
+<p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+</div><h2 class="groupheader">Макросы</h2>
+<a id="aa27bc16108f37dbef348fe7e2644da4d" name="aa27bc16108f37dbef348fe7e2644da4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27bc16108f37dbef348fe7e2644da4d">&#9670;&#160;</a></span>BSP_SD_CardInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BSP_SD_CardInfo&#160;&#160;&#160;HAL_SD_CardInfoTypeDef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SD Card information structure. </p>
+
+</div>
+</div>
+<a id="aa3fc6f6551d2bfd4524379e0c2526516" name="aa3fc6f6551d2bfd4524379e0c2526516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fc6f6551d2bfd4524379e0c2526516">&#9670;&#160;</a></span>MSD_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSD_ERROR&#160;&#160;&#160;((uint8_t)0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af544b72de2dd084023a2106d78df7d96" name="af544b72de2dd084023a2106d78df7d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af544b72de2dd084023a2106d78df7d96">&#9670;&#160;</a></span>MSD_ERROR_SD_NOT_PRESENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSD_ERROR_SD_NOT_PRESENT&#160;&#160;&#160;((uint8_t)0x02)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0486e06b5a59ffb7579cf6cb29037bc8" name="a0486e06b5a59ffb7579cf6cb29037bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0486e06b5a59ffb7579cf6cb29037bc8">&#9670;&#160;</a></span>MSD_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSD_OK&#160;&#160;&#160;((uint8_t)0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SD status structure definition. </p>
+
+</div>
+</div>
+<a id="a9ca34cf6f4e38835347bc2dc29f9469e" name="a9ca34cf6f4e38835347bc2dc29f9469e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca34cf6f4e38835347bc2dc29f9469e">&#9670;&#160;</a></span>SD_DATATIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_DATATIMEOUT&#160;&#160;&#160;((uint32_t)100000000)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a342b72a630b1c5c90e2fd95c93dd686b" name="a342b72a630b1c5c90e2fd95c93dd686b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342b72a630b1c5c90e2fd95c93dd686b">&#9670;&#160;</a></span>SD_NOT_PRESENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_NOT_PRESENT&#160;&#160;&#160;((uint8_t)0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44beec2a536fb750d2401d7bb7c227b6" name="a44beec2a536fb750d2401d7bb7c227b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44beec2a536fb750d2401d7bb7c227b6">&#9670;&#160;</a></span>SD_PRESENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_PRESENT&#160;&#160;&#160;((uint8_t)0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c21d1c360457d0c9f035d325cc4adaf" name="a6c21d1c360457d0c9f035d325cc4adaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c21d1c360457d0c9f035d325cc4adaf">&#9670;&#160;</a></span>SD_TRANSFER_BUSY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_TRANSFER_BUSY&#160;&#160;&#160;((uint8_t)0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5d3734fc73a394772363a2e88cf3aac" name="ac5d3734fc73a394772363a2e88cf3aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d3734fc73a394772363a2e88cf3aac">&#9670;&#160;</a></span>SD_TRANSFER_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_TRANSFER_OK&#160;&#160;&#160;((uint8_t)0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SD transfer state definition. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a0a395393d1522c9844c525f0dc61fe3e" name="a0a395393d1522c9844c525f0dc61fe3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a395393d1522c9844c525f0dc61fe3e">&#9670;&#160;</a></span>BSP_SD_AbortCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSP_SD_AbortCallback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BSP SD Abort callback. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>empty (up to the user to fill it in or to remove it if useless) </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_a0a395393d1522c9844c525f0dc61fe3e_icgraph.png" border="0" usemap="#absp__driver__sd_8h_a0a395393d1522c9844c525f0dc61fe3e_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_a0a395393d1522c9844c525f0dc61fe3e_icgraph" id="absp__driver__sd_8h_a0a395393d1522c9844c525f0dc61fe3e_icgraph">
+<area shape="rect" title="BSP SD Abort callback." alt="" coords="213,5,374,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html#a52a463063ce8c6f1e8910f30dd4e8376" title="SD Abort callbacks." alt="" coords="5,5,165,32"/>
+<area shape="poly" title=" " alt="" coords="197,21,165,21,165,16,197,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="affac80d97e56403e94031344d356ea67" name="affac80d97e56403e94031344d356ea67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affac80d97e56403e94031344d356ea67">&#9670;&#160;</a></span>BSP_SD_Erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_Erase </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>StartAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>EndAddr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erases the specified memory area of the given SD card. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">StartAddr</td><td>Start byte address </td></tr>
+    <tr><td class="paramname">EndAddr</td><td>End byte address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0594e1814863b9d5093807a998a1daf6" name="a0594e1814863b9d5093807a998a1daf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0594e1814863b9d5093807a998a1daf6">&#9670;&#160;</a></span>BSP_SD_GetCardInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSP_SD_GetCardInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bsp__driver__sd_8h.html#aa27bc16108f37dbef348fe7e2644da4d">BSP_SD_CardInfo</a> *&#160;</td>
+          <td class="paramname"><em>CardInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab53d88c4f6fe22d4dedae5aae9f77f22" name="ab53d88c4f6fe22d4dedae5aae9f77f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53d88c4f6fe22d4dedae5aae9f77f22">&#9670;&#160;</a></span>BSP_SD_GetCardState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_GetCardState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current SD card data status. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Data</td><td>transfer state. This value can be one of the following values: <ul>
+<li>SD_TRANSFER_OK: No data transfer is acting </li>
+<li>SD_TRANSFER_BUSY: Data transfer is acting </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_ab53d88c4f6fe22d4dedae5aae9f77f22_icgraph.png" border="0" usemap="#absp__driver__sd_8h_ab53d88c4f6fe22d4dedae5aae9f77f22_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_ab53d88c4f6fe22d4dedae5aae9f77f22_icgraph" id="absp__driver__sd_8h_ab53d88c4f6fe22d4dedae5aae9f77f22_icgraph">
+<area shape="rect" title="Gets the current SD card data status." alt="" coords="125,5,284,32"/>
+<area shape="rect" href="sd__diskio_8c.html#a1f2ee4a775d8a3877f368533db97cbe4" title="Reads Sector(s)" alt="" coords="5,5,77,32"/>
+<area shape="poly" title=" " alt="" coords="109,21,77,21,77,16,109,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3d12270ffa22c857ec7a0fd9893bf881" name="a3d12270ffa22c857ec7a0fd9893bf881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d12270ffa22c857ec7a0fd9893bf881">&#9670;&#160;</a></span>BSP_SD_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the SD card device. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_cgraph.png" border="0" usemap="#absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_cgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_cgraph" id="absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_cgraph">
+<area shape="rect" title="Initializes the SD card device." alt="" coords="5,5,103,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html#a80c0a2c6722e29b76aa3e3d8a57ee27a" title="Detects if SD card is correctly plugged in the memory slot or not." alt="" coords="151,5,293,32"/>
+<area shape="poly" title=" " alt="" coords="103,16,135,16,135,21,103,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_icgraph.png" border="0" usemap="#absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_icgraph" id="absp__driver__sd_8h_a3d12270ffa22c857ec7a0fd9893bf881_icgraph">
+<area shape="rect" title="Initializes the SD card device." alt="" coords="147,5,244,32"/>
+<area shape="rect" href="sd__diskio_8c.html#aad7ae36100f45de75e573a0f5fd3addd" title="Initializes a Drive." alt="" coords="5,5,99,32"/>
+<area shape="poly" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe90f483ae462df3f35f64c63d4fe932" name="abe90f483ae462df3f35f64c63d4fe932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe90f483ae462df3f35f64c63d4fe932">&#9670;&#160;</a></span>BSP_SD_IsDetected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_IsDetected </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detects if SD card is correctly plugged in the memory slot or not. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Returns</td><td>if SD is detected or not </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_abe90f483ae462df3f35f64c63d4fe932_icgraph.png" border="0" usemap="#absp__driver__sd_8h_abe90f483ae462df3f35f64c63d4fe932_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_abe90f483ae462df3f35f64c63d4fe932_icgraph" id="absp__driver__sd_8h_abe90f483ae462df3f35f64c63d4fe932_icgraph">
+<area shape="rect" title="Detects if SD card is correctly plugged in the memory slot or not." alt="" coords="292,5,434,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html#afe208758d02f97e12c2eecbf604c1726" title="Initializes the SD card device." alt="" coords="147,5,244,32"/>
+<area shape="poly" title=" " alt="" coords="277,21,244,21,244,16,277,16"/>
+<area shape="rect" href="sd__diskio_8c.html#aad7ae36100f45de75e573a0f5fd3addd" title="Initializes a Drive." alt="" coords="5,5,99,32"/>
+<area shape="poly" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a84fa96a230dacebf9c960e17f277e4ad" name="a84fa96a230dacebf9c960e17f277e4ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84fa96a230dacebf9c960e17f277e4ad">&#9670;&#160;</a></span>BSP_SD_ITConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_ITConfig </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configures Interrupt mode for SD detection pin. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Returns</td><td>0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1228bfe77312aeb7383d65aaff4fab57" name="a1228bfe77312aeb7383d65aaff4fab57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1228bfe77312aeb7383d65aaff4fab57">&#9670;&#160;</a></span>BSP_SD_ReadBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_ReadBlocks </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ReadAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumOfBlocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads block(s) from a specified address in an SD card, in polling mode. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pData</td><td>Pointer to the buffer that will contain the data to transmit </td></tr>
+    <tr><td class="paramname">ReadAddr</td><td>Address from where data is to be read </td></tr>
+    <tr><td class="paramname">NumOfBlocks</td><td>Number of SD blocks to read </td></tr>
+    <tr><td class="paramname">Timeout</td><td>Timeout for read operation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5e192c8975d8c5d43549ff4c1e2f8a6" name="ae5e192c8975d8c5d43549ff4c1e2f8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e192c8975d8c5d43549ff4c1e2f8a6">&#9670;&#160;</a></span>BSP_SD_ReadBlocks_DMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_ReadBlocks_DMA </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ReadAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumOfBlocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads block(s) from a specified address in an SD card, in DMA mode. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pData</td><td>Pointer to the buffer that will contain the data to transmit </td></tr>
+    <tr><td class="paramname">ReadAddr</td><td>Address from where data is to be read </td></tr>
+    <tr><td class="paramname">NumOfBlocks</td><td>Number of SD blocks to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_ae5e192c8975d8c5d43549ff4c1e2f8a6_icgraph.png" border="0" usemap="#absp__driver__sd_8h_ae5e192c8975d8c5d43549ff4c1e2f8a6_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_ae5e192c8975d8c5d43549ff4c1e2f8a6_icgraph" id="absp__driver__sd_8h_ae5e192c8975d8c5d43549ff4c1e2f8a6_icgraph">
+<area shape="rect" title="Reads block(s) from a specified address in an SD card, in DMA mode." alt="" coords="125,5,311,32"/>
+<area shape="rect" href="sd__diskio_8c.html#a1f2ee4a775d8a3877f368533db97cbe4" title="Reads Sector(s)" alt="" coords="5,5,77,32"/>
+<area shape="poly" title=" " alt="" coords="109,21,77,21,77,16,109,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8d66ac35cee6a454f7e584f0051bc9f8" name="a8d66ac35cee6a454f7e584f0051bc9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d66ac35cee6a454f7e584f0051bc9f8">&#9670;&#160;</a></span>BSP_SD_ReadCpltCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSP_SD_ReadCpltCallback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BSP Rx Transfer completed callback. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>empty (up to the user to fill it in or to remove it if useless)</dd></dl>
+<p>BSP Rx Transfer completed callback.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hsd</td><td>SD handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_a8d66ac35cee6a454f7e584f0051bc9f8_icgraph.png" border="0" usemap="#absp__driver__sd_8h_a8d66ac35cee6a454f7e584f0051bc9f8_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_a8d66ac35cee6a454f7e584f0051bc9f8_icgraph" id="absp__driver__sd_8h_a8d66ac35cee6a454f7e584f0051bc9f8_icgraph">
+<area shape="rect" title="BSP Rx Transfer completed callback." alt="" coords="221,5,404,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html#a1720dc3a0e88b26e557ae63fad3a382d" title="Rx Transfer completed callback." alt="" coords="5,5,173,32"/>
+<area shape="poly" title=" " alt="" coords="205,21,173,21,173,16,205,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad8f41626181da956e81e713682de3fd5" name="ad8f41626181da956e81e713682de3fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f41626181da956e81e713682de3fd5">&#9670;&#160;</a></span>BSP_SD_WriteBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_WriteBlocks </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>WriteAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumOfBlocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>Timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes block(s) to a specified address in an SD card, in polling mode. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pData</td><td>Pointer to the buffer that will contain the data to transmit </td></tr>
+    <tr><td class="paramname">WriteAddr</td><td>Address from where data is to be written </td></tr>
+    <tr><td class="paramname">NumOfBlocks</td><td>Number of SD blocks to write </td></tr>
+    <tr><td class="paramname">Timeout</td><td>Timeout for write operation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f57e8a4a23c9ea770b9f9da5eab8e8f" name="a2f57e8a4a23c9ea770b9f9da5eab8e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f57e8a4a23c9ea770b9f9da5eab8e8f">&#9670;&#160;</a></span>BSP_SD_WriteBlocks_DMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t BSP_SD_WriteBlocks_DMA </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>WriteAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>NumOfBlocks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Writes block(s) to a specified address in an SD card, in DMA mode. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pData</td><td>Pointer to the buffer that will contain the data to transmit </td></tr>
+    <tr><td class="paramname">WriteAddr</td><td>Address from where data is to be written </td></tr>
+    <tr><td class="paramname">NumOfBlocks</td><td>Number of SD blocks to write </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">SD</td><td>status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc4f1ecdf361e0c0808803167f31d61b" name="afc4f1ecdf361e0c0808803167f31d61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4f1ecdf361e0c0808803167f31d61b">&#9670;&#160;</a></span>BSP_SD_WriteCpltCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BSP_SD_WriteCpltCallback </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BSP Tx Transfer completed callback. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>empty (up to the user to fill it in or to remove it if useless)</dd></dl>
+<p>BSP Tx Transfer completed callback.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lun</td><td>: not used </td></tr>
+    <tr><td class="paramname">*buff</td><td>Data to be written </td></tr>
+    <tr><td class="paramname">sector</td><td>Sector address (LBA) </td></tr>
+    <tr><td class="paramname">count</td><td>Number of sectors to write (1..128) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DRESULT</td><td>Operation result</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>I/O control operation </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lun</td><td>: not used </td></tr>
+    <tr><td class="paramname">cmd</td><td>Control code </td></tr>
+    <tr><td class="paramname">*buff</td><td>Buffer to send/receive control data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DRESULT</td><td>Operation result</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Tx Transfer completed callbacks </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hsd</td><td>SD handle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp__driver__sd_8h_afc4f1ecdf361e0c0808803167f31d61b_icgraph.png" border="0" usemap="#absp__driver__sd_8h_afc4f1ecdf361e0c0808803167f31d61b_icgraph" alt=""/></div>
+<map name="absp__driver__sd_8h_afc4f1ecdf361e0c0808803167f31d61b_icgraph" id="absp__driver__sd_8h_afc4f1ecdf361e0c0808803167f31d61b_icgraph">
+<area shape="rect" title="BSP Tx Transfer completed callback." alt="" coords="219,5,403,32"/>
+<area shape="rect" href="bsp__driver__sd_8c.html#a7f42b31026c697fea97c132e9aed15e2" title="Tx Transfer completed callback." alt="" coords="5,5,171,32"/>
+<area shape="poly" title=" " alt="" coords="203,21,171,21,171,16,203,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

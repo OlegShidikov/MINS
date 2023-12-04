@@ -1,0 +1,7 @@
+<map id="BSP_SD_IsDetected" name="BSP_SD_IsDetected">
+<area shape="rect" id="Node000001" title="Detects if SD card is correctly plugged in the memory slot or not." alt="" coords="292,5,434,32"/>
+<area shape="rect" id="Node000002" href="$bsp__driver__sd_8c.html#afe208758d02f97e12c2eecbf604c1726" title="Initializes the SD card device." alt="" coords="147,5,244,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,21,244,21,244,16,277,16"/>
+<area shape="rect" id="Node000003" href="$sd__diskio_8c.html#aad7ae36100f45de75e573a0f5fd3addd" title="Initializes a Drive." alt="" coords="5,5,99,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,21,99,21,99,16,131,16"/>
+</map>

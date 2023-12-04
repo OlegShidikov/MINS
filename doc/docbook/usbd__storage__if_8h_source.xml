@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__storage__if_8h_source" xml:lang="ru">
+<title>usbd_storage_if.h</title>
+<indexterm><primary>USB_DEVICE/App/usbd_storage_if.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+20 
+21 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+22 <emphasis role="preprocessor">#ifndef&#32;__USBD_STORAGE_IF_H__</emphasis>
+23 <emphasis role="preprocessor">#define&#32;__USBD_STORAGE_IF_H__</emphasis>
+24 
+25 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+26 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+27 <emphasis role="preprocessor">#endif</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&quot;usbd_msc.h&quot;</emphasis>
+31 
+32 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;INCLUDE&#32;*/</emphasis>
+33 
+34 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;INCLUDE&#32;*/</emphasis>
+35 
+51 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_DEFINES&#32;*/</emphasis>
+52 
+53 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_DEFINES&#32;*/</emphasis>
+54 
+64 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_TYPES&#32;*/</emphasis>
+65 
+66 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_TYPES&#32;*/</emphasis>
+67 
+77 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_MACRO&#32;*/</emphasis>
+78 
+79 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_MACRO&#32;*/</emphasis>
+80 
+91 <emphasis role="keyword">extern</emphasis>&#32;USBD_StorageTypeDef&#32;<link linkend="_group___u_s_b_d___s_t_o_r_a_g_e___exported___variables_1ga6e9e9e24e717b09df4341124e05b6aad">USBD_Storage_Interface_fops_HS</link>;
+92 
+93 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_VARIABLES&#32;*/</emphasis>
+94 
+95 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_VARIABLES&#32;*/</emphasis>
+96 
+106 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EXPORTED_FUNCTIONS&#32;*/</emphasis>
+107 
+108 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EXPORTED_FUNCTIONS&#32;*/</emphasis>
+109 
+122 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+123 }
+124 <emphasis role="preprocessor">#endif</emphasis>
+125 
+126 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__USBD_STORAGE_IF_H__&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+127 
+</programlisting></section>

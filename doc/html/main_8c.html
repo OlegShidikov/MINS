@@ -1,0 +1,1010 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MINS: Файл Core/Src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MINS<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_b596f468b52957496e4f78b80e029268.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл main.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>: Main program body  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+<code>#include &quot;cmsis_os.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="fatfs_8h_source.html">fatfs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="usb__device_8h_source.html">usb_device.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#a_core_2_src_2main_8c" alt=""/></div>
+<map name="a_core_2_src_2main_8c" id="a_core_2_src_2main_8c">
+<area shape="rect" title=": Main program body" alt="" coords="66,5,181,32"/>
+<area shape="rect" href="main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="32,229,92,256"/>
+<area shape="poly" title=" " alt="" coords="83,35,49,53,34,66,22,81,11,107,9,129,13,152,22,180,30,199,42,216,38,219,26,202,17,182,8,154,3,129,5,106,17,79,30,62,46,49,81,30"/>
+<area shape="rect" title=" " alt="" coords="31,80,120,107"/>
+<area shape="poly" title=" " alt="" coords="117,34,94,69,90,66,113,31"/>
+<area shape="rect" href="fatfs_8h.html" title="Header for fatfs applications." alt="" coords="143,80,200,107"/>
+<area shape="poly" title=" " alt="" coords="134,31,157,66,153,69,130,34"/>
+<area shape="rect" href="usb__device_8h.html" title=": Header for usb_device.c file." alt="" coords="325,80,421,107"/>
+<area shape="poly" title=" " alt="" coords="168,30,315,73,314,78,166,35"/>
+<area shape="rect" title=" " alt="" coords="180,304,296,331"/>
+<area shape="poly" title=" " alt="" coords="94,254,194,295,192,300,92,259"/>
+<area shape="rect" title=" " alt="" coords="31,155,69,181"/>
+<area shape="poly" title=" " alt="" coords="152,110,84,150,82,145,149,105"/>
+<area shape="rect" title=" " alt="" coords="93,155,183,181"/>
+<area shape="poly" title=" " alt="" coords="168,108,153,142,148,139,163,106"/>
+<area shape="rect" href="sd__diskio_8h.html" title="Header for sd_diskio.c module." alt="" coords="206,155,294,181"/>
+<area shape="poly" title=" " alt="" coords="187,105,227,142,224,146,183,109"/>
+<area shape="rect" href="bsp__driver__sd_8h.html" title="This file contains the common defines and functions prototypes for the bsp_driver_sd...." alt="" coords="182,229,294,256"/>
+<area shape="poly" title=" " alt="" coords="251,182,245,215,240,214,245,181"/>
+<area shape="poly" title=" " alt="" coords="241,257,241,288,235,288,235,257"/>
+<area shape="poly" title=" " alt="" coords="372,108,351,174,332,217,308,258,290,279,270,296,266,292,286,275,304,254,328,215,346,173,367,106"/>
+<area shape="rect" title=" " alt="" coords="369,155,462,181"/>
+<area shape="poly" title=" " alt="" coords="383,106,403,140,398,143,378,109"/>
+<area shape="rect" title=" " alt="" coords="485,155,570,181"/>
+<area shape="poly" title=" " alt="" coords="401,105,488,145,486,150,399,110"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a70af21c671abfcc773614a9a4f63d920" id="r_a70af21c671abfcc773614a9a4f63d920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</a> (void)</td></tr>
+<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <br /></td></tr>
+<tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aec512f5ea58a32add39c04e89dc7ce" id="r_a4aec512f5ea58a32add39c04e89dc7ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4aec512f5ea58a32add39c04e89dc7ce">startLoggingTask</a> (void *argument)</td></tr>
+<tr class="memdesc:a4aec512f5ea58a32add39c04e89dc7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function implementing the loggingTask thread.  <br /></td></tr>
+<tr class="separator:a4aec512f5ea58a32add39c04e89dc7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957161ee39c150382e39fd3ec9d03e1e" id="r_a957161ee39c150382e39fd3ec9d03e1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a957161ee39c150382e39fd3ec9d03e1e">startCalculationTask</a> (void *argument)</td></tr>
+<tr class="memdesc:a957161ee39c150382e39fd3ec9d03e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function implementing the calculationTask thread.  <br /></td></tr>
+<tr class="separator:a957161ee39c150382e39fd3ec9d03e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8644c1b001f7d8c6e4495b10629ecb9" id="r_af8644c1b001f7d8c6e4495b10629ecb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af8644c1b001f7d8c6e4495b10629ecb9">startBridgeTask</a> (void *argument)</td></tr>
+<tr class="memdesc:af8644c1b001f7d8c6e4495b10629ecb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function implementing the bridgeTask thread.  <br /></td></tr>
+<tr class="separator:af8644c1b001f7d8c6e4495b10629ecb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084f3112a502531b9994c4f4a669768a" id="r_a084f3112a502531b9994c4f4a669768a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a084f3112a502531b9994c4f4a669768a">startGyroModuleTask</a> (void *argument)</td></tr>
+<tr class="memdesc:a084f3112a502531b9994c4f4a669768a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function implementing the gyroModuleTask thread.  <br /></td></tr>
+<tr class="separator:a084f3112a502531b9994c4f4a669768a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
+<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
+<tr class="separator:a1730ffe1e560465665eb47d9264826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:af7b2c26e44dadaaa798a5c3d82914ba7" id="r_af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af7b2c26e44dadaaa798a5c3d82914ba7">hi2c1</a></td></tr>
+<tr class="separator:af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818789480a74b70bbcaf6d73e8e763ed" id="r_a818789480a74b70bbcaf6d73e8e763ed"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a818789480a74b70bbcaf6d73e8e763ed">hi2c4</a></td></tr>
+<tr class="separator:a818789480a74b70bbcaf6d73e8e763ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c7fca836406ade332e1e3f1039d8ab" id="r_aa0c7fca836406ade332e1e3f1039d8ab"><td class="memItemLeft" align="right" valign="top">RTC_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa0c7fca836406ade332e1e3f1039d8ab">hrtc</a></td></tr>
+<tr class="separator:aa0c7fca836406ade332e1e3f1039d8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0b867cf724e111d6329c1eb91f3b30b" id="r_ad0b867cf724e111d6329c1eb91f3b30b"><td class="memItemLeft" align="right" valign="top">SD_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad0b867cf724e111d6329c1eb91f3b30b">hsd1</a></td></tr>
+<tr class="separator:ad0b867cf724e111d6329c1eb91f3b30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fc663547539bc49fecc0011bd76ab5" id="r_a25fc663547539bc49fecc0011bd76ab5"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a25fc663547539bc49fecc0011bd76ab5">htim1</a></td></tr>
+<tr class="separator:a25fc663547539bc49fecc0011bd76ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f6f787777409af5ed0d131b52b7988" id="r_a31f6f787777409af5ed0d131b52b7988"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a31f6f787777409af5ed0d131b52b7988">htim9</a></td></tr>
+<tr class="separator:a31f6f787777409af5ed0d131b52b7988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9f881b6ce706635a5be2e500f5c6cc" id="r_aab9f881b6ce706635a5be2e500f5c6cc"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aab9f881b6ce706635a5be2e500f5c6cc">htim12</a></td></tr>
+<tr class="separator:aab9f881b6ce706635a5be2e500f5c6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae273feb3e0dc44e38892650faa58fced" id="r_ae273feb3e0dc44e38892650faa58fced"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae273feb3e0dc44e38892650faa58fced">huart4</a></td></tr>
+<tr class="separator:ae273feb3e0dc44e38892650faa58fced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a00c3ec9efd91cc4d43997e347a9e1d" id="r_a5a00c3ec9efd91cc4d43997e347a9e1d"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5a00c3ec9efd91cc4d43997e347a9e1d">huart7</a></td></tr>
+<tr class="separator:a5a00c3ec9efd91cc4d43997e347a9e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c07cbc82baf01ac2608c07b86332a67" id="r_a5c07cbc82baf01ac2608c07b86332a67"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5c07cbc82baf01ac2608c07b86332a67">huart8</a></td></tr>
+<tr class="separator:a5c07cbc82baf01ac2608c07b86332a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
+<tr class="separator:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9479c261d65eecedd3d9582f7f0f89c" id="r_aa9479c261d65eecedd3d9582f7f0f89c"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></td></tr>
+<tr class="separator:aa9479c261d65eecedd3d9582f7f0f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c63c1b0f65db92b6a4ea19edf957e1" id="r_ab7c63c1b0f65db92b6a4ea19edf957e1"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab7c63c1b0f65db92b6a4ea19edf957e1">huart3</a></td></tr>
+<tr class="separator:ab7c63c1b0f65db92b6a4ea19edf957e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38905dda1d2fbff006c69db48eddba9d" id="r_a38905dda1d2fbff006c69db48eddba9d"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a38905dda1d2fbff006c69db48eddba9d">huart6</a></td></tr>
+<tr class="separator:a38905dda1d2fbff006c69db48eddba9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba482216705f0b6f710bf03238ae09e" id="r_adba482216705f0b6f710bf03238ae09e"><td class="memItemLeft" align="right" valign="top">osThreadId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adba482216705f0b6f710bf03238ae09e">loggingTaskHandle</a></td></tr>
+<tr class="separator:adba482216705f0b6f710bf03238ae09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2108f85a3e34366701da5806d17773e" id="r_af2108f85a3e34366701da5806d17773e"><td class="memItemLeft" align="right" valign="top">const osThreadAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af2108f85a3e34366701da5806d17773e">loggingTask_attributes</a></td></tr>
+<tr class="separator:af2108f85a3e34366701da5806d17773e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ed9a7dfcf1ece98b8a01c5f7652b9d" id="r_ab3ed9a7dfcf1ece98b8a01c5f7652b9d"><td class="memItemLeft" align="right" valign="top">osThreadId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab3ed9a7dfcf1ece98b8a01c5f7652b9d">calculationTaskHandle</a></td></tr>
+<tr class="separator:ab3ed9a7dfcf1ece98b8a01c5f7652b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2ffbf22b8c350b5d43db008b6d778a" id="r_a6f2ffbf22b8c350b5d43db008b6d778a"><td class="memItemLeft" align="right" valign="top">const osThreadAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6f2ffbf22b8c350b5d43db008b6d778a">calculationTask_attributes</a></td></tr>
+<tr class="separator:a6f2ffbf22b8c350b5d43db008b6d778a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a64ece4c3f0786f8bb22ef582566a8" id="r_ac3a64ece4c3f0786f8bb22ef582566a8"><td class="memItemLeft" align="right" valign="top">osThreadId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac3a64ece4c3f0786f8bb22ef582566a8">bridgeTaskHandle</a></td></tr>
+<tr class="separator:ac3a64ece4c3f0786f8bb22ef582566a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb2a8e4278b4fc4f32b8ac9219616b0" id="r_a6cb2a8e4278b4fc4f32b8ac9219616b0"><td class="memItemLeft" align="right" valign="top">const osThreadAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6cb2a8e4278b4fc4f32b8ac9219616b0">bridgeTask_attributes</a></td></tr>
+<tr class="separator:a6cb2a8e4278b4fc4f32b8ac9219616b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2adbc23545292c938807370deb68639e" id="r_a2adbc23545292c938807370deb68639e"><td class="memItemLeft" align="right" valign="top">osThreadId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2adbc23545292c938807370deb68639e">gyroModuleTaskHandle</a></td></tr>
+<tr class="separator:a2adbc23545292c938807370deb68639e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa89319826f9f9b1be05ca84632be309" id="r_aaa89319826f9f9b1be05ca84632be309"><td class="memItemLeft" align="right" valign="top">const osThreadAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaa89319826f9f9b1be05ca84632be309">gyroModuleTask_attributes</a></td></tr>
+<tr class="separator:aaa89319826f9f9b1be05ca84632be309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7bdf080634b0ace6c5173282cf1c8f7" id="r_ab7bdf080634b0ace6c5173282cf1c8f7"><td class="memItemLeft" align="right" valign="top">osMessageQueueId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab7bdf080634b0ace6c5173282cf1c8f7">loggingQueueHandle</a></td></tr>
+<tr class="separator:ab7bdf080634b0ace6c5173282cf1c8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7451894273818f14882f35dbd770c950" id="r_a7451894273818f14882f35dbd770c950"><td class="memItemLeft" align="right" valign="top">const osMessageQueueAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7451894273818f14882f35dbd770c950">loggingQueue_attributes</a></td></tr>
+<tr class="separator:a7451894273818f14882f35dbd770c950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f22ff9ce07e72c7cf160e2fe416b1af" id="r_a3f22ff9ce07e72c7cf160e2fe416b1af"><td class="memItemLeft" align="right" valign="top">osMessageQueueId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3f22ff9ce07e72c7cf160e2fe416b1af">calculationQueueHandle</a></td></tr>
+<tr class="separator:a3f22ff9ce07e72c7cf160e2fe416b1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdbb5a4e167b2f07ffad3085f59b22b" id="r_a5fdbb5a4e167b2f07ffad3085f59b22b"><td class="memItemLeft" align="right" valign="top">const osMessageQueueAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5fdbb5a4e167b2f07ffad3085f59b22b">calculationQueue_attributes</a></td></tr>
+<tr class="separator:a5fdbb5a4e167b2f07ffad3085f59b22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada047f338330cc148ea634481e4c9dac" id="r_ada047f338330cc148ea634481e4c9dac"><td class="memItemLeft" align="right" valign="top">osMessageQueueId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ada047f338330cc148ea634481e4c9dac">bridgeQueueHandle</a></td></tr>
+<tr class="separator:ada047f338330cc148ea634481e4c9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c878e855a191cf311420900b747267a" id="r_a4c878e855a191cf311420900b747267a"><td class="memItemLeft" align="right" valign="top">const osMessageQueueAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4c878e855a191cf311420900b747267a">bridgeQueue_attributes</a></td></tr>
+<tr class="separator:a4c878e855a191cf311420900b747267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b8971a4b2b5ffda08d5d326726a98e" id="r_a18b8971a4b2b5ffda08d5d326726a98e"><td class="memItemLeft" align="right" valign="top">osMessageQueueId_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a18b8971a4b2b5ffda08d5d326726a98e">gyroModuleQueueHandle</a></td></tr>
+<tr class="separator:a18b8971a4b2b5ffda08d5d326726a98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa761491443e7dad4e178b8af82ef83" id="r_a2aa761491443e7dad4e178b8af82ef83"><td class="memItemLeft" align="right" valign="top">const osMessageQueueAttr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2aa761491443e7dad4e178b8af82ef83">gyroModuleQueue_attributes</a></td></tr>
+<tr class="separator:a2aa761491443e7dad4e178b8af82ef83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>: Main program body </p>
+<dl class="section attention"><dt>Внимание</dt><dd></dd></dl>
+<p>Copyright (c) 2023 STMicroelectronics. All rights reserved.</p>
+<p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a1730ffe1e560465665eb47d9264826f9" name="a1730ffe1e560465665eb47d9264826f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&#160;</a></span>Error_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Error_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is executed in case of error occurrence. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a1730ffe1e560465665eb47d9264826f9_icgraph.png" border="0" usemap="#amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" alt=""/></div>
+<map name="amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph" id="amain_8c_a1730ffe1e560465665eb47d9264826f9_icgraph">
+<area shape="rect" title="This function is executed in case of error occurrence." alt="" coords="512,183,613,209"/>
+<area shape="rect" href="stm32f7xx__hal__msp_8c.html#abe01a202c27b23fc150aa66af3130073" title="I2C MSP Initialization This function configures the hardware resources used in this example." alt="" coords="318,5,439,32"/>
+<area shape="poly" title=" " alt="" coords="548,170,516,107,492,74,463,46,438,33,441,28,466,42,496,71,521,104,553,167"/>
+<area shape="rect" href="usbd__conf_8c.html#af4fbef977092aa525c6b1668ffbec77b" title="Reset callback." alt="" coords="293,56,464,83"/>
+<area shape="poly" title=" " alt="" coords="540,172,507,133,463,97,439,86,441,81,466,92,511,129,544,168"/>
+<area shape="rect" href="stm32f7xx__hal__msp_8c.html#aee6eddaa309c8c9829f1ca794d8f99c5" title="RTC MSP Initialization This function configures the hardware resources used in this example." alt="" coords="315,107,442,133"/>
+<area shape="poly" title=" " alt="" coords="523,177,463,148,431,136,433,131,465,143,526,172"/>
+<area shape="rect" href="stm32f7xx__hal__msp_8c.html#a11b692d44079cb65eb037202d627ae96" title="SD MSP Initialization This function configures the hardware resources used in this example." alt="" coords="319,157,439,184"/>
+<area shape="poly" title=" " alt="" coords="497,190,439,182,440,176,498,184"/>
+<area shape="rect" href="stm32f7xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7" title="UART MSP Initialization This function configures the hardware resources used in this example." alt="" coords="311,208,447,235"/>
+<area shape="poly" title=" " alt="" coords="498,208,448,215,447,209,497,202"/>
+<area shape="rect" href="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.html#gadab4f7fc1db4ce2be073d3913209d2af" title=" " alt="" coords="303,259,455,285"/>
+<area shape="poly" title=" " alt="" coords="526,220,465,249,433,261,431,256,463,244,523,215"/>
+<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="103,309,245,336"/>
+<area shape="poly" title=" " alt="" coords="546,224,513,265,491,284,465,300,410,319,352,330,296,334,245,333,245,327,296,328,351,325,409,314,463,295,487,280,509,261,542,221"/>
+<area shape="rect" href="usbd__conf_8c.html#a24b61e95db7e4c7ad30a835e8d905943" title="Initializes the low level portion of the device driver." alt="" coords="328,360,430,387"/>
+<area shape="poly" title=" " alt="" coords="552,225,518,284,494,316,466,343,432,362,429,358,463,339,490,312,514,281,547,222"/>
+<area shape="rect" href="main_8c.html#a4aec512f5ea58a32add39c04e89dc7ce" title="Function implementing the loggingTask thread." alt="" coords="114,259,234,285"/>
+<area shape="poly" title=" " alt="" coords="287,275,234,275,234,269,287,269"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,284,55,311"/>
+<area shape="poly" title=" " alt="" coords="99,288,56,296,55,290,98,283"/>
+<area shape="poly" title=" " alt="" coords="87,310,54,304,55,299,88,305"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The application entry point. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" alt=""/></div>
+<map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
+<area shape="rect" title="The application entry point." alt="" coords="5,132,55,159"/>
+<area shape="rect" href="fatfs_8c.html#a3712bd1d3043334cf9343acc30bd2604" title=" " alt="" coords="120,5,231,32"/>
+<area shape="poly" title=" " alt="" coords="35,130,60,87,79,63,101,42,108,37,111,42,104,46,83,67,64,90,40,133"/>
+<area shape="rect" href="main_8c.html#af8644c1b001f7d8c6e4495b10629ecb9" title="Function implementing the bridgeTask thread." alt="" coords="119,56,232,83"/>
+<area shape="poly" title=" " alt="" coords="47,129,101,92,113,87,116,91,104,97,50,134"/>
+<area shape="rect" href="main_8c.html#a957161ee39c150382e39fd3ec9d03e1e" title="Function implementing the calculationTask thread." alt="" coords="106,107,245,133"/>
+<area shape="poly" title=" " alt="" coords="54,139,90,132,91,137,55,144"/>
+<area shape="rect" href="main_8c.html#a084f3112a502531b9994c4f4a669768a" title="Function implementing the gyroModuleTask thread." alt="" coords="103,157,248,184"/>
+<area shape="poly" title=" " alt="" coords="55,147,88,153,87,158,54,152"/>
+<area shape="rect" href="main_8c.html#a4aec512f5ea58a32add39c04e89dc7ce" title="Function implementing the loggingTask thread." alt="" coords="115,208,236,235"/>
+<area shape="poly" title=" " alt="" coords="50,157,104,194,116,199,113,204,101,198,47,161"/>
+<area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="301,259,443,285"/>
+<area shape="poly" title=" " alt="" coords="39,158,62,202,81,226,104,244,147,263,194,274,241,279,285,279,285,284,241,284,193,280,146,268,101,249,77,230,58,205,34,160"/>
+<area shape="rect" href="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.html#gadab4f7fc1db4ce2be073d3913209d2af" title=" " alt="" coords="296,208,448,235"/>
+<area shape="poly" title=" " alt="" coords="236,219,280,219,280,224,236,224"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="496,233,597,260"/>
+<area shape="poly" title=" " alt="" coords="449,230,481,235,481,240,448,235"/>
+<area shape="poly" title=" " alt="" coords="443,259,480,254,481,259,444,264"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af8644c1b001f7d8c6e4495b10629ecb9" name="af8644c1b001f7d8c6e4495b10629ecb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8644c1b001f7d8c6e4495b10629ecb9">&#9670;&#160;</a></span>startBridgeTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startBridgeTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function implementing the bridgeTask thread. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argument</td><td>Not used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph.png" border="0" usemap="#amain_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph" alt=""/></div>
+<map name="amain_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph" id="amain_8c_af8644c1b001f7d8c6e4495b10629ecb9_icgraph">
+<area shape="rect" title="Function implementing the bridgeTask thread." alt="" coords="103,5,215,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a957161ee39c150382e39fd3ec9d03e1e" name="a957161ee39c150382e39fd3ec9d03e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957161ee39c150382e39fd3ec9d03e1e">&#9670;&#160;</a></span>startCalculationTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startCalculationTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function implementing the calculationTask thread. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argument</td><td>Not used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph.png" border="0" usemap="#amain_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph" alt=""/></div>
+<map name="amain_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph" id="amain_8c_a957161ee39c150382e39fd3ec9d03e1e_icgraph">
+<area shape="rect" title="Function implementing the calculationTask thread." alt="" coords="103,5,242,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a084f3112a502531b9994c4f4a669768a" name="a084f3112a502531b9994c4f4a669768a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084f3112a502531b9994c4f4a669768a">&#9670;&#160;</a></span>startGyroModuleTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startGyroModuleTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function implementing the gyroModuleTask thread. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argument</td><td>Not used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a084f3112a502531b9994c4f4a669768a_icgraph.png" border="0" usemap="#amain_8c_a084f3112a502531b9994c4f4a669768a_icgraph" alt=""/></div>
+<map name="amain_8c_a084f3112a502531b9994c4f4a669768a_icgraph" id="amain_8c_a084f3112a502531b9994c4f4a669768a_icgraph">
+<area shape="rect" title="Function implementing the gyroModuleTask thread." alt="" coords="103,5,248,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4aec512f5ea58a32add39c04e89dc7ce" name="a4aec512f5ea58a32add39c04e89dc7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aec512f5ea58a32add39c04e89dc7ce">&#9670;&#160;</a></span>startLoggingTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startLoggingTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function implementing the loggingTask thread. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argument</td><td>Not used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph.png" border="0" usemap="#amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph" alt=""/></div>
+<map name="amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph" id="amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_cgraph">
+<area shape="rect" title="Function implementing the loggingTask thread." alt="" coords="5,5,126,32"/>
+<area shape="rect" href="group___u_s_b_d___d_e_v_i_c_e___exported___functions_prototype.html#gadab4f7fc1db4ce2be073d3913209d2af" title=" " alt="" coords="174,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="126,16,158,16,158,21,126,21"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="374,5,474,32"/>
+<area shape="poly" title=" " alt="" coords="326,16,359,16,359,21,326,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph.png" border="0" usemap="#amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph" alt=""/></div>
+<map name="amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph" id="amain_8c_a4aec512f5ea58a32add39c04e89dc7ce_icgraph">
+<area shape="rect" title="Function implementing the loggingTask thread." alt="" coords="103,5,223,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70af21c671abfcc773614a9a4f63d920" name="a70af21c671abfcc773614a9a4f63d920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70af21c671abfcc773614a9a4f63d920">&#9670;&#160;</a></span>SystemClock_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemClock_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>System Clock Configuration. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Configure the main internal regulator output voltage</p>
+<p>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</p>
+<p>Activate the Over-Drive mode</p>
+<p>Initializes the CPU, AHB and APB buses clocks</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a70af21c671abfcc773614a9a4f63d920_cgraph.png" border="0" usemap="#amain_8c_a70af21c671abfcc773614a9a4f63d920_cgraph" alt=""/></div>
+<map name="amain_8c_a70af21c671abfcc773614a9a4f63d920_cgraph" id="amain_8c_a70af21c671abfcc773614a9a4f63d920_cgraph">
+<area shape="rect" title="System Clock Configuration." alt="" coords="5,5,148,32"/>
+<area shape="rect" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="196,5,296,32"/>
+<area shape="poly" title=" " alt="" coords="148,16,180,16,180,21,148,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c_a70af21c671abfcc773614a9a4f63d920_icgraph.png" border="0" usemap="#amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph" alt=""/></div>
+<map name="amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph" id="amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph">
+<area shape="rect" title="System Clock Configuration." alt="" coords="103,5,245,32"/>
+<area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a4c878e855a191cf311420900b747267a" name="a4c878e855a191cf311420900b747267a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c878e855a191cf311420900b747267a">&#9670;&#160;</a></span>bridgeQueue_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osMessageQueueAttr_t bridgeQueue_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;bridgeQueue&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ada047f338330cc148ea634481e4c9dac" name="ada047f338330cc148ea634481e4c9dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada047f338330cc148ea634481e4c9dac">&#9670;&#160;</a></span>bridgeQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQueueId_t bridgeQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cb2a8e4278b4fc4f32b8ac9219616b0" name="a6cb2a8e4278b4fc4f32b8ac9219616b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb2a8e4278b4fc4f32b8ac9219616b0">&#9670;&#160;</a></span>bridgeTask_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osThreadAttr_t bridgeTask_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;bridgeTask&quot;</span>,</div>
+<div class="line">  .stack_size = 128 * 4,</div>
+<div class="line">  .priority = (osPriority_t) osPriorityLow,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3a64ece4c3f0786f8bb22ef582566a8" name="ac3a64ece4c3f0786f8bb22ef582566a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a64ece4c3f0786f8bb22ef582566a8">&#9670;&#160;</a></span>bridgeTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId_t bridgeTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fdbb5a4e167b2f07ffad3085f59b22b" name="a5fdbb5a4e167b2f07ffad3085f59b22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdbb5a4e167b2f07ffad3085f59b22b">&#9670;&#160;</a></span>calculationQueue_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osMessageQueueAttr_t calculationQueue_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;calculationQueue&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3f22ff9ce07e72c7cf160e2fe416b1af" name="a3f22ff9ce07e72c7cf160e2fe416b1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f22ff9ce07e72c7cf160e2fe416b1af">&#9670;&#160;</a></span>calculationQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQueueId_t calculationQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2ffbf22b8c350b5d43db008b6d778a" name="a6f2ffbf22b8c350b5d43db008b6d778a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2ffbf22b8c350b5d43db008b6d778a">&#9670;&#160;</a></span>calculationTask_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osThreadAttr_t calculationTask_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;calculationTask&quot;</span>,</div>
+<div class="line">  .stack_size = 128 * 4,</div>
+<div class="line">  .priority = (osPriority_t) osPriorityAboveNormal,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab3ed9a7dfcf1ece98b8a01c5f7652b9d" name="ab3ed9a7dfcf1ece98b8a01c5f7652b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ed9a7dfcf1ece98b8a01c5f7652b9d">&#9670;&#160;</a></span>calculationTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId_t calculationTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2aa761491443e7dad4e178b8af82ef83" name="a2aa761491443e7dad4e178b8af82ef83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aa761491443e7dad4e178b8af82ef83">&#9670;&#160;</a></span>gyroModuleQueue_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osMessageQueueAttr_t gyroModuleQueue_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;gyroModuleQueue&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a18b8971a4b2b5ffda08d5d326726a98e" name="a18b8971a4b2b5ffda08d5d326726a98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b8971a4b2b5ffda08d5d326726a98e">&#9670;&#160;</a></span>gyroModuleQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQueueId_t gyroModuleQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa89319826f9f9b1be05ca84632be309" name="aaa89319826f9f9b1be05ca84632be309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa89319826f9f9b1be05ca84632be309">&#9670;&#160;</a></span>gyroModuleTask_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osThreadAttr_t gyroModuleTask_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;gyroModuleTask&quot;</span>,</div>
+<div class="line">  .stack_size = 128 * 4,</div>
+<div class="line">  .priority = (osPriority_t) osPriorityLow,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2adbc23545292c938807370deb68639e" name="a2adbc23545292c938807370deb68639e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2adbc23545292c938807370deb68639e">&#9670;&#160;</a></span>gyroModuleTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId_t gyroModuleTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7b2c26e44dadaaa798a5c3d82914ba7" name="af7b2c26e44dadaaa798a5c3d82914ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b2c26e44dadaaa798a5c3d82914ba7">&#9670;&#160;</a></span>hi2c1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2C_HandleTypeDef hi2c1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a818789480a74b70bbcaf6d73e8e763ed" name="a818789480a74b70bbcaf6d73e8e763ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818789480a74b70bbcaf6d73e8e763ed">&#9670;&#160;</a></span>hi2c4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2C_HandleTypeDef hi2c4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0c7fca836406ade332e1e3f1039d8ab" name="aa0c7fca836406ade332e1e3f1039d8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c7fca836406ade332e1e3f1039d8ab">&#9670;&#160;</a></span>hrtc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTC_HandleTypeDef hrtc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0b867cf724e111d6329c1eb91f3b30b" name="ad0b867cf724e111d6329c1eb91f3b30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b867cf724e111d6329c1eb91f3b30b">&#9670;&#160;</a></span>hsd1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SD_HandleTypeDef hsd1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25fc663547539bc49fecc0011bd76ab5" name="a25fc663547539bc49fecc0011bd76ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fc663547539bc49fecc0011bd76ab5">&#9670;&#160;</a></span>htim1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef htim1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab9f881b6ce706635a5be2e500f5c6cc" name="aab9f881b6ce706635a5be2e500f5c6cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9f881b6ce706635a5be2e500f5c6cc">&#9670;&#160;</a></span>htim12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef htim12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31f6f787777409af5ed0d131b52b7988" name="a31f6f787777409af5ed0d131b52b7988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f6f787777409af5ed0d131b52b7988">&#9670;&#160;</a></span>htim9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef htim9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cf715bef37f7e8ef385a30974a5f0d5" name="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf715bef37f7e8ef385a30974a5f0d5">&#9670;&#160;</a></span>huart1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9479c261d65eecedd3d9582f7f0f89c" name="aa9479c261d65eecedd3d9582f7f0f89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9479c261d65eecedd3d9582f7f0f89c">&#9670;&#160;</a></span>huart2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7c63c1b0f65db92b6a4ea19edf957e1" name="ab7c63c1b0f65db92b6a4ea19edf957e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c63c1b0f65db92b6a4ea19edf957e1">&#9670;&#160;</a></span>huart3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae273feb3e0dc44e38892650faa58fced" name="ae273feb3e0dc44e38892650faa58fced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae273feb3e0dc44e38892650faa58fced">&#9670;&#160;</a></span>huart4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38905dda1d2fbff006c69db48eddba9d" name="a38905dda1d2fbff006c69db48eddba9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38905dda1d2fbff006c69db48eddba9d">&#9670;&#160;</a></span>huart6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a00c3ec9efd91cc4d43997e347a9e1d" name="a5a00c3ec9efd91cc4d43997e347a9e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a00c3ec9efd91cc4d43997e347a9e1d">&#9670;&#160;</a></span>huart7</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c07cbc82baf01ac2608c07b86332a67" name="a5c07cbc82baf01ac2608c07b86332a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c07cbc82baf01ac2608c07b86332a67">&#9670;&#160;</a></span>huart8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7451894273818f14882f35dbd770c950" name="a7451894273818f14882f35dbd770c950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7451894273818f14882f35dbd770c950">&#9670;&#160;</a></span>loggingQueue_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osMessageQueueAttr_t loggingQueue_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;loggingQueue&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab7bdf080634b0ace6c5173282cf1c8f7" name="ab7bdf080634b0ace6c5173282cf1c8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7bdf080634b0ace6c5173282cf1c8f7">&#9670;&#160;</a></span>loggingQueueHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osMessageQueueId_t loggingQueueHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2108f85a3e34366701da5806d17773e" name="af2108f85a3e34366701da5806d17773e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2108f85a3e34366701da5806d17773e">&#9670;&#160;</a></span>loggingTask_attributes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const osThreadAttr_t loggingTask_attributes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  .name = <span class="stringliteral">&quot;loggingTask&quot;</span>,</div>
+<div class="line">  .stack_size = 128 * 4,</div>
+<div class="line">  .priority = (osPriority_t) osPriorityNormal,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adba482216705f0b6f710bf03238ae09e" name="adba482216705f0b6f710bf03238ae09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba482216705f0b6f710bf03238ae09e">&#9670;&#160;</a></span>loggingTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">osThreadId_t loggingTaskHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___u_s_b_d___d_e_s_c___private___functions" xml:lang="ru">
+<title>USBD_DESC_Private_Functions</title>
+<indexterm><primary>USBD_DESC_Private_Functions</primary></indexterm>
+<para>
+
+<para>Private functions. </para>
+ 
+</para>
+Граф связей класса USBD_DESC_Private_Functions:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group___u_s_b_d___d_e_s_c___private___functions.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+
+<para>Private functions. </para>
+</section>

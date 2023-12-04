@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_usbd__conf_8h_source" xml:lang="ru">
+<title>usbd_conf.h</title>
+<indexterm><primary>USB_DEVICE/Target/usbd_conf.h</primary></indexterm>
+См. документацию.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+19 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+20 
+21 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+22 <emphasis role="preprocessor">#ifndef&#32;__USBD_CONF__H__</emphasis>
+23 <emphasis role="preprocessor">#define&#32;__USBD_CONF__H__</emphasis>
+24 
+25 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+26 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+27 <emphasis role="preprocessor">#endif</emphasis>
+28 
+29 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+30 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+32 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+33 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_main_8h">main.h</link>&quot;</emphasis>
+34 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx.h&quot;</emphasis>
+35 <emphasis role="preprocessor">#include&#32;&quot;stm32f7xx_hal.h&quot;</emphasis>
+36 
+37 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;INCLUDE&#32;*/</emphasis>
+38 
+39 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;INCLUDE&#32;*/</emphasis>
+40 
+64 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+65 <emphasis role="preprocessor">#define&#32;USBD_MAX_NUM_INTERFACES&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+66 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+67 <emphasis role="preprocessor">#define&#32;USBD_MAX_NUM_CONFIGURATION&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+68 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+69 <emphasis role="preprocessor">#define&#32;USBD_MAX_STR_DESC_SIZ&#32;&#32;&#32;&#32;&#32;512U</emphasis>
+70 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+71 <emphasis role="preprocessor">#define&#32;USBD_DEBUG_LEVEL&#32;&#32;&#32;&#32;&#32;0U</emphasis>
+72 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+73 <emphasis role="preprocessor">#define&#32;USBD_LPM_ENABLED&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+74 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+75 <emphasis role="preprocessor">#define&#32;USBD_SELF_POWERED&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+76 <emphasis role="comment">/*----------&#32;-----------*/</emphasis>
+77 <emphasis role="preprocessor">#define&#32;MSC_MEDIA_PACKET&#32;&#32;&#32;&#32;&#32;512U</emphasis>
+78 
+79 <emphasis role="comment">/****************************************/</emphasis>
+80 <emphasis role="comment">/*&#32;#define&#32;for&#32;FS&#32;and&#32;HS&#32;identification&#32;*/</emphasis>
+81 <emphasis role="preprocessor">#define&#32;DEVICE_FS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+82 <emphasis role="preprocessor">#define&#32;DEVICE_HS&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+83 
+93 <emphasis role="comment">/*&#32;Memory&#32;management&#32;macros&#32;*/</emphasis>
+94 
+96 <emphasis role="preprocessor">#define&#32;USBD_malloc&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;malloc</emphasis>
+97 
+99 <emphasis role="preprocessor">#define&#32;USBD_free&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free</emphasis>
+100 
+102 <emphasis role="preprocessor">#define&#32;USBD_memset&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memset</emphasis>
+103 
+105 <emphasis role="preprocessor">#define&#32;USBD_memcpy&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;memcpy</emphasis>
+106 
+108 <emphasis role="preprocessor">#define&#32;USBD_Delay&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HAL_Delay</emphasis>
+109 
+110 <emphasis role="comment">/*&#32;DEBUG&#32;macros&#32;*/</emphasis>
+111 
+112 <emphasis role="preprocessor">#if&#32;(USBD_DEBUG_LEVEL&#32;&gt;&#32;0)</emphasis>
+113 <emphasis role="preprocessor">#define&#32;USBD_UsrLog(...)&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\</emphasis>
+114 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;\n&quot;);</emphasis>
+115 <emphasis role="preprocessor">#else</emphasis>
+116 <emphasis role="preprocessor">#define&#32;USBD_UsrLog(...)</emphasis>
+117 <emphasis role="preprocessor">#endif</emphasis>
+118 
+119 <emphasis role="preprocessor">#if&#32;(USBD_DEBUG_LEVEL&#32;&gt;&#32;1)</emphasis>
+120 
+121 <emphasis role="preprocessor">#define&#32;USBD_ErrLog(...)&#32;&#32;&#32;&#32;printf(&quot;ERROR:&#32;&quot;)&#32;;\</emphasis>
+122 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\</emphasis>
+123 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;\n&quot;);</emphasis>
+124 <emphasis role="preprocessor">#else</emphasis>
+125 <emphasis role="preprocessor">#define&#32;USBD_ErrLog(...)</emphasis>
+126 <emphasis role="preprocessor">#endif</emphasis>
+127 
+128 <emphasis role="preprocessor">#if&#32;(USBD_DEBUG_LEVEL&#32;&gt;&#32;2)</emphasis>
+129 <emphasis role="preprocessor">#define&#32;USBD_DbgLog(...)&#32;&#32;&#32;&#32;printf(&quot;DEBUG&#32;:&#32;&quot;)&#32;;\</emphasis>
+130 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(__VA_ARGS__);\</emphasis>
+131 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(&quot;\n&quot;);</emphasis>
+132 <emphasis role="preprocessor">#else</emphasis>
+133 <emphasis role="preprocessor">#define&#32;USBD_DbgLog(...)</emphasis>
+134 <emphasis role="preprocessor">#endif</emphasis>
+135 
+154 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------*/</emphasis>
+155 
+168 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+169 }
+170 <emphasis role="preprocessor">#endif</emphasis>
+171 
+172 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__USBD_CONF__H__&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

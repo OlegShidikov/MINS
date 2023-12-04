@@ -1,0 +1,16 @@
+<map id="USBD_DESC" name="USBD_DESC">
+<area shape="rect" id="Node000002" href="$group___s_t_m32___u_s_b___o_t_g___d_e_v_i_c_e___l_i_b_r_a_r_y.html" title="Usb device." alt="" coords="5,284,253,311"/>
+<area shape="rect" id="Node000001" title="Usb device descriptors module." alt="" coords="301,284,401,311"/>
+<area shape="rect" id="Node000009" href="$group___u_s_b_d___d_e_s_c___exported___constants.html" title="Constants." alt="" coords="476,5,701,32"/>
+<area shape="rect" id="Node000010" href="$group___u_s_b_d___d_e_s_c___exported___defines.html" title="Defines." alt="" coords="484,56,693,83"/>
+<area shape="rect" id="Node000014" href="$group___u_s_b_d___d_e_s_c___exported___functions_prototype.html" title="Public functions declaration." alt="" coords="449,107,728,133"/>
+<area shape="rect" id="Node000012" href="$group___u_s_b_d___d_e_s_c___exported___macros.html" title="Aliases." alt="" coords="484,157,693,184"/>
+<area shape="rect" id="Node000011" href="$group___u_s_b_d___d_e_s_c___exported___types_definitions.html" title="Types." alt="" coords="458,208,719,235"/>
+<area shape="rect" id="Node000013" href="$group___u_s_b_d___d_e_s_c___exported___variables.html" title="Public variables." alt="" coords="479,259,699,285"/>
+<area shape="rect" id="Node000004" href="$group___u_s_b_d___d_e_s_c___private___defines.html" title="Private defines." alt="" coords="491,309,687,336"/>
+<area shape="rect" id="Node000006" href="$group___u_s_b_d___d_e_s_c___private___function_prototypes.html" title="Private functions declaration." alt="" coords="456,360,722,387"/>
+<area shape="rect" id="Node000008" href="$group___u_s_b_d___d_e_s_c___private___functions.html" title="Private functions." alt="" coords="484,411,694,437"/>
+<area shape="rect" id="Node000005" href="$group___u_s_b_d___d_e_s_c___private___macros.html" title="Private macros." alt="" coords="491,461,687,488"/>
+<area shape="rect" id="Node000003" href="$group___u_s_b_d___d_e_s_c___private___types_definitions.html" title="Private types." alt="" coords="465,512,713,539"/>
+<area shape="rect" id="Node000007" href="$group___u_s_b_d___d_e_s_c___private___variables.html" title="Private variables." alt="" coords="485,563,692,589"/>
+</map>
